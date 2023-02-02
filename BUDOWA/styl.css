@@ -1,0 +1,113 @@
+
+#container{
+    margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFCF2;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+	flex-wrap: wrap;
+}
+
+#naglowek{
+	width: 1000px;
+	height: 1100px;
+}
+
+#baner{
+	width: 80%;
+	position: relative;
+	width: 100%;
+	height: 800px;
+	background-image: url(/pp/remont.jpg);
+	background-size: cover;
+}
+
+#foto{
+	width: 80%;
+	width: auto;
+	padding: 10px;
+	margin: 10px;
+	float: left;
+}
+
+#odnosniki{
+	position: absolute;
+	text-align: right;
+	float: left;
+	top: 15px;
+	right: 15px;
+	word-spacing: 5px;
+}
+#odnosniki > a{
+	text-decoration: none;
+	font-size: 23px;
+	font-family: initial;
+	font-weight: bold;
+	color: #EAAE0F;
+}
+
+#opis{
+	width: 100%;
+	height: 400px;
+	background-color: #FFFCF2;
+	float: left;
+}
+
+#opis > p{
+	font-size: 30px;
+}
+
+#main{
+	width: 90%;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+        
+}
+
+.oferta{
+	width: 33.33%;
+}
+
+.oferta > img{
+	padding: 10px;
+	margin: 10px;
+	width: 300px;
+	height: 250px;
+	border-radius: 25px;
+}
+
+.oferta > ul{
+	font-size: 18px;
+	text-align: left;
+}
+
+.oferta > ul > li{
+	font-size: 18px;
+	margin: 2px;
+	
+}
+
+.oferta > p{
+	font-size: 30px;
+	padding: 5px;
+	display: inline;
+	color: #B6911C;
+}
+
+#stopka{
+	width: 90%;
+	height: 200px;
+	float: left;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer{
+	float: left;
+}
+
+
+
