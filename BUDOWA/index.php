@@ -2,7 +2,9 @@
 <html lang="pl">
 <head>
     <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="styl.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Usługi remontowe</title>
 </head>
 <body>
@@ -63,14 +65,15 @@
 		</div>
 		<div id="stopka">
 		    <div class="footer">
-			    <h4>Kontakt</h4>
-				<p>Nr. telefonu: +48 691 257 812</p>
-				<p>e-mail: <a href="sznycmail.com">Sznycowanie@gamail.com</a></p>
-				<p>Adres: Kurznie ul.twojego starego 18</p>
+			    <h4>Dane kontaktowe</h4>
+				<p class="fa fa-phone"> +48 691 257 812</p><br>
+				<p class="fa fa-envelope"><a href="sznycmail.com"> Sznycowanie@gamail.com</a></p>
 			</div>
 			<div class="footer">
 			    <h4>Media społecznościowe</h4>
-				<a href="https://www.instagram.com/haniaa.rozanska">Instagram</a>
+				<a href="https://www.instagram.com/haniaa.rozanska" class="fa fa-instagram"></a>
+				<a href="https://www.facebook.com/profile.php?id=100010178499427" class="fa fa-facebook"></a>
+				<a href="https://twitter.com/home?lang=pl" class="fa fa-twitter"></a>
 			</div>
 		</div>
 	</div>
