@@ -87,7 +87,7 @@
 
 #obraz > img{
     width: 90%;
-    height: 60%;
+    height: 80%;
     border: 1px;
     border-style: solid;
     border-color: black;
@@ -99,23 +99,57 @@
     background-color: green;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-#tresc_kontener > .tresc{
+#tresc_z_tabela{
+    background-color: pink;
+    display: flex;
+    flex-direction: row;
+}
+
+#tabela{
+    font-size: 13px;
+    text-align: center;
     text-align: left;
 }
 
+#tabela > p{
+    text-align: center;
+}
+
+#tabela > table{
+    display: inline;
+}
 .tresc{
     background-color: blue;
     padding: 5px;
     font-size: 17px;
 }
 
-.tresc > h1{
-    text-align: left;
-    font-size: 29px;
+.tresc > hr{
+    color: #E7E1CF;
+    display: flex;
 }
+
+.tresc > h1{
+    font-size: 29px;
+    padding: 3px;
+}
+
+.tresc > h2{
+    font-size: 20px;
+    display: inline-block;
+}
+
+.tresc > p{
+    font-size: 17px;
+    padding: 3px;
+    display: inline-block; 
+}
+
+
+
+
 
 
 
