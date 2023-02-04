@@ -1,29 +1,43 @@
 #container{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 #lewy_panel{
     width: 10%;
     height: 100%;
-    text-align: center;
-    float: left;
     background-color: yellow;
+    display: flex;
+    justify-content: center;
 }
 
 #lewy_panel > img{
-    width: 90%;
+    width: 160px;
     height: 130px;
+    padding: 10px;
+}
+
+#naglowek{
+    width: 90%;
+    height: 75px;
+    display: flex;
+    display: inline-block;
 }
 
 #naglowek_pierwszy{
-    width: 90%;
+    width: 100%;
     height: 25px;
     font-size: 13px;
     background-color: red;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    
 }
 
 #naglowek_pierwszy > p {                    
@@ -31,28 +45,41 @@
 }
 
 #naglowek_drugi{
-    width: 90%;
+    width: 100%;
     height: 50px;
     background-color: blue;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    flex-wrap: nowrap;
 }
 
 .czesc_naglowka_drugiego{
     display: flex;
-    flex-direction: row;
+    align-items: center;
 }
 
 .czesc_naglowka_drugiego > p{
     padding: 5px;
 }
 
-#obraz{
+.czesc_naglowka_drugiego > input{
+    font-size: 13px;
+    padding: 10px;
+    resize: horizontal;
+    width: 250px;
+    height: 10px;
+}
+
+#obraz_kontener{
     width: 90%;
-    height: 200px;
+    height: 120px;
     background-color: orange;
+    display: flex;
+}
+
+#obraz{
+    width: 100%;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,16 +90,33 @@
     height: 60%;
     border: 1px;
     border-style: solid;
-    border-color: #D5CCB3;
+    border-color: black;
 }
 
-#tresc{
+#tresc_kontener{
     width: 90%;
     height: 250px;
     background-color: green;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
+#tresc_kontener > .tresc{
+    text-align: left;
+}
+
+.tresc{
+    background-color: blue;
+    padding: 5px;
+    font-size: 17px;
+}
+
+.tresc > h1{
+    text-align: left;
+    font-size: 29px;
+}
+
 
 
 
