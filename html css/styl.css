@@ -1,30 +1,55 @@
+body{
+    overflow-x: hidden;
+}
+
 #container{
-    width: 100vw;
+    width: 89vw;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 #lewy_panel{
     width: 10%;
     height: 100%;
-    background-color: yellow;
+    background-color: #EAF1F3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#lewy_panel_foto{
     display: flex;
     justify-content: center;
 }
 
-#lewy_panel > img{
-    width: 160px;
-    height: 130px;
-    padding: 10px;
+#lewy_panel_foto > img{
+    width: 70%;
+    text-align: center;
+}
+
+.panele{
+    width: 100%;
+    height: auto;
+    background-color: #EAF1F3;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.panele > ul{
+    list-style-type: none;
 }
 
 #naglowek{
     width: 100%;
     height: 75px;
+    background-color: #EAF1F3;
     display: flex;
     display: inline-block;
 }
@@ -33,7 +58,6 @@
     width: 100%;
     height: 25px;
     font-size: 13px;
-    background-color: red;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -47,7 +71,6 @@
 #naglowek_drugi{
     width: 100%;
     height: 50px;
-    background-color: blue;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -71,9 +94,9 @@
 }
 
 #obraz_kontener{
-    width: 99%;
+    width: 100%;
     height: 120px;
-    background-color: orange;
+    background-color: #EAF1F3;
     display: flex;
 }
 
@@ -94,10 +117,14 @@
 }
 
 #tresc_kontener{
-    width: 99%;
+    width: 100%;
     height: 150px;
     display: flex;
     flex-direction: column;
+}
+
+#obramowanie{
+    border: 1px solid #4EC9EE;
 }
 
 #tresc_z_tabela{
@@ -105,7 +132,6 @@
     height: 150px;
     display: flex;
     flex-direction: row;
-    background-color: pink;
 }
 
 #tabela{
@@ -133,13 +159,17 @@
     text-align: center;
 }
 
+.pozycja{
+    background-color: #EAF1F3;
+}
+
 .Egipt{
     text-align: center;
 }
 
 .tresc{
     height: 150px;
-    background-color: blue;
+    background-color: white;
     padding: 5px;
     font-size: 17px;
 }
@@ -166,11 +196,12 @@
 }
 
 #dodatki_kontener{
+    width: 100%;
     height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: pink;
+    background-color: #EAF1F3;
 }
 
 #Sklad{
@@ -188,20 +219,26 @@
 #Kategorie{
     height: 50%;
     font-size: 13px;
-    border: solid 1px grey;
+    background-color: #EAF1F3;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    border: 1px solid grey;
+}
+
+#Kategorie > p{
+    padding: 2px;
 }
 
 #footer{
-    width: 99%;
-    background-color: green;
+    width: 100%;
+    background-color: #EAF1F3;
     font-size: 13px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 10px;
+    clear: both;
 }
 
 #f1, #f2, #f3{
@@ -210,7 +247,7 @@
 }
 
 #f3{
-    background-color: yellowgreen;
+    background-color: #EAF1F3;
     justify-content: flex-start;
 }
 
@@ -225,7 +262,7 @@
 }
 
 #foto_f3{
-    background-color: fuchsia;
+    background-color: #EAF1F3;
     width: 20%;
     display: flex;
     justify-content: flex-end;
@@ -235,6 +272,8 @@
 #foto_f3 > img{
     padding: 5px;
 }
+
+
 
 
 
