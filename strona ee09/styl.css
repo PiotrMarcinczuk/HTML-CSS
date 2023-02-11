@@ -1,0 +1,67 @@
+#container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #3A3C3D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Open Sans';
+}
+
+#start_list{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    background-color: #FE5058;
+    justify-content: center;
+    align-items: center;
+}
+
+#start_list > p{
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.naglowek{
+    width: 60%;
+    height: 12%; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 22px;
+    margin: 5px;
+}
+
+.naglowek > h1{
+    font-weight: lighter;
+    font-size: 55px;
+    margin-top: 90px;
+}
+
+.naglowek > p{
+    color: #BBBBBB;
+    margin: 5px;
+}
+
+#reklama{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 25%;
+    margin-top: 5px;
+}
+
+#czas{
+    font-size: 21px;
+    display: flex;
+    flex-direction: row;
+    color: #BBBBBB;
+}
+
+hr{
+    width: 60%;
+    border: 1px solid #FE5058;
+}
+
