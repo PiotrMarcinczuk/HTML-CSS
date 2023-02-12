@@ -1,6 +1,6 @@
 #container{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: #3A3C3D;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
 }
 
 .naglowek{
-    width: 60%;
+    width: 70%;
     height: 12%; 
     display: flex;
     flex-direction: column;
@@ -48,12 +48,13 @@
 #reklama{
     display: flex;
     justify-content: center;
-    width: 60%;
+    width: 70%;
     height: 25%;
     margin-top: 5px;
+    margin-bottom: 20px;
 }
 
-#czas{
+.czas{
     font-size: 21px;
     display: flex;
     flex-direction: row;
@@ -61,7 +62,159 @@
 }
 
 hr{
-    width: 60%;
+    width: 70%;
     border: 1px solid #FE5058;
 }
+
+#test_kontener{
+    width: 70%;
+    display: flex;
+}
+
+#test{
+    width: 70%;
+    font-size: 22px;
+    margin-top: 10px;
+    color: #908D8D;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.odp1{
+    margin: 8px;
+    padding: 5px;
+    background-color: #333333;
+}
+
+#reklama_test{
+    width: 30%;
+    padding: 10px;
+}
+
+#reklama_test > img{
+    width: 100%;
+    height: 100%;
+}
+
+.star{
+    font-size: 18px;
+    padding: 20px;
+    color: #BBBBBB;
+}
+
+#sprawdz{
+    width: 70%;
+    text-align: center;
+}
+
+.check{
+    width: 250px;
+    height: 60px;
+    font-size: 18px;
+    color: white;
+    background-color: #FE5058;
+    border: none;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#reklama_apart{
+    width: 70%;
+    height: 200px;
+}
+
+#reklama_apart > img{
+    width: 100%;
+    height: 100%;
+}
+
+#opis_kontener{
+    width: 70%;
+    height: 500px;
+    display: flex;
+    color: #908D8D;
+}
+
+#O_nas{
+    width: 40%;
+}
+
+.nav{
+    font-size: 19px;
+    color: #F0EDED;
+}
+
+#foto{
+    width: 35%;
+}
+
+#foto > h3{
+    padding-left: 30px;
+}
+
+#foto_1{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#foto_1 > img{
+    width: 40%;
+    padding: 3px;
+}
+
+#foto_2{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#foto_2 > img{
+    width: 20%;
+    padding: 3px;
+}
+
+#foto_3{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#foto_3 > img{
+    width: 20%;
+    padding: 3px;
+}
+
+#linki{
+    width: 25%;
+}
+
+.znacznik{
+    font-size: 19px;
+}
+
+#footer{
+    width: 100%; 
+    color: #908D8D;
+    background-color: #262626;
+    display: flex;
+}
+
+#fot_1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#fot_2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#fot_2 > p{
+    padding: 5px;
+}
+
+
 
