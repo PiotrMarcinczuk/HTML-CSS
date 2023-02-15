@@ -10,17 +10,29 @@
 
 #start_list{
     width: 100%;
-    height: 10%;
+    max-height: 10%;
     display: flex;
     background-color: #FE5058;
     justify-content: center;
     align-items: center;
 }
 
-#start_list > p{
-    padding: 10px;
+#start_list > button{
+    height: 60px;
     font-size: 20px;
     color: white;
+    border: none;
+    background-color: #FE5058;
+    border: 1px solid #FE5058;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#start_list > button:hover{
+    color: #F82E2E;
+    background-color: #3A3C3D;
+    border: 1px solid black;
+    opacity: 0.9;
 }
 
 .naglowek{
@@ -37,7 +49,7 @@
 .naglowek > h1{
     font-weight: lighter;
     font-size: 55px;
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 .naglowek > p{
@@ -84,6 +96,17 @@ hr{
     margin: 8px;
     padding: 5px;
     background-color: #333333;
+    border: #333333 1px solid;
+}
+
+.odp1_pytanie{
+    margin: 8px;
+    padding: 5px;
+    background-color: #333333;
+}
+
+.odp1:hover{
+    border: #36E5F6 1px solid;
 }
 
 #reklama_test{
@@ -110,6 +133,10 @@ hr{
     width: 70%;
     padding: 15px;
     text-align: center;
+}
+
+.check:hover{
+    background-color: #E04C3C;
 }
 
 .check{
@@ -233,8 +260,9 @@ hr{
         align-items: center;
     }
 
-    #start_list > p{
+    #start_list > button{
         font-size: 8px;
+        max-width: 60px;
         color: white;
     }
 
@@ -296,9 +324,11 @@ hr{
     #fot_2{
         width: 100%;
     }
-
-
 }
+
+
+
+
 
 
 
