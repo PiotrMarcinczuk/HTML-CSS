@@ -3,6 +3,7 @@ body{
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    background-color: #dad9d1;
 }
 
 #container{
@@ -11,7 +12,6 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: #fff718;
 }
 
 #nav{
@@ -51,6 +51,7 @@ body{
     height: 800px;
     display: flex;
     flex-direction: row;
+    background-color: #fff718;
 }
 
 
@@ -104,7 +105,9 @@ hr{
 
 #center_down{
     height: 65%;
+    padding-bottom: 50px;
 }
+
 
 .center_items{
     text-decoration: none;
@@ -115,6 +118,7 @@ hr{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    overflow: hidden;
 }
 
 #cm > img{
@@ -132,8 +136,84 @@ hr{
 }
 #paper_2{
     transform: translate(40%,-5%);
-
 }
+
+#bar{
+    background-image: url(images/bot-bar.png);
+    width: 100%;
+    height: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#bottom{
+    width: 100%;
+    background-color: #dad9d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#bottom_help{
+    width: 60%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+h3{
+    font-weight: normal;
+}
+
+#bottom_left{
+    width: 33%;
+    background-image: url(images/back1.jpg);
+    color: white;
+    padding: 30px;
+}
+#bottom_center{
+    width: 33%;
+    background-image: url(images/back2.jpg);
+    color: white;
+    padding: 30px;
+}
+#bottom_right{
+    width: 33%;
+    background-image: url(images/back3.jpg);
+    color: black;
+    padding: 30px;
+}
+
+#footer{
+    width: 60%;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: #9999a7;
+    margin-top: 20px;
+}
+
+#footer > hr{
+    border:  1px dashed #D3971E;
+    width: 100%;
+}
+
+#foot_1{
+    width: 50%;
+}
+
+#foot_1 > p > a{
+    text-decoration: none;
+    color: #9999a7;
+}
+
+#foot_2{
+    text-align: right;
+    width: 50%;
+}
+
+
 
 
 
