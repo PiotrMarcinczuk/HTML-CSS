@@ -222,6 +222,10 @@ h3{
     display: none;
 }
 
+#media_img{
+    display: none;
+}
+
 @media screen and (max-width: 850px){
     #container{
         width: 100%;
@@ -251,9 +255,11 @@ h3{
 
     #nav_bar{
         width: 50%;
+        height: auto;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        overflow: auto;
     }
 
     #nav_bar > img{
@@ -266,12 +272,151 @@ h3{
         display: none;
     }
 
-    #clew{
-        
+    #main{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #fff718;
+    }
+
+    #center{
+        width: 100%;
+        height: 100%;
+        margin-top: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #center_up{
+        display: flex;
+        height: 10%;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    #left{
+        display: none;
+    }
+
+    #right{
+        display: none;
+    }
+
+    #center_center{
+        display: none;
+    }
+
+    #center_up > h1, h2{
+        font-size: 16px;
+        font-weight: normal;
+        margin: 0;
     }
     
-    #paper_1{
-  
+    #center_up > h2{
+        color: #db214a;
+        margin: 0;
+    }
+    
+    #media_img{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        position: relative;
+    }
+
+    .one{
+        width: 40%;
+        height: 30%;
+        position: absolute;
+        overflow: hidden;
+        top: -25px;
+    }
+    .two{
+        width: 60%;
+        height: 45%;
+        position: absolute;
+        overflow: hidden;
+        top: 100px;
+        right: 80px;
+    }
+    .tree{
+        width: 60%;
+        height: 50%;
+        position: absolute;
+        overflow: hidden;
+        top: 10px;
+        right: -40px;
+    }
+
+    .fort{
+        width: 30%;
+        height: 35%;
+        position: absolute;
+        overflow: hidden;
+        top: 40px;
+        left: -5px;
+    }
+    
+    #center_down{
+        height: 25%;
+        padding-bottom: 5px;
+        display: none;
+    }
+
+    hr{
+        display: none;
+    }
+
+    #bottom_help{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #bottom_left{
+        width: 100%;
+        background-image: url(images/back1.jpg);
+        color: white;
+    }
+    #bottom_center{
+        width: 100%;
+        background-image: url(images/back2.jpg);
+        color: white;
+    }
+    #bottom_right{
+        width: 100%;
+        background-image: url(images/back3.jpg);
+        color: black;
+    }
+
+    #footer{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 13px;
+        color: #9999a7;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    #footer > hr{
+        border:  1px dashed #D3971E;
+        width: 100%;
+    }
+    
+    #foot_1 > p > a{
+        text-decoration: none;
+        color: #9999a7;
+    }
+    
+    #foot_2{
+        display: none;
     }
 }
 
