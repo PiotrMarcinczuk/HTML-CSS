@@ -39,6 +39,11 @@ body{
     align-items: center;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 .nav_select{
     margin: 20px;
     padding: 3px;
@@ -242,6 +247,9 @@ h3{
         background-image: url(images/menu.png);
         display: flex;
         justify-content: flex-start;
+    }
+    #nav > a{
+        text-decoration: none;
     }
 
     #nav_logo{
