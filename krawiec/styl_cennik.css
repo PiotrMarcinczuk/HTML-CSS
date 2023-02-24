@@ -121,17 +121,42 @@ hr{
 }
 
 #page{
-    width: 33%;
+    width: 70%;
     background-color: white;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#page_1 > ul{
+.page_part > ul{
     list-style-type: none;
+    text-align: left;
+    line-height: 30px;
+}
+
+li{
+    border-bottom: 1px solid #d6d6d6;
+    margin: 5 px;
 }
 
 .price{
     float: right;
+    background-color: #db214a;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    color: white;
 }
+
+.page_part{
+    margin: 7px;
+    width: 32%;
+}
+
+.page_part > h2{
+    font-weight: normal;
+    margin-left: 40px;
+}
+
 
 @media screen and (max-width: 850px){
     #container{
