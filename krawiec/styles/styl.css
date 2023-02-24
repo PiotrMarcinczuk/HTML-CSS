@@ -22,7 +22,7 @@ body{
     justify-content: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    background-image: url(images/menu.png);
+    background-image: url(../images/menu.png);
 }
 
 #nav_logo{
@@ -147,7 +147,7 @@ hr{
 }
 
 #bar{
-    background-image: url(images/bot-bar.png);
+    background-image: url(../images/bot-bar.png);
     width: 100%;
     height: 15px;
     margin-top: 5px;
@@ -175,19 +175,19 @@ h3{
 
 #bottom_left{
     width: 33%;
-    background-image: url(images/back1.jpg);
+    background-image: url(../images/back1.jpg);
     color: white;
     padding: 30px;
 }
 #bottom_center{
     width: 33%;
-    background-image: url(images/back2.jpg);
+    background-image: url(../images/back2.jpg);
     color: white;
     padding: 30px;
 }
 #bottom_right{
     width: 33%;
-    background-image: url(images/back3.jpg);
+    background-image: url(../images/back3.jpg);
     color: black;
     padding: 30px;
 }
@@ -244,7 +244,7 @@ h3{
         width: 100%;
         color: white;
         height: 100px;
-        background-image: url(images/menu.png);
+        background-image: url(../images/menu.png);
         display: flex;
         justify-content: flex-start;
     }
@@ -388,17 +388,17 @@ h3{
 
     #bottom_left{
         width: 100%;
-        background-image: url(images/back1.jpg);
+        background-image: url(../images/back1.jpg);
         color: white;
     }
     #bottom_center{
         width: 100%;
-        background-image: url(images/back2.jpg);
+        background-image: url(../images/back2.jpg);
         color: white;
     }
     #bottom_right{
         width: 100%;
-        background-image: url(images/back3.jpg);
+        background-image: url(../images/back3.jpg);
         color: black;
     }
 
