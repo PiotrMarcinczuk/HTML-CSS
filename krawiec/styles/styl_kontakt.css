@@ -63,6 +63,150 @@ a{
     padding: 5px 15px 5px 15px;
 }
 
+#main{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff718;
+}
+
+#left{
+    width: 30%;
+    height: 100%;
+}
+
+#center{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#center_item{
+    text-align: center;
+    transform: translate(0px, 80px);
+}
+
+#right{
+    width: 30%;
+    height: 100%;
+    text-align: right;
+}
+
+#left > img, #right > img{
+    width: 85%;
+    height: 100%;
+}
+
+hr{
+    border: 1px solid #db214a;
+}
+
+#bar{
+    background-image: url(../images/bot-bar.png);
+    width: 100%;
+    height: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#bottom{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+#bot_1{
+    width: 65%;
+    height: 650px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#map{
+    width: 100%;
+    padding: 30px;
+}
+
+#map > iframe{
+    width: 100%;
+    border: 0;
+}
+
+#opis{
+    width: 20%;
+    height: 80%;
+    font-size: 14px;
+    padding: 0px 20px 20px 30px;
+}
+
+.f1{
+    color: #db214a;
+    font-weight: bold;
+}
+
+#foto{
+    width: 27%;
+    height: 80%;
+    text-align: center;
+    margin: 0px 15px 0px 15px;
+}
+
+#formularz{ 
+    width: 40%;
+    height: 80%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#formularz > h1{
+    margin: 0;
+}
+
+.formsy{
+    border: 1px #db214a solid;
+    margin-left: 10px;
+    width: 70%;
+    height: 15px;
+    float: right;
+}
+
+#wiadomosc{
+    height: 250px;
+}
+
+#footer{
+    width: 65%;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: #9999a7;
+    margin-top: 10px;
+}
+
+#footer > hr{
+    border:  1px dashed #D3971E;
+    width: 100%;
+}
+
+#foot_1{
+    width: 50%;
+}
+
+#foot_1 > p > a{
+    text-decoration: none;
+    color: #9999a7;
+}
+
+#foot_2{
+    text-align: right;
+    width: 50%;
+}
+
 @media screen and (max-width: 850px){
     #container{
         width: 100%;
@@ -107,6 +251,90 @@ a{
     }
 
     #nav_span{
+        display: none;
+    }
+
+    #main{
+        height: 200px;
+    }
+
+    #left{
+        display: none;
+    }
+
+    #right{
+        display: none;
+    }
+
+    #center{
+        width: 100%;
+        transform: translate(0px,-40px);
+        height: 50px;
+    }
+
+    #bottom{
+        width: 100%;
+        height: 1400px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #bot_1{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #opis{
+        width: 100%;
+        height: 20%;
+    }
+
+    #foto{
+        width: 100%;
+        text-align: left;
+        height: 30%;
+    }
+
+    #formularz > form > h1{
+        font-size: 20px;
+        text-align: left;
+    }
+
+    #formularz > form{
+        width: 100%;
+    }
+
+    #formularz{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #formularz > span{
+        text-align: left;
+    }
+
+    .formsy{
+        text-align: left;
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    #footer{
+        width: 100%;
+    }
+
+    #foot_1{
+        width: 100%;
+        padding: 5px;
+    }
+
+    #foot_2{
+        width: 0;
+        height: 0;
         display: none;
     }
 }
