@@ -7,12 +7,11 @@ body{
 }
 
 #container{
-    width: 100vw;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-
 }
 
 #nav{
@@ -27,9 +26,6 @@ body{
     background-color: #fff718;
     background-repeat: repeat-x;
     z-index: 998;
-    top: 0;
-    left: 0;
-    right: 0;
 }
 
 #nav_logo{
@@ -45,7 +41,7 @@ body{
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 1px;
+    right: 300px;
 }
 
 a{
@@ -66,33 +62,34 @@ a{
 
 #main{
     width: 100%;
-    height: 1000px;
-    display: flex;
-    flex-direction: row;
+    height: 950px;
     background-color: #fff718;
 }
 
-#left{
-    width: 25%;
-    height: 1000px;
-}
-
-#clew{
-    transform: translate(80px, -120px);
-}
-
-#paper_1{
-    transform: translate(-140px, -110px);
-}
-
 #center{
-    width: 50%;
-    height: 1000px;
-    margin-top: 20px;
+    width: 100%;
+    height: 300px;
+    margin: 150px 150px 50px 0px;
     text-align: center;
-    justify-content: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: normal;
+}
+
+h2{
+    font-size: 30px;
+    font-weight: normal;
+    color: #db214a;
+}
+
+#center > p{
+    width: 550px;
 }
 
 hr{
@@ -100,85 +97,58 @@ hr{
     border: 1px solid #db214a;
 }
 
-#center_up{
-    height: 50px;
-}
-
-#center_up > h1, h2{
-    font-size: 36px;
-    font-weight: normal;
-}
-
-#center_up > h2{
-    color: #db214a;
-}
-
-#center_center{
-    width: 600px;
-    height: 550px;
-    margin-top: 250px;
-}
-
-#center_down{
+.scissors{
     position: absolute;
-    left: 25%;
-    top: 663px;
-
+    top: 180px;
 }
 
-.center_items{
-    text-decoration: none;
-}
-
-#right{
-    width: 25%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    overflow: hidden;
-}
-
-#cm > img{
-    width: 70%;
-    height: 80%;
-}
-
-#cm{
-    transform: translate(30%,-80px);
-    display: none;
-}
-
-#ball{
+.clew{
     position: absolute;
-    right: 300px;
-    top: 70px;
+    top: 420px;
+    left: 100px;
 }
 
-#ruler{
+.paper_ruler{
     position: absolute;
-    width: 355px;
-    height: 280px;
-    top: 240px;
+    bottom: -145px;
+    left: -150px;
+}
+
+.draft_1{
+    position: absolute;
+    left: 650px;
+    bottom: -145px;
+}
+
+.ball{
+    position: absolute;
+    top: 80px;
+    right: 200px;
+    z-index: 1;
+}
+
+.ruler{
+    position: absolute;
+    top: 200px;
     right: 0px;
 }
 
-#ruler > img{
-    width: 355px;
-    height: 280px;
+.cm{
+    position: absolute;
+    right: 0px;
+    top: 480px;
+    height: 200px;
 }
 
-#paper_2 > img{
-    width: 80%;
-    height: 90%;
-}
-#paper_2{
-    transform: translate(40%,-5%);
-    display: none;
+.draft_2{
+    position: absolute;
+    right: -150px;
+    bottom: -175px;
 }
 
 #bar{
     background-image: url(../images/bot-bar.png);
-    width: 100%;
+    background-repeat: repeat-x;
     height: 15px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -254,10 +224,6 @@ h3{
 #nav_bar{
     width: 0px;
     height: 0px;
-    display: none;
-}
-
-#media_img{
     display: none;
 }
 
