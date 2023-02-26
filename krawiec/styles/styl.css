@@ -7,22 +7,29 @@ body{
 }
 
 #container{
-    width: 100%;
+    width: 100vw;
     height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
+
 }
 
 #nav{
     width: 100%;
     color: white;
-    height: 100px;
+    height: 105px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
     background-image: url(../images/menu.png);
+    background-color: #fff718;
+    background-repeat: repeat-x;
+    z-index: 998;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 #nav_logo{
@@ -37,6 +44,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    right: 1px;
 }
 
 a{
@@ -57,7 +66,7 @@ a{
 
 #main{
     width: 100%;
-    height: 800px;
+    height: 1000px;
     display: flex;
     flex-direction: row;
     background-color: #fff718;
@@ -78,9 +87,9 @@ a{
 
 #center{
     width: 50%;
-    margin-top: 50px;
+    height: 1000px;
+    margin-top: 20px;
     text-align: center;
-    align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -92,8 +101,7 @@ hr{
 }
 
 #center_up{
-    height: 25%;
-    padding-top: 75px;
+    height: 50px;
 }
 
 #center_up > h1, h2{
@@ -107,15 +115,16 @@ hr{
 
 #center_center{
     width: 600px;
-    height: 10%;
-    margin: 20px;
+    height: 550px;
+    margin-top: 250px;
 }
 
 #center_down{
-    height: 65%;
-    padding-bottom: 50px;
-}
+    position: absolute;
+    left: 25%;
+    top: 663px;
 
+}
 
 .center_items{
     text-decoration: none;
@@ -136,6 +145,26 @@ hr{
 
 #cm{
     transform: translate(30%,-80px);
+    display: none;
+}
+
+#ball{
+    position: absolute;
+    right: 300px;
+    top: 70px;
+}
+
+#ruler{
+    position: absolute;
+    width: 355px;
+    height: 280px;
+    top: 240px;
+    right: 0px;
+}
+
+#ruler > img{
+    width: 355px;
+    height: 280px;
 }
 
 #paper_2 > img{
@@ -144,6 +173,7 @@ hr{
 }
 #paper_2{
     transform: translate(40%,-5%);
+    display: none;
 }
 
 #bar{
@@ -231,7 +261,7 @@ h3{
     display: none;
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 715px){
     #container{
         width: 100%;
         height: 100%;
@@ -426,6 +456,13 @@ h3{
     #foot_2{
         display: none;
     }
+}
+
+@media screen and (max-width: 1200px){
+    #ruler{
+        display: none;
+    }
+
 }
 
 
