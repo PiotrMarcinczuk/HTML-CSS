@@ -1,0 +1,56 @@
+$background_color: #1e1e1e;
+$nav_color: #171614;
+$h_color: #E1DEDA;
+$default_font: 'Kanit', sans-serif;
+
+body{
+    background-color: $background_color;
+    font-family: $default_font;
+    margin: 0;
+    padding: 0;
+  }
+
+  @mixin font($font_color: #E1DEDA){
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: $font_color;
+}
+
+nav{
+    width: 100%;
+    height: 150px;
+    background-color: $nav_color;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    overflow: hidden;
+    h1{
+        height: 150px;
+        margin-top: 25px;
+    }
+  }
+  
+  #nav_logo{
+    width: 50%;
+    height: 100%;
+    color: $h_color;
+    font-size: 60px;
+  }
+
+  main{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #opis{
+    width: 50%;
+    height: 300px;
+    padding: 5px;
+    background-color: $nav_color;
+    font-weight: normal;
+    span{
+        color: #010101;
+    }
+    @include font($font_color: #000000)
+  }
