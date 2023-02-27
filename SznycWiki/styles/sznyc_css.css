@@ -14,16 +14,27 @@ nav {
   padding-left: 25px;
   overflow: hidden;
 }
-nav h1 {
-  height: 150px;
-  margin-top: 25px;
-}
-
-#nav_logo {
+nav #nav_logo {
   width: 50%;
   height: 100%;
   color: #E1DEDA;
   font-size: 60px;
+}
+nav #nav_bar {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+nav #nav_bar button {
+  font-size: 25px;
+  font-family: "Kanit", sans-serif;
+  background: #171614;
+  border: 0;
+}
+nav h1 {
+  height: 150px;
+  margin-top: 25px;
 }
 
 main {
@@ -61,8 +72,21 @@ main #opis a {
   color: #000000;
   text-decoration: none;
 }
+main #opis h3 {
+  font-size: 30px;
+}
 main #opis span {
   color: #010101;
+}
+main #historia {
+  width: 33%;
+  height: auto;
+  background-color: #171614;
+  padding: 10px;
+  margin: 10px;
+  position: absolute;
+  right: 40px;
+  top: 360px;
 }
 
 footer {
