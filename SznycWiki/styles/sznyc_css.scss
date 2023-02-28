@@ -24,7 +24,7 @@ body{
 //    Nagłówek i jakieś bajery
 nav{
     width: 100%;
-    height: 150px;
+    height: 100px;
     background-color: $nav_color;
     display: flex;
     align-items: center;
@@ -94,11 +94,16 @@ nav{
         width: 70%;
         background-color: $nav_color;
         padding: 4px;
+        height: auto;
         a{
             text-decoration: none;
             color: black;
             font-weight: bold;
             font-size: 18px;
+        }
+
+        ul{
+            font-size: 20px;
         }
 
         .wiki_div{
@@ -107,15 +112,36 @@ nav{
 
         #wstepny_opis_postaci{
             width: 50%;
+            margin: 0; 
+            height: 200px;
         }
 
         #zdjecie_postaci{
             width: 50%;
+            height: auto;
+            position: absolute;
+            right: -350px;
+            top: 160px;
+            overflow: hidden;
+            font-size: 14px;
+            a{
+                font-size: 15px;
+            }
+
+            img{
+                border: 1px solid black;
+            }
+
+            img :hover{
+                transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+                -moz-transform: scale(1.2);
+                z-index: 0;
+            }
         }
 
         hr{
             border: 1px solid #CB7A7A;
-            
         }
     }
   }

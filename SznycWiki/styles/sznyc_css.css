@@ -11,7 +11,7 @@ body {
 
 nav {
   width: 100%;
-  height: 150px;
+  height: 100px;
   background-color: #171614;
   display: flex;
   align-items: center;
@@ -74,6 +74,7 @@ main #opis {
   width: 70%;
   background-color: #171614;
   padding: 4px;
+  height: auto;
 }
 main #opis a {
   text-decoration: none;
@@ -81,14 +82,37 @@ main #opis a {
   font-weight: bold;
   font-size: 18px;
 }
+main #opis ul {
+  font-size: 20px;
+}
 main #opis .wiki_div {
   padding: 8px;
 }
 main #opis #wstepny_opis_postaci {
   width: 50%;
+  margin: 0;
+  height: 200px;
 }
 main #opis #zdjecie_postaci {
   width: 50%;
+  height: auto;
+  position: absolute;
+  right: -350px;
+  top: 160px;
+  overflow: hidden;
+  font-size: 14px;
+}
+main #opis #zdjecie_postaci a {
+  font-size: 15px;
+}
+main #opis #zdjecie_postaci img {
+  border: 1px solid black;
+}
+main #opis #zdjecie_postaci img :hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  z-index: 0;
 }
 main #opis hr {
   border: 1px solid #CB7A7A;
