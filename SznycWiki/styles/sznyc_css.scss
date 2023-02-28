@@ -84,70 +84,38 @@ nav{
   main{
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 70%;
-    margin-top: 15px;
-
-    #imie{
-        width: 100%;
-        height: 80px;
-        text-align: center;
-        margin-bottom: 25px;
-        h2{
-            font-size: 56px;
-            margin: 0;
-        }
-    }
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: $background_color;
+    margin-top: 50px;
 
     #opis{
-        width: 30%;
-        height: auto;
-        padding: 5px;
-        margin: 5px;
-        font-weight: normal;
+        width: 70%;
         background-color: $nav_color;
-        box-shadow: 3px 3px 3px;
-        
+        padding: 4px;
         a{
+            text-decoration: none;
+            color: black;
             font-weight: bold;
-            @include font($font_color: #000000)
+            font-size: 18px;
         }
 
-        span{
-            color: #010101;
+        .wiki_div{
+            padding: 8px;
         }
-        @include font($font_color: #000000)
-    }
 
-    #historia{
-        width: 30%;
-        height: auto;
-        padding: 5px;
-        margin: 5px;
-        background-color: $nav_color;
-        box-shadow: 3px 3px 3px;
-    }
-
-    #osiagniecia{
-        width: 50%;
-        padding: 5px;
-        margin: 5px;
-        background-color: $nav_color;
-        box-shadow: 3px 3px 3px;
-        li{
-            margin: 10px;
+        #wstepny_opis_postaci{
+            width: 50%;
         }
-    }
 
-    #wydarzenia{
-        width: 50%;
-        padding: 5px;
-        margin: 5px;
-        background-color: $nav_color;
-        box-shadow: 3px 3px 3px;
-        li{
-            margin: 10px;
+        #zdjecie_postaci{
+            width: 50%;
+        }
+
+        hr{
+            border: 1px solid #CB7A7A;
+            
         }
     }
   }
@@ -247,12 +215,6 @@ nav{
     
     main{
         width: 100%;
-        #imie{
-            height: 10%;
-            h2{
-                font-size: 30px;
-            }
-        }
         #opis{
             width: 100%;
         }
