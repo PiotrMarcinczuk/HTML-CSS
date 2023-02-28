@@ -16,15 +16,16 @@ nav {
   display: flex;
   align-items: center;
   padding-left: 25px;
-  overflow: hidden;
 }
 nav #nav_logo {
   width: 50%;
   height: 100%;
   color: #E1DEDA;
   font-size: 60px;
-  display: flex;
-  align-items: center;
+  text-align: left;
+}
+nav #nav_logo h1 {
+  margin: 0;
 }
 nav #nav_span {
   width: 50%;
@@ -66,6 +67,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
   background-color: #1e1e1e;
   margin-top: 50px;
@@ -75,6 +77,7 @@ main #opis {
   background-color: #171614;
   padding: 4px;
   height: auto;
+  box-shadow: 3px 3px 3px 0px;
 }
 main #opis a {
   text-decoration: none;
@@ -88,31 +91,32 @@ main #opis ul {
 main #opis .wiki_div {
   padding: 8px;
 }
-main #opis #wstepny_opis_postaci {
-  width: 50%;
-  margin: 0;
-  height: 200px;
+main #opis #opis_postaci {
+  width: 95%;
+  margin: 0px;
+  height: 280px;
+  display: flex;
 }
-main #opis #zdjecie_postaci {
+main #opis #opis_postaci #wstepny_opis {
+  width: 70%;
+  margin-right: 20px;
+}
+main #opis #opis_postaci #zdjecie_postaci {
   width: 50%;
   height: auto;
-  position: absolute;
-  right: -350px;
-  top: 160px;
-  overflow: hidden;
+  text-align: right;
   font-size: 14px;
 }
-main #opis #zdjecie_postaci a {
+main #opis #opis_postaci #zdjecie_postaci a {
   font-size: 15px;
 }
-main #opis #zdjecie_postaci img {
+main #opis #opis_postaci #zdjecie_postaci #postac_img {
   border: 1px solid black;
+  transition: transform 0.2s;
 }
-main #opis #zdjecie_postaci img :hover {
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  z-index: 0;
+main #opis #opis_postaci #zdjecie_postaci #postac_img :hover {
+  transform: scale(1.5);
+  background-color: red;
 }
 main #opis hr {
   border: 1px solid #CB7A7A;

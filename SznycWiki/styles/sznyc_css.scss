@@ -29,15 +29,16 @@ nav{
     display: flex;
     align-items: center;
     padding-left: 25px;
-    overflow: hidden;
 
     #nav_logo{
         width: 50%;
         height: 100%;
         color: $h_color;
         font-size: 60px;
-        display: flex;
-        align-items: center;
+        text-align: left;
+        h1{
+            margin: 0;
+        }
     }
 
     #nav_span{
@@ -86,6 +87,7 @@ nav{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
     background-color: $background_color;
     margin-top: 50px;
@@ -95,6 +97,7 @@ nav{
         background-color: $nav_color;
         padding: 4px;
         height: auto;
+        box-shadow: 3px 3px 3px 0px;
         a{
             text-decoration: none;
             color: black;
@@ -110,34 +113,36 @@ nav{
             padding: 8px;
         }
 
-        #wstepny_opis_postaci{
-            width: 50%;
-            margin: 0; 
-            height: 200px;
+        #opis_postaci{
+            width: 95%;
+            margin: 0px; 
+            height: 280px;
+            display: flex;
+            
+            #wstepny_opis{
+                width: 70%;
+                margin-right: 20px;
+            }
+            
+            #zdjecie_postaci{
+                width: 50%;
+                height: auto;
+                text-align: right;
+                font-size: 14px;
+                a{
+                    font-size: 15px;
+                }
+    
+                #postac_img{
+                    border: 1px solid black;
+                    transition: transform .2s;
+                }
+    
+                #postac_img :hover{
+                    transform: scale(1.5);
+                    background-color: red;
+                }
         }
-
-        #zdjecie_postaci{
-            width: 50%;
-            height: auto;
-            position: absolute;
-            right: -350px;
-            top: 160px;
-            overflow: hidden;
-            font-size: 14px;
-            a{
-                font-size: 15px;
-            }
-
-            img{
-                border: 1px solid black;
-            }
-
-            img :hover{
-                transform: scale(1.2);
-                -webkit-transform: scale(1.2);
-                -moz-transform: scale(1.2);
-                z-index: 0;
-            }
         }
 
         hr{
