@@ -110,13 +110,16 @@ main #opis #opis_postaci #zdjecie_postaci {
 main #opis #opis_postaci #zdjecie_postaci a {
   font-size: 15px;
 }
-main #opis #opis_postaci #zdjecie_postaci #postac_img {
-  border: 1px solid black;
-  transition: transform 0.2s;
+main #opis #opis_postaci #zdjecie_postaci img {
+  border: 2px solid black;
+  transition: transform 0.5s;
+  overflow: hidden;
 }
-main #opis #opis_postaci #zdjecie_postaci #postac_img :hover {
-  transform: scale(1.5);
-  background-color: red;
+main #opis #opis_postaci #zdjecie_postaci img:hover {
+  transform: scale(1.2);
+}
+main #opis #opis_postaci #zdjecie_postaci img:hover figcaption {
+  display: none;
 }
 main #opis hr {
   border: 1px solid #CB7A7A;

@@ -133,16 +133,19 @@ nav{
                     font-size: 15px;
                 }
     
-                #postac_img{
-                    border: 1px solid black;
-                    transition: transform .2s;
+                img{
+                    border: 2px solid black;
+                    transition: transform .5s;
+                    overflow: hidden;
                 }
     
-                #postac_img :hover{
-                    transform: scale(1.5);
-                    background-color: red;
+                img:hover{
+                    transform: scale(1.2);
+                    figcaption{
+                        display: none;
+                    }
                 }
-        }
+            }
         }
 
         hr{
