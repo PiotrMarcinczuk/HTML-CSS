@@ -8,9 +8,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SznycWiki</title>
     </head>
-    <body>
+    <body class="download">
         <!--naglowek /start-->
         <nav>
             <section id="nav_logo">
@@ -20,13 +19,15 @@
                 <button type="button" data-target="nav_bar"><img src="./images/button.png" alt="guzik do rozwinięcia list"></button>
             </section>
             <section id="nav_span">
-                <button class="button_1">Strona Główna</button>
+                <button class="button_1"><a href="index.html">Strona Główna</a></button>
                 <hr>
                 <button class="button_1">O nas</button>
                 <hr>
                 <button class="button_1">Galeria</button>
                 <hr>
                 <button class="button_1">Kontakt</button>
+                <hr>
+                <button class="button_1"><a href="artykuly.html">Artykuły</a></button>
             </section>
             <div id="nav_bar">
                 
@@ -37,7 +38,12 @@
             <div id="opis">
                 <!--Wstępny opis postaci /start-->
                 <div id="wstep">
-                    <h3>Wojtek Szałkowski</h3>
+                    <h3><a href="sznyc.html" class="tytul">Wojtek Szałkowski</a></h3>
+                    <script>
+                        // let title = document.querySelector('.tytul').textContent;
+                        // console.log(title);
+                        // console.log(12);
+                    </script>
                     <div id="opis_postaci" class="wiki_div">
                         <span id="wstepny_opis">
                             Urodzony w 01.01.2001 prawdopodobnie w Elblągu, w którym dalej zamieszkuje na ulicy Wojciecha Kossaka, od wczesnych lat 
@@ -102,7 +108,6 @@
                 </div>
                 <!--Ciekawostki o postaci /koniec-->
             </div>
-            
         </main>
         <footer>
             <div class="footer_part">

@@ -55,6 +55,13 @@ nav #nav_span h1 {
   height: 150px;
   margin-top: 25px;
 }
+nav #nav_span a {
+  text-decoration: none;
+  color: black;
+}
+nav #nav_span a:hover {
+  color: white;
+}
 nav #button_mobile {
   display: none;
 }
@@ -85,8 +92,12 @@ main #opis a {
   font-weight: bold;
   font-size: 18px;
 }
+main #opis h3 a {
+  cursor: default;
+}
 main #opis ul {
   font-size: 20px;
+  list-style: square;
 }
 main #opis .wiki_div {
   padding: 8px;

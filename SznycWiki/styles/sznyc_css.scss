@@ -61,7 +61,8 @@ nav{
         }
 
         .button_1:hover{
-            color: white;
+            // usunac color bo skonczeniu bo dubluje
+            color: white; 
             transition-duration: 0.5s;
             transform: scale(1.2);
         }
@@ -69,6 +70,15 @@ nav{
         h1{
             height: 150px;
             margin-top: 25px;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover{
+            color: white;
         }
     }
 
@@ -80,7 +90,6 @@ nav{
         display: none;
     }
 }
-
 //   Main, główny kontent
   main{
     display: flex;
@@ -105,8 +114,15 @@ nav{
             font-size: 18px;
         }
 
+        h3{
+            a{
+                cursor: default;
+            }
+        }
+
         ul{
             font-size: 20px;
+            list-style: square;
         }
 
         .wiki_div{

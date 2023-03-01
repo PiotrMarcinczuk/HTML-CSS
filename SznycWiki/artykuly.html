@@ -9,11 +9,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
+    <body class="download">
         <!--naglowek /start-->
         <nav>
             <section id="nav_logo">
                 <h1>SznycWiki</h1>
+                <h3><a href="sznyc.html" class="tytul">Wojtek Sd</a></h3>
             </section>
             <section id="button_mobile">
                 <button type="button" data-target="nav_bar"><img src="./images/button.png" alt="guzik do rozwinięcia list"></button>
@@ -33,5 +34,25 @@
                 
             </div>
         </nav>
+        <main>
+            <!--Pojemnik na wszystkie artykuly /start-->
+            <div id="opis">
+                <script>
+                    let output = document.querySelectorAll('.download');
+                    const tab = [];
+                    for (let i = 0; i < output.length; i++){
+                        console.log(i);
+                        let title = output[i].querySelector('.tytul');
+                        if (title){
+                            let content = title.textContent;
+                            tab.push(title);
+                        }
+                    }
+                    console.log(tab)
+
+                </script>
+            </div>
+            <!--Pojemnik na wszystkie artykuly /koniec-->
+        </main>
     </body>
 </html>
