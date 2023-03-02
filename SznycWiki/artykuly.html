@@ -40,18 +40,19 @@
         </main>
         <script>
             let content_div = document.getElementById("opis");
-            let pages = ['sznyc.html','index.html'];
-                let titles = [];
+            let pages = [{url: 'sznyc.html', title: ''},{url: 'index.html', title: ''}];
+            let titles = [];
             async function fetchTitles(){
                 for(let i = 0; i < pages.length; i++){
-                    let page = pages[i];
+                    let page = pages[i].url;
                     let url = new URL(page, window.location.href);
                     const response = await fetch(url);
                     let text = await response.text();
                     const parser = new DOMParser();
                     let htmlDocument = parser.parseFromString(text, 'text/html');
                     let titleElement = htmlDocument.querySelector('.tytul');
-                    const title = titleElement.textContent;
+                    let title = titleElement.textContent;
+                    pages[i].title = title;
                     titles.push(title);
                 }  
                 return titles;
@@ -61,17 +62,16 @@
                 titles.sort(function(x,y) {
                     return x.localeCompare(y);
                 });
+                
                 for (let i = 0; i < titles.length; i++){
-                    let title_div = document.createElement("div");
-                    title_div.textContent = titles[i];
+                    let title = titles[i];
+                    let page = pages.find(p => p.title === title);
+                    let title_div = document.createElement("a");
+                    title_div.href = page.url;
+                    title_div.textContent = title;
                     content_div.appendChild(title_div);
                 } 
             });
-
-            
-
-
-           
         </script>
 
     </body>
