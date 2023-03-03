@@ -39,10 +39,16 @@
             <!--Pojemnik na wszystkie artykuly /koniec-->
         </main>
         <script>
-            let content_div = document.getElementById("opis");
             let pages = [{url: 'sznyc.html', title: ''},{url: 'index.html', title: ''}];
-            let titles = [];
+            
+            window.addEventListener('load', function(){
+                fetchTitles();
+            })
+            
             async function fetchTitles(){
+                let content_div = document.getElementById("opis");
+                let titles = [];
+
                 for(let i = 0; i < pages.length; i++){
                     let page = pages[i].url;
                     let url = new URL(page, window.location.href);
@@ -55,23 +61,37 @@
                     pages[i].title = title;
                     titles.push(title);
                 }  
-                return titles;
-            }
 
-            fetchTitles().then(titles => {
                 titles.sort(function(x,y) {
                     return x.localeCompare(y);
                 });
                 
+                let letters = [];
+                content_div.innerHTML = '';
+
                 for (let i = 0; i < titles.length; i++){
                     let title = titles[i];
                     let page = pages.find(p => p.title === title);
+                    let first = title.charAt(0).toUpperCase();
+
+                    if (!letters.includes(first)){
+                        letters.push(first);
+                        let header_div = document.createElement("div");
+                        header_div.textContent = first;
+                        content_div.appendChild(header_div);
+                        header_div.style.margin = "20px 0 0 0";
+                    }
+                    let hr = document.createElement("hr");
+                    content_div.appendChild(hr);
+
                     let title_div = document.createElement("a");
                     title_div.href = page.url;
                     title_div.textContent = title;
+                    title_div.style.display = "inline";
                     content_div.appendChild(title_div);
-                } 
-            });
+                    content_div.appendChild(hr);
+                }  
+            }
         </script>
 
     </body>
