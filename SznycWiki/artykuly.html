@@ -39,7 +39,7 @@
             <!--Pojemnik na wszystkie artykuly /koniec-->
         </main>
         <script>
-            let pages = [{url: 'sznyc.html', title: ''},{url: 'index.html', title: ''}];
+            let pages = [{url: 'sznyc.html', title: ''},{url: 'index.html', title: ''},{url: 'test.html', title: ''}];
             
             window.addEventListener('load', function(){
                 fetchTitles();
@@ -67,6 +67,7 @@
                 });
                 
                 let letters = [];
+                let list = document.createElement("ul");
                 content_div.innerHTML = '';
 
                 for (let i = 0; i < titles.length; i++){
@@ -79,18 +80,18 @@
                         let header_div = document.createElement("div");
                         header_div.textContent = first;
                         content_div.appendChild(header_div);
+                        list.appendChild(header_div);
                         header_div.style.margin = "20px 0 0 0";
                     }
-                    let hr = document.createElement("hr");
-                    content_div.appendChild(hr);
 
                     let title_div = document.createElement("a");
+                    let list_item = document.createElement("li");
                     title_div.href = page.url;
                     title_div.textContent = title;
-                    title_div.style.display = "inline";
-                    content_div.appendChild(title_div);
-                    content_div.appendChild(hr);
-                }  
+                    list_item.appendChild(title_div);
+                    list.appendChild(list_item);
+                    content_div.appendChild(list);
+                }     
             }
         </script>
 
