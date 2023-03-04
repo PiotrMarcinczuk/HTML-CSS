@@ -2,6 +2,7 @@ $background_color: #1e1e1e;
 $nav_color: #171614;
 $h_color: #E1DEDA;
 $default_font: 'Kanit', sans-serif;
+$font_color: #E6E9E8;
 
 body{
     background-color: $background_color;
@@ -14,12 +15,11 @@ body{
     align-items: center;
   }
 
-  @mixin font($font_color: #E1DEDA){
-    font-family: Arial, Helvetica, sans-serif;
+  @mixin font{
+    font-family: $default_font;
     font-size: 18px;
     color: $font_color;
-    text-decoration: none;
-   }  
+  }
 
 //    Nagłówek i jakieś bajery
 nav{
@@ -179,6 +179,7 @@ nav{
             border: 1px solid #CB7A7A;
         }
     }
+    @include font;
   }
 
 // Stopka i podpisy
@@ -291,7 +292,3 @@ nav{
         }
     }
 }
-
-
-  
- 
