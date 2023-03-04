@@ -110,6 +110,7 @@ nav{
         padding: 4px;
         height: auto;
         box-shadow: 3px 3px 3px 0px;
+        font-size: 20px;
         a{
             text-decoration: none;
             color: black;
@@ -131,21 +132,24 @@ nav{
         .wiki_div{
             padding: 8px;
         }
+        #wstep{
+            height: auto;
+        }
 
         #opis_postaci{
             width: 95%;
             margin: 0px; 
-            height: 280px;
+            height: auto;
             display: flex;
             
             #wstepny_opis{
                 width: 70%;
+                height: 100%;
                 margin-right: 20px;
             }
             
             #zdjecie_postaci{
                 width: 50%;
-                height: auto;
                 text-align: right;
                 font-size: 14px;
                 a{
@@ -153,13 +157,13 @@ nav{
                 }
     
                 img{
-                    border: 2px solid black;
+                    border: 1px solid black;
                     transition: transform .5s;
                     overflow: hidden;
                 }
     
                 img:hover{
-                    transform: scale(1.2);
+                    transform: scale(1.1);
                 }
 
                 figcaption{

@@ -89,6 +89,7 @@ main #opis {
   padding: 4px;
   height: auto;
   box-shadow: 3px 3px 3px 0px;
+  font-size: 20px;
 }
 main #opis a {
   text-decoration: none;
@@ -106,19 +107,22 @@ main #opis ul {
 main #opis .wiki_div {
   padding: 8px;
 }
+main #opis #wstep {
+  height: auto;
+}
 main #opis #opis_postaci {
   width: 95%;
   margin: 0px;
-  height: 280px;
+  height: auto;
   display: flex;
 }
 main #opis #opis_postaci #wstepny_opis {
   width: 70%;
+  height: 100%;
   margin-right: 20px;
 }
 main #opis #opis_postaci #zdjecie_postaci {
   width: 50%;
-  height: auto;
   text-align: right;
   font-size: 14px;
 }
@@ -126,12 +130,12 @@ main #opis #opis_postaci #zdjecie_postaci a {
   font-size: 15px;
 }
 main #opis #opis_postaci #zdjecie_postaci img {
-  border: 2px solid black;
+  border: 1px solid black;
   transition: transform 0.5s;
   overflow: hidden;
 }
 main #opis #opis_postaci #zdjecie_postaci img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 main #opis #opis_postaci #zdjecie_postaci figcaption {
   margin-top: 15px;
