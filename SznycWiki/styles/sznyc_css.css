@@ -60,7 +60,7 @@ nav #nav_span a {
   color: black;
 }
 nav #nav_span a:hover {
-  color: white;
+  color: #E6E9E8;
 }
 nav #button_mobile {
   display: none;
@@ -122,12 +122,14 @@ main #opis #opis_postaci {
 main #opis #opis_postaci #wstepny_opis {
   width: 70%;
   height: 100%;
-  margin-right: 20px;
 }
 main #opis #opis_postaci #zdjecie_postaci {
-  width: 50%;
+  width: 30%;
   text-align: right;
   font-size: 14px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
 }
 main #opis #opis_postaci #zdjecie_postaci a {
   font-size: 15px;
@@ -136,12 +138,19 @@ main #opis #opis_postaci #zdjecie_postaci img {
   border: 1px solid black;
   transition: transform 0.5s;
   overflow: hidden;
+  width: 60%;
+  height: 70%;
 }
 main #opis #opis_postaci #zdjecie_postaci img:hover {
   transform: scale(1.1);
 }
+main #opis #opis_postaci #zdjecie_postaci .place {
+  width: 80%;
+}
 main #opis #opis_postaci #zdjecie_postaci figcaption {
-  margin-top: 15px;
+  width: 60%;
+  margin-top: 20px;
+  text-align: center;
 }
 main #opis hr {
   border: 1px solid #CB7A7A;

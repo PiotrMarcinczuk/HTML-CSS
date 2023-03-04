@@ -78,7 +78,7 @@ nav{
         }
 
         a:hover{
-            color: white;
+            color: $font_color;
         }
     }
 
@@ -94,7 +94,6 @@ nav{
 .content_div{
     font-size: 44px;
 }
-
 
   main{
     display: flex;
@@ -144,17 +143,19 @@ nav{
             margin: 0px; 
             height: auto;
             display: flex;
-            
+
             #wstepny_opis{
                 width: 70%;
                 height: 100%;
-                margin-right: 20px;
             }
             
             #zdjecie_postaci{
-                width: 50%;
+                width: 30%;
                 text-align: right;
                 font-size: 14px;
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
                 a{
                     font-size: 15px;
                 }
@@ -163,14 +164,22 @@ nav{
                     border: 1px solid black;
                     transition: transform .5s;
                     overflow: hidden;
+                    width: 60%;
+                    height: 70%;
                 }
     
                 img:hover{
                     transform: scale(1.1);
                 }
 
+                .place{
+                    width: 80%;
+                }
+
                 figcaption{
-                    margin-top: 15px;
+                    width: 60%;
+                    margin-top: 20px;
+                    text-align: center;
                 }
             }
         }
