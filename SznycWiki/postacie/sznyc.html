@@ -25,7 +25,12 @@
 
                     function func(){
                         let div = document.querySelector("#nav_bar");
-                        div.style.display = "flex";
+                        if (div.style.display == "none"){
+                            div.style.display = "flex";
+                            console.log(2);
+                        }else{
+                            div.style.display = "none";
+                        }  
                     }
                 </script>
             </section>
@@ -40,9 +45,8 @@
                 <hr>
                 <button class="button_1"><a href="../artykuly.html">Artykuły</a></button>
             </section>
-        </nav>
-        <!--Rozwijana lista guzik /start-->
-        <section id="nav_bar">
+            <!--Rozwijana lista guzik /start-->
+            <section id="nav_bar">
             <ul>
                 <li><button class="button_1"><a href="../index.html">Strona Główna</a></button></li>
                 <li><button class="button_1">O nas</button></li>
@@ -50,8 +54,9 @@
                 <li><button class="button_1">Kontakt</button></li>
                 <li><button class="button_1"><a href="../artykuly.html">Artykuły</a></button></li>
             </ul>
-        </section>
-        <!--Rozwijana lista guzik /koniec-->
+            </section>
+            <!--Rozwijana lista guzik /koniec-->
+        </nav>
         <!--naglowek /koniec-->
         <main>
             <div id="opis">
