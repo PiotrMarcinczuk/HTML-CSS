@@ -16,6 +16,8 @@ nav {
   display: flex;
   align-items: center;
   padding-left: 25px;
+  position: fixed;
+  top: 0px;
 }
 nav #nav_logo {
   width: 50%;
@@ -81,7 +83,7 @@ main {
   flex-wrap: wrap;
   width: 100%;
   background-color: #1e1e1e;
-  margin-top: 50px;
+  margin-top: 80px;
   font-family: "Kanit", sans-serif;
   font-size: 18px;
   color: #E6E9E8;
@@ -97,7 +99,7 @@ main #opis {
   background-color: #171614;
   padding: 4px;
   height: auto;
-  box-shadow: 3px 3px 3px 0px;
+  box-shadow: 3px 3px 3px 0px black;
   font-size: 20px;
 }
 main #opis h3 a {
