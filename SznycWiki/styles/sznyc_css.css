@@ -242,24 +242,43 @@ footer #footer_part {
   }
   #nav_bar {
     display: none;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 300px;
-    background-color: red;
+    justify-content: center;
   }
-  #nav_bar ul li {
+  #nav_bar ul {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 90px 5px 0px 5px;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
+  }
+  #nav_bar ul li .button_1 {
+    background-color: #171614;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    margin: 5px 0px 5px 0px;
+  }
+  #nav_bar ul li .button_1 .button_1:hover {
+    color: white;
+    transition-duration: 0.5s;
+    transform: scale(1.1);
   }
   main {
     width: 100%;
+    margin-top: 10px;
   }
   main #opis {
-    width: 100%;
+    width: 95%;
     height: auto;
   }
   main #opis #wstep {
-    width: 95%;
+    width: 100%;
   }
   main #opis #opis_postaci {
     display: block;
