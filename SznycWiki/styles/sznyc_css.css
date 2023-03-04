@@ -7,6 +7,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 nav {
@@ -235,6 +236,9 @@ footer #footer_part {
   nav #nav_bar {
     display: none;
   }
+  nav .script_button:hover {
+    background-color: red;
+  }
   main {
     width: 100%;
   }
@@ -242,14 +246,15 @@ footer #footer_part {
     width: 100%;
     height: auto;
   }
+  main #opis #wstep {
+    width: 95%;
+  }
   main #opis #opis_postaci {
     display: block;
     width: 100%;
     height: 30%;
   }
-  main #zdjecie_postaci {
+  main #opis #opis_postaci #zdjecie_postaci {
     display: none;
-    height: 0;
-    width: 0;
   }
 }/*# sourceMappingURL=sznyc_css.css.map */

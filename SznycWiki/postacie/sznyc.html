@@ -16,7 +16,19 @@
                 <h1>SznycWiki</h1>
             </section>
             <section id="button_mobile">
-                <button type="button" data-target="nav_bar"><img src="../images/button.png" alt="guzik do rozwinięcia list"></button>
+                <button type="button" data-target="nav_bar" class="script_button"><img src="../images/button.png" alt="guzik do rozwinięcia list"></button>
+                <script>
+                    let guzik = document.querySelector('.script_button');
+                    guzik.addEventListener('click',function(){
+
+                    });
+
+                    function func(){
+                        let div = document.querySelector('#nav_bar');
+                        div.style.display = "show";
+
+                    }
+                </script>
             </section>
             <section id="nav_span">
                 <button class="button_1"><a href="../index.html">Strona Główna</a></button>
@@ -30,7 +42,13 @@
                 <button class="button_1"><a href="../artykuly.html">Artykuły</a></button>
             </section>
             <div id="nav_bar">
-                
+                <ul>
+                    <li><button class="button_1"><a href="../index.html">Strona Główna</a></button></li>
+                    <li><button class="button_1">O nas</button></li>
+                    <li><button class="button_1">Galeria</button></li>
+                    <li><button class="button_1">Kontakt</button></li>
+                    <li><button class="button_1"><a href="../artykuly.html">Artykuły</a></button></li>
+                </ul>
             </div>
         </nav>
         <!--naglowek /koniec-->
