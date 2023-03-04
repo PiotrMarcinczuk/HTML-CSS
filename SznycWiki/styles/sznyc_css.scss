@@ -94,6 +94,8 @@ nav{
 .content_div{
     font-size: 44px;
 }
+
+
   main{
     display: flex;
     justify-content: center;
@@ -104,6 +106,13 @@ nav{
     background-color: $background_color;
     margin-top: 50px;
 
+    a{
+        text-decoration: none;
+        color: #233858;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
     #opis{
         width: 70%;
         background-color: $nav_color;
@@ -111,12 +120,6 @@ nav{
         height: auto;
         box-shadow: 3px 3px 3px 0px;
         font-size: 20px;
-        a{
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            font-size: 18px;
-        }
 
         h3{
             a{
