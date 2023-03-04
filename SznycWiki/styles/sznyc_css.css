@@ -16,7 +16,6 @@ nav {
   background-color: #171614;
   display: flex;
   align-items: center;
-  padding-left: 25px;
   position: fixed;
   top: 0px;
 }
@@ -25,6 +24,7 @@ nav #nav_logo {
   height: 100%;
   color: #E1DEDA;
   font-size: 60px;
+  margin-left: 15px;
   text-align: left;
 }
 nav #nav_logo h1 {
@@ -68,7 +68,8 @@ nav #nav_span a:hover {
 nav #button_mobile {
   display: none;
 }
-nav #nav_bar {
+
+#nav_bar {
   display: none;
 }
 
@@ -188,7 +189,7 @@ footer #footer_part {
   nav #button_mobile {
     display: none;
   }
-  nav #nav_bar {
+  #nav_bar {
     display: none;
   }
   main {
@@ -204,9 +205,10 @@ footer #footer_part {
 @media screen and (max-width: 900px) {
   nav {
     width: 100%;
+    flex-wrap: wrap;
   }
   nav #nav_logo {
-    width: 80%;
+    width: 70%;
   }
   nav #nav_logo h1 {
     font-size: 50px;
@@ -216,14 +218,19 @@ footer #footer_part {
   }
   nav #button_mobile {
     background-color: #171614;
-    width: 20%;
+    width: 15%;
     height: 60%;
-    display: block;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 15px;
     cursor: pointer;
+  }
+  nav #button_mobile .script_button {
+    transition-duration: 0.5s;
+  }
+  nav #button_mobile .script_button:hover {
+    transform: scale(1.2);
   }
   nav #button_mobile img {
     width: 40px;
@@ -233,11 +240,16 @@ footer #footer_part {
     background-color: #171614;
     border: 0;
   }
-  nav #nav_bar {
+  #nav_bar {
     display: none;
-  }
-  nav .script_button:hover {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
     background-color: red;
+  }
+  #nav_bar ul li {
+    text-decoration: none;
   }
   main {
     width: 100%;
