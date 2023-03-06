@@ -48,9 +48,10 @@ nav #nav_span .button_1 {
   background-color: #171614;
   border: 0;
   cursor: pointer;
+  color: #E6E9E8;
 }
 nav #nav_span .button_1:hover {
-  color: white;
+  color: #E45429;
   transition-duration: 0.5s;
   transform: scale(1.2);
 }
@@ -60,10 +61,10 @@ nav #nav_span h1 {
 }
 nav #nav_span a {
   text-decoration: none;
-  color: black;
+  color: #E6E9E8;
 }
 nav #nav_span a:hover {
-  color: #E6E9E8;
+  color: #E45429;
 }
 nav #button_mobile {
   display: none;
@@ -272,13 +273,13 @@ footer #footer_part {
   }
   #nav_bar ul li .button_1 a {
     text-decoration: none;
-    color: black;
+    color: #E6E9E8;
   }
   #nav_bar ul li .button_1 a:hover {
-    color: white;
+    color: #E45429;
   }
   #nav_bar ul li .button_1:hover {
-    color: white;
+    color: #E45429;
     transition-duration: 0.5s;
   }
   main {

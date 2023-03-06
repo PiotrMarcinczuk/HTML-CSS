@@ -3,6 +3,7 @@ $nav_color: #171614;
 $h_color: #E1DEDA;
 $default_font: 'Kanit', sans-serif;
 $font_color: #E6E9E8;
+$hover_color: #E45429;
 
 body{
     background-color: $background_color;
@@ -61,11 +62,11 @@ nav{
             background-color: $nav_color;
             border: 0;
             cursor: pointer;
+            color: $font_color;
         }
 
         .button_1:hover{
-            // usunac color bo skonczeniu bo dubluje
-            color: white; 
+            color: $hover_color; 
             transition-duration: 0.5s;
             transform: scale(1.2);
         }
@@ -77,11 +78,11 @@ nav{
 
         a{
             text-decoration: none;
-            color: black;
+            color: $font_color;
         }
 
         a:hover{
-            color: $font_color;
+            color: $hover_color; 
         }
     }
 
@@ -319,17 +320,16 @@ nav{
                     margin: 5px 0px 5px 0px;
                     a{
                         text-decoration: none;
-                        color: black;
+                        color: $font_color;
                     }
-
                     a:hover{
-                        color: white;
+                        color: $hover_color;
                     }
                 }
 
                 .button_1:hover{
                     // usunac color bo skonczeniu bo dubluje
-                    color: white; 
+                    color: $hover_color;
                     transition-duration: 0.5s;
                 }
             }
