@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="../script.js"></script>
+        <script src="gallery_script.js" defer></script>
     </head>
     <body>
         <!--naglowek /start-->
@@ -17,7 +17,7 @@
                 <h1>SznycWiki</h1>
             </section>
             <section id="button_mobile">
-                <button type="button"><img src="../images/button.png" class="script_button" alt="guzik do rozwinięcia list"></button>
+                <button type="button"><img src="images/button.png" class="script_button" alt="guzik do rozwinięcia list"></button>
             </section>
             <section id="nav_span">
                 <button class="button_1"><a href="index.html">Strona Główna</a></button>
@@ -43,9 +43,21 @@
             <!--Rozwijana lista guzik /koniec-->
         </nav>
         <main>
-            <div id="gallery">
-                f
-            </div>
+            <ul id="gallery">
+                <li class="foto"><img src="gallery/dominik1.jpg" alt="dominik1"></li>
+                <li class="foto"><img src="gallery/dominik2.jpg" alt="dominik2"></li>
+                <li class="foto"><img src="gallery/marcin1.jpg" alt="marcin1"></li>
+                <li class="foto"><img src="gallery/piotr1.jpg" alt="piotr1"></li>
+                <li class="foto"><img src="gallery/piotr2.jpg" alt="piotr2"></li>
+                <li class="foto"><img src="gallery/tymon1.jpg" alt="tymon1"></li>
+                <li class="foto"><img src="gallery/tymon2.jpg" alt="tymon2"></li>
+            </ul>
         </main>
+        <div id="selected_foto">
+            <button id="close">X</button>
+            <img src="" alt="select">
+            <button class="arrow" id="left"><</button>
+            <button class="arrow" id="right">></button>
+        </div>
     </body>
 </html>
