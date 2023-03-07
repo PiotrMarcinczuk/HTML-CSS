@@ -1,0 +1,112 @@
+$background_color: #1e1e1e;
+$nav_color: #171614;
+$h_color: #E1DEDA;
+$default_font: 'Kanit', sans-serif;
+$font_color: #E6E9E8;
+$hover_color: #E45429;
+
+body{
+    background-color: $background_color;
+    font-family: $default_font;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  @mixin font{
+    font-family: $default_font;
+    font-size: 18px;
+    color: $font_color;
+  }
+
+//    Nagłówek i jakieś bajery
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: $nav_color;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+
+    #nav_logo{
+        width: 50%;
+        height: 100%;
+        color: $h_color;
+        font-size: 60px;
+        margin-left: 15px;
+        text-align: left;
+        h1{
+            margin: 0;
+        }
+    }
+
+    #nav_span{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        hr{
+            border: 1px #F88181 solid;
+            height: 20px;
+            margin: 10px;
+        }
+       .button_1{
+            margin: 15px;
+            font-size: 30px;
+            font-family: $default_font;
+            background-color: $nav_color;
+            border: 0;
+            cursor: pointer;
+            color: $font_color;
+        }
+
+        .button_1:hover{
+            color: $hover_color; 
+            transition-duration: 0.5s;
+            transform: scale(1.2);
+        }
+
+        h1{
+            height: 150px;
+            margin-top: 25px;
+        }
+
+        a{
+            text-decoration: none;
+            color: $font_color;
+        }
+
+        a:hover{
+            color: $hover_color; 
+        }
+    }
+
+    #button_mobile{
+        display: none;
+    }
+}
+
+#nav_bar{
+    display: none;
+}
+
+main{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    margin-top: 150px;
+    #gallery{
+        width: 80%;
+        height: 200px;
+        background-color: darkblue;
+        margin: 0;
+        padding: 0;
+    }
+}
