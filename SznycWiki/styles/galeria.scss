@@ -96,11 +96,11 @@ nav{
 }
 
 main{
-    width: 100%;
+    width: 95%;
     height: 80%;
     display: flex;
     justify-content: center;
-    background-color: red;
+    background-color: $nav_color;
     margin-top: 150px;
     #gallery{
         width: 90%;
@@ -110,6 +110,11 @@ main{
         margin: 0;
         padding: 0;
         list-style-type: none;
+        .podpis{
+            display: none;
+            font-size: 50px;
+        }
+
         .foto{
             width: 10%;
             height: 200px;
@@ -147,6 +152,16 @@ main{
     img{
         width: 400px;
         height: 550px;
+    }
+
+    .napis{
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        top: 75%;
+        right: 45%;
+        font-size: 25px;
     }
 }
 
@@ -319,12 +334,11 @@ main{
         margin-top: 300px;
         #gallery{
             width: 100%;
-            height: 2000px;
-            display: flex;
-            flex-wrap: wrap;
+            height: 1000px;
             justify-content: space-between;
             margin: 0;
             padding: 0;
+            flex-wrap: wrap;
             list-style-type: none;
             .foto{
                 width: 25%;

@@ -75,11 +75,11 @@ nav #button_mobile {
 }
 
 main {
-  width: 100%;
+  width: 95%;
   height: 80%;
   display: flex;
   justify-content: center;
-  background-color: red;
+  background-color: #171614;
   margin-top: 150px;
 }
 main #gallery {
@@ -90,6 +90,10 @@ main #gallery {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+main #gallery .podpis {
+  display: none;
+  font-size: 50px;
 }
 main #gallery .foto {
   width: 10%;
@@ -127,6 +131,15 @@ main #gallery .foto:hover {
 #selected_foto img {
   width: 400px;
   height: 550px;
+}
+#selected_foto .napis {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  position: fixed;
+  top: 75%;
+  right: 45%;
+  font-size: 25px;
 }
 
 #close {
@@ -279,12 +292,11 @@ main #gallery .foto:hover {
   }
   main #gallery {
     width: 100%;
-    height: 2000px;
-    display: flex;
-    flex-wrap: wrap;
+    height: 1000px;
     justify-content: space-between;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
     list-style-type: none;
   }
   main #gallery .foto {
