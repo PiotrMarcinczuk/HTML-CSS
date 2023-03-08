@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="gallery_script.js" defer></script>
+        <script src="script.js" defer></script>
     </head>
     <body>
         <!--naglowek /start-->
@@ -44,20 +45,20 @@
         </nav>
         <main>
             <ul id="gallery">
-                <li class="foto"><img src="gallery/1.jpg" alt="dominik1"></li>
-                <li class="foto"><img src="gallery/2.jpg" alt="dominik2"></li>
-                <li class="foto"><img src="gallery/3.jpg" alt="marcin1"></li>
-                <li class="foto"><img src="gallery/5.jpg" alt="piotr1"></li>
-                <li class="foto"><img src="gallery/4.jpg" alt="piotr2"></li>
-                <li class="foto"><img src="gallery/7.jpg" alt="tymon1"></li>
-                <li class="foto"><img src="gallery/8.jpg" alt="tymon2"></li>
+                <li class="foto"><img src="gallery/dominik1.jpg" alt="dominik1"></li>
+                <li class="foto"><img src="gallery/piotr2.jpg" alt="dominik2"></li>
+                <li class="foto"><img src="gallery/piotr3.jpg" alt="marcin1"></li>
+                <li class="foto"><img src="gallery/piotr1.jpg" alt="piotr1"></li>
+                <li class="foto"><img src="gallery/tymon1.jpg" alt="piotr2"></li>
+                <li class="foto"><img src="gallery/marcin1.jpg" alt="tymon1"></li>
+                <li class="foto"><img src="gallery/dominik2.jpg" alt="tymon2"></li>
             </ul>
         </main>
         <div id="selected_foto">
             <button id="close" onclick="close_selected()">X</button>
             <img src="" id="main_foto" alt="select">
-            <button class="arrow" onclick="prev()" id="left"><</button>
-            <button class="arrow" onclick="next()" id="right">></button>
+            <button class="arrow" onclick="prev()" id="left"><div id="right_div"></div></button>
+            <button class="arrow" onclick="next()" id="right"><div id="left_div"></div></button>
         </div>
     </body>
 </html>

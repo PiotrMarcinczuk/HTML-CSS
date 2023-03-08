@@ -19,13 +19,25 @@ function close_selected(){
 }
 
 function next(){
-    current += 1;
-    selected_img.src = gallery[current].querySelector("img").src;
+    if(current == gallery.length-1){
+        current = 0;
+        selected_img.src = gallery[current].querySelector("img").src;
+    }
+    else{
+        current += 1;
+        selected_img.src = gallery[current].querySelector("img").src;
+    }
 }
 
 function prev(){
-    current -= 1;
-    selected_img.src = gallery[current].querySelector("img").src;
+    if(current == 0){
+        current = gallery.length-1;
+        selected_img.src = gallery[current].querySelector("img").src;
+    }
+    else{
+        current -= 1;
+        selected_img.src = gallery[current].querySelector("img").src;
+    }
 }
 
 
