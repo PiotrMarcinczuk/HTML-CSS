@@ -95,7 +95,7 @@ main #gallery {
 }
 main #gallery .podpis {
   display: none;
-  font-size: 50px;
+  color: red;
 }
 main #gallery .foto {
   width: 8%;
@@ -129,9 +129,9 @@ main #gallery .foto:hover {
   height: 100%;
   text-align: center;
   display: none;
-  transition-duration: 0.5s;
   position: fixed;
   top: 0;
+  color: red;
 }
 #selected_foto img {
   width: 35%;
@@ -323,7 +323,7 @@ main #gallery .foto:hover {
     cursor: pointer;
   }
   #selected_foto img {
-    width: 50%;
+    width: 60%;
     height: 65%;
   }
   #selected_foto #main_foto {
@@ -340,6 +340,9 @@ main #gallery .foto:hover {
     right: 10%;
     font-size: 25px;
   }
+  #selected_foto figcaption {
+    color: red;
+  }
   #close {
     position: fixed;
     right: 10px;
@@ -352,10 +355,10 @@ main #gallery .foto:hover {
   }
   #left {
     top: 50%;
-    left: 15%;
+    left: 11%;
   }
   #right {
     top: 50%;
-    right: 15%;
+    right: 11%;
   }
 }/*# sourceMappingURL=galeria.css.map */

@@ -114,7 +114,7 @@ main{
         list-style-type: none;
         .podpis{
             display: none;
-            font-size: 50px;
+            color: red;
         }
 
         .foto{
@@ -151,13 +151,12 @@ main{
     height: 100%;
     text-align: center;
     display: none;
-    transition-duration: 0.5s;
     position: fixed;
     top: 0;
+    color: red;
     img{
         width: 35%;
         height: 85%;
-
     }
 
     .napis{
@@ -370,7 +369,7 @@ main{
 
     #selected_foto{
         img{
-            width: 50%;
+            width: 60%;
             height: 65%;
         }
 
@@ -389,6 +388,10 @@ main{
             right: 10%;
             font-size: 25px;
         }
+
+        figcaption{
+            color: red;
+        }
     }
     
     #close{
@@ -406,11 +409,11 @@ main{
     
     #left{
         top: 50%;
-        left: 15%
+        left: 11%
     }
     
     #right{
         top: 50%;
-        right: 15%
+        right: 11%
     }
 }
