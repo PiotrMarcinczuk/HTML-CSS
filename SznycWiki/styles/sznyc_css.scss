@@ -208,8 +208,39 @@ nav{
     }
   }
 
+//special
+@media screen and (min-width: 901px) and (max-width: 1050px){
+    nav{
+        #nav_logo{
+            width: 30%;
+        }
+     
+        #nav_span{
+            width: 70%;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 15px;
+            .button_1{
+                font-size: 18px;
+                margin: 5px;
+            }
+
+            .button_1:hover{
+                color: $hover_color; 
+                transition-duration: 0.5s;
+                transform: scale(1.1);
+            }
+        }
+
+        #button_mobile{
+            display: none;
+        }
+    }
+    
+}
+
   // Dla laptopów
-@media screen and (min-width: 801px) and (max-width: 1281px){
+@media screen and (min-width: 1051px) and (max-width: 1281px){
     nav{
         #nav_logo{
             width: 30%;

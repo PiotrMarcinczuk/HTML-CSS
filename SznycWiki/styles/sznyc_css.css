@@ -173,7 +173,30 @@ footer #footer_part {
   height: 100%;
 }
 
-@media screen and (min-width: 801px) and (max-width: 1281px) {
+@media screen and (min-width: 901px) and (max-width: 1050px) {
+  nav #nav_logo {
+    width: 30%;
+  }
+  nav #nav_span {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+  }
+  nav #nav_span .button_1 {
+    font-size: 18px;
+    margin: 5px;
+  }
+  nav #nav_span .button_1:hover {
+    color: #E45429;
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+  }
+  nav #button_mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 1051px) and (max-width: 1281px) {
   nav #nav_logo {
     width: 30%;
   }
