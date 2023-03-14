@@ -26,7 +26,7 @@ body{
 //    Nagłówek i jakieś bajery
 nav{
     width: 100%;
-    height: 110px;
+    height: 120px;
     background-color: $nav_color;
     display: flex;
     align-items: center;
@@ -334,9 +334,11 @@ nav{
         width: 100%;
         height: 100%;
         justify-content: center;
+        margin-top: 20px;
         ul{
+          font-size: 32px;
             width: 100%;
-            height: auto;
+            height: 250px;
             text-align: center;
             list-style-type: none;
             padding: 0;
@@ -345,31 +347,19 @@ nav{
             flex-direction: column;
             text-decoration: none;
             li{
-                .button_1{
-                    background-color: $nav_color;
-                    border: 0;
-                    border-bottom: 1px solid black;
-                    width: 100%;
-                    height: 100%;
-                    font-size: 40px;
-                    margin: 5px 0px 5px 0px;
-                    a{
-                        text-decoration: none;
-                        color: $font_color;
-                    }
-                    a:hover{
-                        color: $hover_color;
-                    }
-                }
-
-                .button_1:hover{
-                    // usunac color bo skonczeniu bo dubluje
-                    color: $hover_color;
-                    transition-duration: 0.5s;
-                }
+              background-color: $nav_color;
+              border-bottom: 1px solid black;
+              border-bottom-width: 1px;
+              a{
+                text-decoration: none;
+                color: $font_color;
+                transition-duration: 0.5s;
+              }
+  
+              a:hover{
+                color: $hover_color;
+              }
             }
-
-            
         }   
     }
     

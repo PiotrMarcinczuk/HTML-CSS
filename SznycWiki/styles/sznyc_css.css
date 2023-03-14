@@ -12,7 +12,7 @@ body {
 
 nav {
   width: 100%;
-  height: 110px;
+  height: 120px;
   background-color: #171614;
   display: flex;
   align-items: center;
@@ -276,10 +276,12 @@ footer #footer_part {
     width: 100%;
     height: 100%;
     justify-content: center;
+    margin-top: 20px;
   }
   #nav_bar ul {
+    font-size: 32px;
     width: 100%;
-    height: auto;
+    height: 250px;
     text-align: center;
     list-style-type: none;
     padding: 0;
@@ -288,25 +290,18 @@ footer #footer_part {
     flex-direction: column;
     text-decoration: none;
   }
-  #nav_bar ul li .button_1 {
+  #nav_bar ul li {
     background-color: #171614;
-    border: 0;
     border-bottom: 1px solid black;
-    width: 100%;
-    height: 100%;
-    font-size: 40px;
-    margin: 5px 0px 5px 0px;
+    border-bottom-width: 1px;
   }
-  #nav_bar ul li .button_1 a {
+  #nav_bar ul li a {
     text-decoration: none;
     color: #E6E9E8;
-  }
-  #nav_bar ul li .button_1 a:hover {
-    color: #E45429;
-  }
-  #nav_bar ul li .button_1:hover {
-    color: #E45429;
     transition-duration: 0.5s;
+  }
+  #nav_bar ul li a:hover {
+    color: #E45429;
   }
   main {
     width: 100%;

@@ -25,7 +25,7 @@ body{
 //    Nagłówek i jakieś bajery
 nav{
   width: 100%;
-  height: 110px;
+  height: 120px;
   background-color: $nav_color;
   display: flex;
   align-items: center;
@@ -60,10 +60,8 @@ nav{
       font-family: $default_font;
       background-color: $nav_color;
       border: 0;
-      flex-wrap: nowrap;
       cursor: pointer;
       color: $font_color;
-      overflow: hidden;
     }
 
     .button_1:hover{
@@ -105,21 +103,224 @@ main{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  a{
+    text-decoration: none;
+    color: black;
+    transition-duration: 0.5s;
+  }
+
+  a:hover{
+    color: $hover_color;
+  }
   #plan{
     width: 97%;
     height: 40%;
     background-color: $nav_color;
     margin: 5px;
+    padding: 10px;
   }
 
-  #przyklad{
+  #podziekowania{
     width: 97%;
     height: 50%;
     background-color: $nav_color;
     margin: 5px;
+    padding: 10px;
+    h2{
+      font-size: 35px;
+    }
+    ul{
+      font-size: 28px;
+    }
   }
 
   .tekst{
-    font-size: 22px;
+    font-size: 28px;
+  }
+  
+}
+
+//special
+@media screen and (min-width: 901px) and (max-width: 1050px){
+    nav{
+        #nav_logo{
+            width: 30%;
+        }
+     
+        #nav_span{
+            width: 70%;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 15px;
+            .button_1{
+                font-size: 18px;
+                margin: 5px;
+            }
+
+            .button_1:hover{
+                color: $hover_color; 
+                transition-duration: 0.5s;
+                transform: scale(1.1);
+            }
+        }
+
+        #button_mobile{
+            display: none;
+        }
+    }
+  main{
+    margin-top: 200px;
+    #plan{
+      height: auto;
+    }
+  
+    #podziekowania{
+      height: auto;
+    }
   }
 }
+
+// Dla laptopów
+@media screen and (min-width: 1051px) and (max-width: 1281px){
+    nav{
+        #nav_logo{
+            width: 30%;
+        }
+     
+        #nav_span{
+            width: 70%;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 15px;
+            .button_1{
+                font-size: 25px;
+                margin: 5px;
+            }
+
+            .button_1:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        #button_mobile{
+            display: none;
+        }
+    }
+
+    #nav_bar{
+        display: none;
+    }
+  
+  main{
+    margin-top: 200px;
+    #plan{
+      height: auto;
+    }
+
+    #podziekowania{
+      height: auto;
+    }
+  }
+}
+
+// Dla mobilnych urządzeń (telefon)
+@media screen and (max-width: 900px){
+  nav{
+      width: 100%;
+      height: 200px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      #nav_logo{
+          width: 60%;
+          height: 30%;
+          h1{
+              font-size: 50px;
+          }
+      }
+
+      #nav_span{
+          display: none;
+      }
+
+      #button_mobile{
+          background-color: $nav_color;
+          width: 50px;
+          height: 20%;
+          margin: 15px 15px 0px 0px;
+          display: flex;
+          justify-content: flex-end;
+          .script_button{
+              transition-duration: 0.5s;
+              cursor: pointer;
+          }
+
+          .script_button:hover{
+              transform: scale(1.2);
+          }
+
+          img{
+              width: 40px;
+              height: 40px;
+          }
+          button{
+              background-color: $nav_color;
+              border: 0;
+          }
+      }
+  }
+
+  #nav_bar{
+      display: none;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      margin-top: 20px;
+      ul{
+        font-size: 32px;
+          width: 100%;
+          height: 250px;
+          text-align: center;
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          text-decoration: none;
+          li{
+            background-color: $nav_color;
+            border-bottom: 1px solid black;
+            border-bottom-width: 1px;
+            a{
+              text-decoration: none;
+              color: $font_color;
+              transition-duration: 0.5s;
+            }
+
+            a:hover{
+              color: $hover_color;
+            }
+          }
+      }   
+  }
+  main{
+    .tekst{
+      font-size: 22px;
+    }
+    margin-top: 750px;
+    #plan{
+      width: 100%;
+      height: auto;
+    }
+
+    #podziekowania{
+      width: 100%;
+      height: auto;
+      li{
+        margin: 5px;
+      }
+    }
+  }
+}
+

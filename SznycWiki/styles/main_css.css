@@ -12,7 +12,7 @@ body {
 
 nav {
   width: 100%;
-  height: 110px;
+  height: 120px;
   background-color: #171614;
   display: flex;
   align-items: center;
@@ -47,10 +47,8 @@ nav #nav_span .button_1 {
   font-family: "Kanit", sans-serif;
   background-color: #171614;
   border: 0;
-  flex-wrap: nowrap;
   cursor: pointer;
   color: #E6E9E8;
-  overflow: hidden;
 }
 nav #nav_span .button_1:hover {
   color: #E45429;
@@ -85,18 +83,192 @@ main {
   justify-content: space-around;
   align-items: center;
 }
+main a {
+  text-decoration: none;
+  color: black;
+  transition-duration: 0.5s;
+}
+main a:hover {
+  color: #E45429;
+}
 main #plan {
   width: 97%;
   height: 40%;
   background-color: #171614;
   margin: 5px;
+  padding: 10px;
 }
-main #przyklad {
+main #podziekowania {
   width: 97%;
   height: 50%;
   background-color: #171614;
   margin: 5px;
+  padding: 10px;
+}
+main #podziekowania h2 {
+  font-size: 35px;
+}
+main #podziekowania ul {
+  font-size: 28px;
 }
 main .tekst {
-  font-size: 22px;
+  font-size: 28px;
+}
+
+@media screen and (min-width: 901px) and (max-width: 1050px) {
+  nav #nav_logo {
+    width: 30%;
+  }
+  nav #nav_span {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+  }
+  nav #nav_span .button_1 {
+    font-size: 18px;
+    margin: 5px;
+  }
+  nav #nav_span .button_1:hover {
+    color: #E45429;
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+  }
+  nav #button_mobile {
+    display: none;
+  }
+  main {
+    margin-top: 200px;
+  }
+  main #plan {
+    height: auto;
+  }
+  main #podziekowania {
+    height: auto;
+  }
+}
+@media screen and (min-width: 1051px) and (max-width: 1281px) {
+  nav #nav_logo {
+    width: 30%;
+  }
+  nav #nav_span {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+  }
+  nav #nav_span .button_1 {
+    font-size: 25px;
+    margin: 5px;
+  }
+  nav #nav_span .button_1:hover {
+    transform: scale(1.1);
+  }
+  nav #button_mobile {
+    display: none;
+  }
+  #nav_bar {
+    display: none;
+  }
+  main {
+    margin-top: 200px;
+  }
+  main #plan {
+    height: auto;
+  }
+  main #podziekowania {
+    height: auto;
+  }
+}
+@media screen and (max-width: 900px) {
+  nav {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  nav #nav_logo {
+    width: 60%;
+    height: 30%;
+  }
+  nav #nav_logo h1 {
+    font-size: 50px;
+  }
+  nav #nav_span {
+    display: none;
+  }
+  nav #button_mobile {
+    background-color: #171614;
+    width: 50px;
+    height: 20%;
+    margin: 15px 15px 0px 0px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav #button_mobile .script_button {
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+  nav #button_mobile .script_button:hover {
+    transform: scale(1.2);
+  }
+  nav #button_mobile img {
+    width: 40px;
+    height: 40px;
+  }
+  nav #button_mobile button {
+    background-color: #171614;
+    border: 0;
+  }
+  #nav_bar {
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  #nav_bar ul {
+    font-size: 32px;
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  #nav_bar ul li {
+    background-color: #171614;
+    border-bottom: 1px solid black;
+    border-bottom-width: 1px;
+  }
+  #nav_bar ul li a {
+    text-decoration: none;
+    color: #E6E9E8;
+    transition-duration: 0.5s;
+  }
+  #nav_bar ul li a:hover {
+    color: #E45429;
+  }
+  main {
+    margin-top: 750px;
+  }
+  main .tekst {
+    font-size: 22px;
+  }
+  main #plan {
+    width: 100%;
+    height: auto;
+  }
+  main #podziekowania {
+    width: 100%;
+    height: auto;
+  }
+  main #podziekowania li {
+    margin: 5px;
+  }
 }/*# sourceMappingURL=main_css.css.map */
