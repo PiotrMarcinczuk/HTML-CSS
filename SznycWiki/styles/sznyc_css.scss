@@ -19,7 +19,7 @@ body{
 
   @mixin font{
     font-family: $default_font;
-    font-size: 18px;
+    font-size: 22px;
     color: $font_color;
   }
 
@@ -109,24 +109,15 @@ nav{
     background-color: $background_color;
     margin-top: 150px;
 
-    #slownik{
-        margin-top: 100px;
-        padding-left: 15px;
-        font-size: 30px;
-        width: 70%;
-        height: auto;
-        background-color: $nav_color;
-        h2{
-            display: inline;
-            font-size: 30px;
-        }
+    #admin{
+        display: none;
     }
 
     a{
         text-decoration: none;
         color: #233858;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 23px;
     }
 
     #opis{
@@ -135,8 +126,7 @@ nav{
         padding: 4px;
         height: auto;
         box-shadow: 3px 3px 3px 0px black;
-        font-size: 20px;
-
+        font-size: 22px;
         h3{
             a{
                 cursor: default;
@@ -144,7 +134,7 @@ nav{
         }
 
         ul{
-            font-size: 20px;
+            font-size: 22px;
             list-style: square;
         }
 
@@ -201,9 +191,27 @@ nav{
             }
         }
 
+        #ciekawostki{
+            padding: 8px;
+        }
+
         hr{
             border: 1px solid #CB7A7A;
         }
+    }
+    #slownik{
+        margin-top: 100px;
+        margin-bottom: 25px;
+        padding-left: 15px;
+        font-size: 30px;
+        width: 70%;
+        height: auto;
+        background-color: $nav_color;
+        div{
+            color: $hover_color;
+            font-size: 40px;
+        }
+
     }
     @include font;
   }
@@ -379,6 +387,14 @@ nav{
     main{
         width: 100%;
         margin-top: 360px;
+        #slownik{
+            width: 90%;
+            margin-top: 20px;
+            p{
+                font-size: 15px;
+            }
+            
+        }
         #opis{
             width: 95%;
             height: auto;

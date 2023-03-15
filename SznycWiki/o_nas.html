@@ -81,6 +81,7 @@
                 for(let i=0; i<tab.length; i++){
                     let temp = tab[i].title;
                     let first = temp.charAt(0).toUpperCase();
+                    
                     if (!letters.includes(first)){   //sprawdzenie czy już nie ma takiej wielkiej Litery jako tytulu
                         letters.push(first);
                         let header_div = document.createElement("div");

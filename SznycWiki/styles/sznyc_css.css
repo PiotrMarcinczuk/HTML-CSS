@@ -88,26 +88,17 @@ main {
   background-color: #1e1e1e;
   margin-top: 150px;
   font-family: "Kanit", sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   color: #E6E9E8;
 }
-main #slownik {
-  margin-top: 100px;
-  padding-left: 15px;
-  font-size: 30px;
-  width: 70%;
-  height: auto;
-  background-color: #171614;
-}
-main #slownik h2 {
-  display: inline;
-  font-size: 30px;
+main #admin {
+  display: none;
 }
 main a {
   text-decoration: none;
   color: #233858;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 23px;
 }
 main #opis {
   width: 70%;
@@ -115,13 +106,13 @@ main #opis {
   padding: 4px;
   height: auto;
   box-shadow: 3px 3px 3px 0px black;
-  font-size: 20px;
+  font-size: 22px;
 }
 main #opis h3 a {
   cursor: default;
 }
 main #opis ul {
-  font-size: 20px;
+  font-size: 22px;
   list-style: square;
 }
 main #opis .wiki_div {
@@ -169,8 +160,24 @@ main #opis #opis_postaci #zdjecie_postaci figcaption {
   margin-top: 20px;
   text-align: center;
 }
+main #opis #ciekawostki {
+  padding: 8px;
+}
 main #opis hr {
   border: 1px solid #CB7A7A;
+}
+main #slownik {
+  margin-top: 100px;
+  margin-bottom: 25px;
+  padding-left: 15px;
+  font-size: 30px;
+  width: 70%;
+  height: auto;
+  background-color: #171614;
+}
+main #slownik div {
+  color: #E45429;
+  font-size: 40px;
 }
 
 footer {
@@ -318,6 +325,13 @@ footer #footer_part {
   main {
     width: 100%;
     margin-top: 360px;
+  }
+  main #slownik {
+    width: 90%;
+    margin-top: 20px;
+  }
+  main #slownik p {
+    font-size: 15px;
   }
   main #opis {
     width: 95%;
