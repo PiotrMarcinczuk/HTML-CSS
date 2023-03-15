@@ -103,9 +103,10 @@ main{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  color: $font_color;
   a{
     text-decoration: none;
-    color: black;
+    color: #F4EAE7;
     transition-duration: 0.5s;
   }
 

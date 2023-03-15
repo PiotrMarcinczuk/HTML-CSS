@@ -91,6 +91,18 @@ main {
   font-size: 18px;
   color: #E6E9E8;
 }
+main #slownik {
+  margin-top: 100px;
+  padding-left: 15px;
+  font-size: 30px;
+  width: 70%;
+  height: auto;
+  background-color: #171614;
+}
+main #slownik h2 {
+  display: inline;
+  font-size: 30px;
+}
 main a {
   text-decoration: none;
   color: #233858;

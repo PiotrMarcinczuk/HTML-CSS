@@ -109,6 +109,19 @@ nav{
     background-color: $background_color;
     margin-top: 150px;
 
+    #slownik{
+        margin-top: 100px;
+        padding-left: 15px;
+        font-size: 30px;
+        width: 70%;
+        height: auto;
+        background-color: $nav_color;
+        h2{
+            display: inline;
+            font-size: 30px;
+        }
+    }
+
     a{
         text-decoration: none;
         color: #233858;
