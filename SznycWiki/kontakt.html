@@ -45,13 +45,29 @@
         <!--naglowek /koniec-->
         <main>
             <section id="plan">
-                <span class="tekst">
+                <span id="formsy">
                     <h1>Skontaktuj się z Sznycami</h1>
-                    <form>
-                        <label for="mail">Wpisz swój e-mail: </label>
-                        <input type="text" id="mail_text">
+                    <form id="slowo">
+                        <label for="mail" class="all">Wpisz swój e-mail: </label>
+                        <input type="text" id="mail_text" class="all_input"><br>
+
+                        <label for="nazwa" class="all">Podaj SznycSłowo: </label>
+                        <input type="text" id="slowo_nazwa" class="all_input"><br>
+
+                        <label for="opis" class="all">Podaj znaczenie/opis słowa: </label>
+                        <input type="text" id="slowo_opis" class="all_input"><br>
+
+                        <input type="button" class="guzik" value="Wyślij">
                     </form>
-                    
+                    <form id="bugi">
+                        <label for="mail" class="all">Wpisz swój e-mail: </label>
+                        <input type="text" id="mail_text_bugi" class="all_input"><br>
+
+                        <label for="rodzaj" class="all">Opisz błąd: </label>
+                        <input type="text" id="mail_opis" class="all_input"><br>
+
+                        <input type="button" class="guzik" value="Wyślij">
+                    </form>
                 </span>
             </section>
         </main>

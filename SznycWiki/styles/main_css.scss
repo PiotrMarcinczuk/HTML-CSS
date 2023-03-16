@@ -115,10 +115,49 @@ main{
   }
   #plan{
     width: 97%;
-    height: 40%;
+    height: auto;
     background-color: $nav_color;
     margin: 5px;
     padding: 10px;
+    #slowo, #bugi{
+      width: 45%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      input[type="text"] {
+        width: 70%;
+        height: 30px;
+        margin: 3px;
+        float: right;
+      }
+
+      #slowo_opis{
+        height: 60px;
+      }
+      #mail_opis{
+        height: 80px;
+      }
+    }
+    #formsy{
+      width: 100%;
+      font-size: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 30px;
+      h1{
+        width: 100%;
+        margin-bottom: 100px;
+      }
+      .guzik{
+        display: block;
+        width: 15%;
+      }
+    }
+    .all{
+      margin-right: 10px;
+    }
   }
 
   #podziekowania{
