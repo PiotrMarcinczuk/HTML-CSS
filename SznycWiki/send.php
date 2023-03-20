@@ -6,15 +6,13 @@ require 'php/PHPMailer-master/src/Exception.php';
 require 'php/PHPMailer-master/src/PHPMailer.php';
 require 'php/PHPMailer-master/src/SMTP.php';
 
-if(isset($_POST['mail_text'])) {
-    $adres = $_POST['mail_text'];
-    $slowo = $_POST['slowo_nazwa'];
-    $opis = $_POST['slowo_opis'];
+if (isset($_POST['mail_text_bugi'])) {
+    $adres_bug = $_POST['mail_text_bugi'];
+    $bugi = $_POST['mail_opis'];
 
-    // Sprawdź, czy pola nie są puste
-    if(empty($adres) || empty($slowo) || empty($opis)) {
+    if(empty($adres_bug) || empty($bugi)) {
         echo "<script>alert('Nie wypełniłeś wszystkich pól.');</script>";
-    } else {
+    }else {
         // ustawienia SMTP
         $mail = new PHPMailer(true);
         $mail->isSMTP();
@@ -24,28 +22,13 @@ if(isset($_POST['mail_text'])) {
         $mail->Password = 'mqrqzesdoqgbommd'; // hasło do emaila
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
+
         // treść wiadomości
         $mail->CharSet = 'UTF-8'; 
         $mail->setFrom('sznycer2137@gmail.com', 'Sznycer');
         $mail->addAddress($adres);
         $mail->Subject = 'Podziękowanie';
         $mail->Body = 'Dziękuję za podsunięcie słowa, niech Sznyc będzie z tobą';
-
-        // ustawienia SMTP
-        $mail1 = new PHPMailer(true);
-        $mail1->isSMTP();
-        $mail1->Host = 'smtp.gmail.com';  // adres serwera SMTP
-        $mail1->SMTPAuth = true;
-        $mail1->Username = 'sznycer2137@gmail.com'; // adres email
-        $mail1->Password = 'mqrqzesdoqgbommd'; // hasło do emaila
-        $mail1->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail1->Port = 587;
-        // treść wiadomości
-        $mail1->CharSet = 'UTF-8'; 
-        $mail1->setFrom('sznycer2137@gmail.com', 'Sznycer');
-        $mail1->addAddress('sznycer2137@gmail.com');
-        $mail1->Subject = $slowo;
-        $mail1->Body = $opis;
 
         // wysłanie wiadomości
         if(!$mail->send()) {
@@ -54,13 +37,9 @@ if(isset($_POST['mail_text'])) {
         } else {
             echo "<script>alert('Twoje zgłoszenie zostało wysłane.');</script>";
         }
-
-        if(!$mail1->send()) {
-            echo 'Wiadomość nie została wysłana.';
-            echo 'Błąd: ' . $mail1->ErrorInfo;
-        } else {
-            echo "<script>alert('Twoje zgłoszenie zostało wysłane.');</script>";
-        }
     }
 }
+
+
+
 ?>

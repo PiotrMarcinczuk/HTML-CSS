@@ -91,11 +91,18 @@ main {
   font-size: 22px;
   color: #E6E9E8;
 }
+main h2 {
+  color: #E45429;
+  font-size: 40px;
+}
 main a {
   text-decoration: none;
   color: #233858;
   font-weight: bold;
   font-size: 23px;
+}
+main #admin {
+  display: none;
 }
 main #opis {
   width: 70%;
