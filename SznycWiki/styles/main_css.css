@@ -109,7 +109,7 @@ main #plan #slowo input[type=text], main #plan #bugi input[type=text] {
   width: 70%;
   height: 30px;
   margin: 3px;
-  float: right;
+  text-orientation: upright;
 }
 main #plan #slowo #slowo_opis, main #plan #bugi #slowo_opis {
   height: 60px;
