@@ -91,9 +91,6 @@ main {
   font-size: 22px;
   color: #E6E9E8;
 }
-main #admin {
-  display: none;
-}
 main a {
   text-decoration: none;
   color: #233858;

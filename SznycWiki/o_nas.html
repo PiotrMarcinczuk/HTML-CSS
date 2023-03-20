@@ -46,61 +46,42 @@
         <!--Główny kontent sznycsłowa /start-->
         <main>
             <section id="slownik">
-
-            </section>
-            <section id="admin">
-                <form id="my_form">
-                    <label for="word">Podaj słowo: </label>
-                    <input type="text" id="word_title">
-                    <br>
-                    <label for="word">Podaj definicje SznycSłowa: </label>
-                    <input type="text" id="word_text">
-                    <br>
-                    <input type="button" onclick="sznycowanie()" value="sznycccc">
-                </form>
-            </section>
-            <script>
-                let word_title = document.querySelector("#word_title");
-                let word_text = document.querySelector("#word_text");
-
-                let slownik = document.getElementById("slownik");
                 
-                let letters = []; //tablica pierwszych liter, które już wystąpiły
-
-                let tab = JSON.parse(localStorage.getItem("slownik") || "[]");
-                tab.sort((a, b) => a.title.localeCompare(b.title)); //alfabetyczne sortowanie 
-                function sznycowanie(){
-                    let title_f = word_title.value; //tytuł naszego słowa
-                    let text_f = word_text.value;   //opis naszego słowa
-                    if(!tab.some(x => x.title_f === title_f)){ //sprawdzenie czy wpisany tytuł występuje już w tabeli
-                        tab.push({title: title_f, text: text_f});
-                        localStorage.setItem("slownik", JSON.stringify(tab)); 
-                    } 
+            </section>
+            <section id="#admin">
+                <p class="pa">SznycoSukces - Wielki sukces</p>
+                <p class="pa">Multimedialna SznycGaleria - Multimedialana galeria dzieł sztuki</p>
+                <p class="pa">Sznycowanie - poprostu Sznycowanie</p>
+                <p class="pa">Sznyceter - osob, która propagowała SznycPopkulture</p>
+                <p class="pa">SznycPopkultura - Kultura społeczeństwa oparta na sznycu (dosłownie)</p>
+                <p class="pa">AlbinoSznyc - Sznyc pozbawiony pigementu</p>
+            </section>
+        </main>
+        <script>
+            let t = document.querySelectorAll('.pa');
+            let slownik = document.getElementById("slownik");
+            function help(){
+                let tab = [];
+                let letters = [];
+                for(let i of t){
+                    tab.push(i.textContent);
                 }
-
-                for(let i=0; i<tab.length; i++){
-                    let temp = tab[i].title;
-                    let first = temp.charAt(0).toUpperCase();
-                    
-                    if (!letters.includes(first)){   //sprawdzenie czy już nie ma takiej wielkiej Litery jako tytulu
-                        letters.push(first);
-                        let header_div = document.createElement("div");
-                        header_div.textContent = first;
-                        slownik.appendChild(header_div); //dodanie do sekcji słownik elementu zawierającego wielka litere
-                        header_div.style.margin = "20px 0 0 0";
+                tab = tab.sort()
+                for(let j of tab){
+                    let letter = j.charAt(0).toUpperCase()
+                    if(!letters.includes(letter)){
+                        letters.push(letter);
+                        let title = document.createElement("h2");
+                        title.textContent = letter;
+                        slownik.appendChild(title);
                     }
-
-                    let area = document.createElement("p"); // towrzenie obszaru ze słowem i jego wyjaśnieniem
-                    area.textContent = tab[i].title + " - " + tab[i].text;
+                    let area = document.createElement("p");
+                    area.textContent = j;
                     slownik.appendChild(area);
                 }
-
-                function removeWord(title) {   //funkcja pomocnicza do usuwania słów
-                    tab = tab.filter(word => word.title !== title);
-                    localStorage.setItem("slownik", JSON.stringify(tab));
-                }
-           </script>
-        </main>
+            }
+            help();
+        </script>
         <!--Główny kontent sznycsłowa /koniec-->
     </body>
 </html>
