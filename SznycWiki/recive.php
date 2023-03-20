@@ -14,6 +14,7 @@ if(isset($_POST['mail_text'])) {
     // Sprawdź, czy pola nie są puste
     if(empty($adres) || empty($slowo) || empty($opis)) {
         echo "<script>alert('Nie wypełniłeś wszystkich pól.');</script>";
+        header("Location: http://localhost/SznycWiki/kontakt.html");
     } else {
         // ustawienia SMTP
         $mail = new PHPMailer(true);
@@ -50,16 +51,10 @@ if(isset($_POST['mail_text'])) {
         // wysłanie wiadomości
         if(!$mail->send()) {
             echo 'Wiadomość nie została wysłana.';
-            echo 'Błąd: ' . $mail->ErrorInfo;
+            header("Location: http://localhost/SznycWiki/thanks.html");
         } else {
             echo "<script>alert('Twoje zgłoszenie zostało wysłane.');</script>";
-        }
-
-        if(!$mail1->send()) {
-            echo 'Wiadomość nie została wysłana.';
-            echo 'Błąd: ' . $mail1->ErrorInfo;
-        } else {
-            echo "<script>alert('Twoje zgłoszenie zostało wysłane.');</script>";
+            header("Location: http://localhost/SznycWiki/thanks.html");
         }
     }
 }

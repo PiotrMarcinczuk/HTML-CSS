@@ -92,6 +92,13 @@ main a {
 main a:hover {
   color: #E45429;
 }
+main #thank p {
+  font-size: 80px;
+}
+main #thank p #h {
+  color: red;
+  font-size: 125px;
+}
 main #plan {
   width: 97%;
   height: auto;

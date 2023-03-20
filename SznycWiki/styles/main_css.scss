@@ -113,6 +113,17 @@ main{
   a:hover{
     color: $hover_color;
   }
+
+  #thank{
+    p{
+      font-size: 80px;
+      #h{
+        color: red;
+        font-size: 125px;
+      }
+    }
+  }
+
   #plan{
     width: 97%;
     height: auto;
