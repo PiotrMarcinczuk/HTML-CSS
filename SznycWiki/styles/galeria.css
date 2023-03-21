@@ -367,7 +367,7 @@ main #gallery .foto:hover {
     border: solid 2px black;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 2px 2px 1px;
+    box-shadow: 2px 2px 1px black;
   }
   main #gallery .foto img {
     width: 100%;
