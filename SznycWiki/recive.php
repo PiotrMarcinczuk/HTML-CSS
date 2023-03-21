@@ -25,12 +25,24 @@ if(isset($_POST['mail_text'])) {
         $mail->Password = 'mqrqzesdoqgbommd'; // hasło do emaila
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
+        $mail->IsHTML(true);
         // treść wiadomości
         $mail->CharSet = 'UTF-8'; 
         $mail->setFrom('sznycer2137@gmail.com', 'Sznycer');
         $mail->addAddress($adres);
         $mail->Subject = 'Podziękowanie';
-        $mail->Body = 'Dziękuję za podsunięcie słowa, niech Sznyc będzie z tobą';
+        $message = '<html>
+        <head>
+            <title>Dzięki od SznycRęki</title>
+        </head>
+        <body>
+            <h1>Dziękuje za SznycSłowo</h1>
+            <hr>
+            <p>Bardzo dziękuje za pomoc w tworzeniu słownika, niech Sznyc będzie z tobą</p>
+        </body>
+        </html>
+        ';
+        $mail->Body = $message;
 
         // ustawienia SMTP
         $mail1 = new PHPMailer(true);
