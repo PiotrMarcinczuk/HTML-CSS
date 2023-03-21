@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
   
     function func() {
       let div = document.querySelector("#nav_bar");
-      if (div.style.display == "flex") {
+      if (div.style.display == "block") {
         div.style.display = "none";
       } else {
-        div.style.display = "flex";
+        div.style.display = "block";
       }  
     }
   });
