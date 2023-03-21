@@ -1,0 +1,347 @@
+body {
+  background-color: #1e1e1e;
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+nav {
+  width: 100%;
+  height: 120px;
+  background-color: #171614;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+}
+nav #nav_logo {
+  width: 50%;
+  height: 100%;
+  color: #E1DEDA;
+  font-size: 60px;
+  margin-left: 15px;
+  text-align: left;
+}
+nav #nav_logo h1 {
+  margin: 0;
+}
+nav #nav_span {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+nav #nav_span hr {
+  border: 1px #F88181 solid;
+  height: 20px;
+  margin: 10px;
+}
+nav #nav_span .button_1 {
+  margin: 15px;
+  font-size: 30px;
+  font-family: "Kanit", sans-serif;
+  background-color: #171614;
+  border: 0;
+  cursor: pointer;
+  color: #E6E9E8;
+}
+nav #nav_span .button_1:hover {
+  color: #E45429;
+  transition-duration: 0.5s;
+  transform: scale(1.2);
+}
+nav #nav_span h1 {
+  height: 150px;
+  margin-top: 25px;
+}
+nav #nav_span a {
+  text-decoration: none;
+  color: #E6E9E8;
+}
+nav #nav_span a:hover {
+  color: #E45429;
+}
+nav #button_mobile {
+  display: none;
+}
+
+#nav_bar {
+  display: none;
+}
+
+main {
+  margin-top: 150px;
+  width: 90%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: #E6E9E8;
+}
+main a {
+  text-decoration: none;
+  color: #F4EAE7;
+  transition-duration: 0.5s;
+}
+main a:hover {
+  color: #E45429;
+}
+main #thank p {
+  font-size: 80px;
+}
+main #thank p #h {
+  color: red;
+  font-size: 125px;
+}
+main #tutorial {
+  margin-bottom: 50px;
+  width: 60%;
+}
+main #plan {
+  width: 97%;
+  height: auto;
+  background-color: #171614;
+  margin: 5px;
+  padding: 10px;
+}
+main #plan #slowo, main #plan #bugi {
+  width: 45%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+main #plan #slowo input[type=text], main #plan #bugi input[type=text] {
+  width: 70%;
+  height: 30px;
+  margin: 3px;
+  text-orientation: upright;
+}
+main #plan #slowo #slowo_opis, main #plan #bugi #slowo_opis {
+  height: 60px;
+}
+main #plan #slowo #mail_opis, main #plan #bugi #mail_opis {
+  height: 80px;
+}
+main #plan #formsy {
+  width: 100%;
+  font-size: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 30px;
+}
+main #plan #formsy h1 {
+  width: 100%;
+  margin-bottom: 40px;
+}
+main #plan #formsy .guzik {
+  display: block;
+  width: 25%;
+  height: 50px;
+  cursor: pointer;
+}
+main #plan .all {
+  margin-right: 10px;
+}
+main #podziekowania {
+  width: 97%;
+  height: 50%;
+  background-color: #171614;
+  margin: 5px;
+  padding: 10px;
+}
+main #podziekowania h2 {
+  font-size: 35px;
+}
+main #podziekowania ul {
+  font-size: 28px;
+}
+main .tekst {
+  font-size: 28px;
+}
+
+@media screen and (min-width: 901px) and (max-width: 1050px) {
+  nav #nav_logo {
+    width: 30%;
+  }
+  nav #nav_span {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+  }
+  nav #nav_span .button_1 {
+    font-size: 18px;
+    margin: 5px;
+  }
+  nav #nav_span .button_1:hover {
+    color: #E45429;
+    transition-duration: 0.5s;
+    transform: scale(1.1);
+  }
+  nav #button_mobile {
+    display: none;
+  }
+  main {
+    margin-top: 200px;
+  }
+  main #plan {
+    height: auto;
+  }
+  main #podziekowania {
+    height: auto;
+  }
+}
+@media screen and (min-width: 1051px) and (max-width: 1281px) {
+  nav #nav_logo {
+    width: 30%;
+  }
+  nav #nav_span {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+  }
+  nav #nav_span .button_1 {
+    font-size: 25px;
+    margin: 5px;
+  }
+  nav #nav_span .button_1:hover {
+    transform: scale(1.1);
+  }
+  nav #button_mobile {
+    display: none;
+  }
+  #nav_bar {
+    display: none;
+  }
+  main {
+    margin-top: 200px;
+  }
+  main #plan {
+    height: auto;
+  }
+  main #podziekowania {
+    height: auto;
+  }
+}
+@media screen and (max-width: 900px) {
+  nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  nav #nav_logo {
+    width: 40%;
+    height: 75%;
+  }
+  nav #nav_logo h1 {
+    font-size: 50px;
+  }
+  nav #nav_span {
+    display: none;
+  }
+  nav #button_mobile {
+    background-color: #171614;
+    width: 20%;
+    height: 60%;
+    margin: 5px 5px 0px 0px;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    right: 0;
+  }
+  nav #button_mobile #arrow_button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    height: auto;
+  }
+  nav #button_mobile #arrow_button:hover {
+    transform: scale(1.3);
+  }
+  nav #button_mobile #arrow {
+    width: 35px;
+    height: 35px;
+    transition: 0.5s;
+    box-shadow: -2px 2px 0 rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transform: rotate(-45deg);
+  }
+  #nav_bar {
+    display: none;
+    width: 50%;
+    height: 150px;
+    justify-content: center;
+    margin-top: 30px;
+    position: fixed;
+    top: 60px;
+    right: 15px;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  #nav_bar ul {
+    font-size: 21px;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  #nav_bar ul li {
+    width: 100%;
+    margin: 0;
+  }
+  #nav_bar ul li a {
+    text-decoration: none;
+    color: #E6E9E8;
+    transition-duration: 0.5s;
+  }
+  #nav_bar ul li a:hover {
+    color: #E45429;
+  }
+  #nav_bar ul li:hover {
+    transition-duration: 0.5s;
+    background-color: #171614;
+    box-shadow: 6px 5px 5px black;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+  main #thank p {
+    font-size: 26px;
+  }
+  main .tekst {
+    font-size: 22px;
+  }
+  main #plan {
+    width: 100%;
+    height: auto;
+  }
+  main #podziekowania {
+    width: 100%;
+    height: auto;
+  }
+  main #podziekowania li {
+    margin: 5px;
+  }
+}/*# sourceMappingURL=thanks.css.map */

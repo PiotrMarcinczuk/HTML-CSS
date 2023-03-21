@@ -1,0 +1,415 @@
+//chuja a nie zmiany
+
+$background_color: #1e1e1e;
+$nav_color: #171614;
+$h_color: #E1DEDA;
+$default_font: 'Kanit', sans-serif;
+$font_color: #E6E9E8;
+$hover_color: #E45429;
+
+body{
+  background-color: $background_color;
+  font-family: $default_font;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+@mixin font{
+  font-family: $default_font;
+  font-size: 18px;
+  color: $font_color;
+}
+//    Nagłówek i jakieś bajery
+nav{
+  width: 100%;
+  height: 120px;
+  background-color: $nav_color;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+
+  #nav_logo{
+    width: 50%;
+    height: 100%;
+    color: $h_color;
+    font-size: 60px;
+    margin-left: 15px;
+    text-align: left;
+    h1{
+      margin: 0;
+    }
+  }
+
+  #nav_span{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    hr{
+      border: 1px #F88181 solid;
+      height: 20px;
+      margin: 10px;
+    }
+    .button_1{
+      margin: 15px;
+      font-size: 30px;
+      font-family: $default_font;
+      background-color: $nav_color;
+      border: 0;
+      cursor: pointer;
+      color: $font_color;
+    }
+
+    .button_1:hover{
+      color: $hover_color; 
+      transition-duration: 0.5s;
+      transform: scale(1.2);
+    }
+
+    h1{
+      height: 150px;
+      margin-top: 25px;
+    }
+
+    a{
+      text-decoration: none;
+      color: $font_color;
+    }
+
+    a:hover{
+      color: $hover_color; 
+      }
+    }
+
+    #button_mobile{
+        display: none;
+    }
+}
+
+#nav_bar{
+    display: none;
+}
+
+//main 
+main{
+  margin-top: 150px;
+  width: 90%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: $font_color;
+  a{
+    text-decoration: none;
+    color: #F4EAE7;
+    transition-duration: 0.5s;
+  }
+
+  a:hover{
+    color: $hover_color;
+  }
+
+  #thank{
+    p{
+      font-size: 80px;
+      #h{
+        color: red;
+        font-size: 125px;
+      }
+    }
+  }
+
+  #tutorial{
+    margin-bottom: 50px;
+    width: 60%;
+  }
+
+  #plan{
+    width: 97%;
+    height: auto;
+    background-color: $nav_color;
+    margin: 5px;
+    padding: 10px;
+    #slowo, #bugi{
+      width: 45%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      input[type="text"] {
+        width: 70%;
+        height: 30px;
+        margin: 3px;
+        text-orientation: upright;
+      }
+
+      #slowo_opis{
+        height: 60px;
+      }
+      #mail_opis{
+        height: 80px;
+      }
+    }
+    #formsy{
+      width: 100%;
+      font-size: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 30px;
+      h1{
+        width: 100%;
+        margin-bottom: 40px;
+      }
+      .guzik{
+        display: block;
+        width: 25%;
+        height: 50px;
+        cursor: pointer;
+      }
+    }
+    .all{
+      margin-right: 10px;
+    }
+  }
+
+  #podziekowania{
+    width: 97%;
+    height: 50%;
+    background-color: $nav_color;
+    margin: 5px;
+    padding: 10px;
+    h2{
+      font-size: 35px;
+    }
+    ul{
+      font-size: 28px;
+    }
+  }
+
+  .tekst{
+    font-size: 28px;
+  }
+  
+}
+
+//special
+@media screen and (min-width: 901px) and (max-width: 1050px){
+    nav{
+        #nav_logo{
+            width: 30%;
+        }
+     
+        #nav_span{
+            width: 70%;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 15px;
+            .button_1{
+                font-size: 18px;
+                margin: 5px;
+            }
+
+            .button_1:hover{
+                color: $hover_color; 
+                transition-duration: 0.5s;
+                transform: scale(1.1);
+            }
+        }
+
+        #button_mobile{
+            display: none;
+        }
+    }
+  main{
+    margin-top: 200px;
+    #plan{
+      height: auto;
+    }
+  
+    #podziekowania{
+      height: auto;
+    }
+  }
+}
+
+// Dla laptopów
+@media screen and (min-width: 1051px) and (max-width: 1281px){
+    nav{
+        #nav_logo{
+            width: 30%;
+        }
+     
+        #nav_span{
+            width: 70%;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 15px;
+            .button_1{
+                font-size: 25px;
+                margin: 5px;
+            }
+
+            .button_1:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        #button_mobile{
+            display: none;
+        }
+    }
+
+    #nav_bar{
+        display: none;
+    }
+  
+  main{
+    margin-top: 200px;
+    #plan{
+      height: auto;
+    }
+
+    #podziekowania{
+      height: auto;
+    }
+  }
+}
+
+// Dla mobilnych urządzeń (telefon)
+@media screen and (max-width: 900px){
+  nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    #nav_logo{
+      width: 40%;
+      height: 75%;
+      h1{
+        font-size: 50px;
+      }
+    }
+
+    #nav_span{
+      display: none;
+    }
+
+    #button_mobile{
+      background-color: $nav_color;
+      width: 20%;
+      height: 60%;
+      margin: 5px 5px 0px 0px;
+      display: flex;
+      justify-content: center;
+      top: 0;
+      right: 0;
+      
+      #arrow_button{
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        display: flex;
+        align-items: center;
+        transition: 0.5s;
+        height: auto;
+      }
+
+      #arrow_button:hover{
+        transform: scale(1.3);
+      }
+
+      #arrow{
+        width: 35px;
+        height: 35px;
+        transition: 0.5s;
+        box-shadow: -2px 2px 0 rgba(255,255,255,0.5);
+        cursor: pointer;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  #nav_bar{
+    display: none;
+    width: 50%;
+    height: 150px;
+    justify-content: center;
+    margin-top: 30px;
+    position: fixed;
+    top: 60px;
+    right: 15px;
+    backdrop-filter: blur(5px);
+    ul{
+      font-size: 21px;
+      width: 100%;
+      height: 150px;
+      text-align: center;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      margin-right: 5px;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      li{
+        width: 100%;
+        margin: 0;
+        a{
+          text-decoration: none;
+          color: $font_color;
+          transition-duration: 0.5s;
+        }
+
+        a:hover{
+          color: $hover_color;
+        }
+      }
+
+      li:hover{
+        transition-duration: 0.5s;
+        background-color: $nav_color;
+        box-shadow: 6px 5px 5px black;
+      }
+    }   
+  }
+
+  
+  main{
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    #thank{
+      p{
+        font-size: 26px;
+
+      }
+      
+    }
+    .tekst{
+      font-size: 22px;
+    }
+    
+    #plan{
+      width: 100%;
+      height: auto;
+    }
+
+    #podziekowania{
+      width: 100%;
+      height: auto;
+      li{
+        margin: 5px;
+      }
+    }
+  }
+}
+
