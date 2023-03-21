@@ -96,8 +96,51 @@ main h2 {
   color: #E45429;
   font-size: 40px;
 }
-main #random {
+main #random_article {
+  width: 70%;
+  height: 100px;
+  background-color: #171614;
+  margin-bottom: 20px;
+  padding: 4px;
+  box-shadow: 3px 3px 3px 0px black;
   color: red;
+  display: flex;
+}
+main #random_article #random {
+  width: 150px;
+  height: 80px;
+  margin: 10px 0px 0px 40px;
+  font-family: "Kanit", sans-serif;
+  font-size: 22px;
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  cursor: pointer;
+  transition-duration: 0.5s;
+  border: none;
+  box-shadow: 5px 5px 5px 5px black;
+}
+main #random_article #random:hover {
+  transform: scale(1.1);
+  background-color: #E45429;
+  color: #E6E9E8;
+  box-shadow: 5px 5px 5px 5px black;
+}
+main #random_article #article {
+  width: 25%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 200px;
+  background: rgba(255, 255, 255, 0.05);
+}
+main #random_article #article a {
+  color: rgba(128, 128, 255, 0.8);
+}
+main #random_article #article p {
+  transition-duration: 0.5s;
+}
+main #random_article #article p:hover {
+  transform: scale(1.2);
 }
 main a {
   text-decoration: none;
@@ -222,6 +265,14 @@ footer #footer_part {
   nav #button_mobile {
     display: none;
   }
+  main #random_article #article {
+    width: 270px;
+    height: 70px;
+    margin-left: 100px;
+  }
+  main #random_article a {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 1051px) and (max-width: 1281px) {
   nav #nav_logo {
@@ -254,6 +305,11 @@ footer #footer_part {
   }
   main #opis #opis_postaci {
     height: auto;
+  }
+  main #random_article #article {
+    width: 300px;
+    height: 70px;
+    margin-left: 100px;
   }
 }
 @media screen and (max-width: 900px) {
@@ -365,6 +421,23 @@ footer #footer_part {
   }
   main #slownik h2 {
     font-size: 35px;
+  }
+  main #random_article {
+    width: 100%;
+  }
+  main #random_article #random {
+    width: 100px;
+    height: 60px;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  main #random_article #article {
+    width: 190px;
+    height: 75px;
+    margin-left: 40px;
+  }
+  main #random_article a {
+    font-size: 18px;
   }
   main #opis {
     width: 95%;
