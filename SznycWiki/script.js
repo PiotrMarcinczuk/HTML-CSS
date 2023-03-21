@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let guzik = document.querySelector(".script_button");
+    let guzik = document.querySelector("#arrow_button");
     guzik.addEventListener('click', function() {
       func();
     });

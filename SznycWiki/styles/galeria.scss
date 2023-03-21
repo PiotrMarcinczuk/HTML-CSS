@@ -312,11 +312,6 @@ main{
                 transition-duration: 0.5s;
                 cursor: pointer;
             }
-
-            .script_button:hover{
-                transform: scale(1.2);
-            }
-
             img{
                 width: 40px;
                 height: 40px;
@@ -325,6 +320,40 @@ main{
                 background-color: $nav_color;
                 border: 0;
             }
+        }
+
+        #nav_bar{
+            display: none;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            margin-top: 20px;
+            ul{
+              font-size: 32px;
+                width: 100%;
+                height: 250px;
+                text-align: center;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                text-decoration: none;
+                li{
+                  background-color: $nav_color;
+                  border-bottom: 1px solid black;
+                  border-bottom-width: 1px;
+                  a{
+                    text-decoration: none;
+                    color: $font_color;
+                    transition-duration: 0.5s;
+                  }
+      
+                  a:hover{
+                    color: $hover_color;
+                  }
+                }
+            }   
         }
     }
 
