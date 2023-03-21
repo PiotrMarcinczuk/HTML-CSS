@@ -124,6 +124,11 @@ main{
     }
   }
 
+  #tutorial{
+    margin-bottom: 50px;
+    width: 60%;
+  }
+
   #plan{
     width: 97%;
     height: auto;
@@ -159,11 +164,13 @@ main{
       font-size: 30px;
       h1{
         width: 100%;
-        margin-bottom: 100px;
+        margin-bottom: 40px;
       }
       .guzik{
         display: block;
-        width: 15%;
+        width: 25%;
+        height: 50px;
+        cursor: pointer;
       }
     }
     .all{

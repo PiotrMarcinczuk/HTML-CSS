@@ -47,7 +47,12 @@
             <section id="plan">
                 <span id="formsy">
                     <h1>Skontaktuj się z Sznycami</h1>
+                    <span id="tutorial">
+                        Strona służy do pomocy w tworzeniu i opisywaniu nowych słow, ponadto można też
+                        zgłosić błąd lub niedopatrzenie wpisując w odpowiednie pola formularza gdzie on występuje.
+                    </span>
                     <form id="slowo" method="POST" action="recive.php">
+                        <h2>Wymyśl SznycSłowo</h2>
                         <label for="mail" class="all">Wpisz swoj e-mail: </label>
                         <input type="text" name="mail_text" class="all_input"><br>
 
@@ -60,6 +65,7 @@
                         <input type="submit" class="guzik" value="Wyślij">
                     </form>
                     <form id="bugi" method="POST" action="send.php">
+                        <h2>Opisz napotkany błąd/problem</h2>
                         <label for="mail" class="all">Wpisz gdzie i kiedy występuje: </label>
                         <input type="text" name="bug_title" class="all_input"><br>
 
