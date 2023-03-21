@@ -426,19 +426,6 @@ nav{
                 cursor: pointer;
                 transform: rotate(-45deg);
             }
-
-            .script_button:hover{
-                transform: scale(1.2);
-            }
-
-            img{
-                width: 40px;
-                height: 40px;
-            }
-            button{
-                background-color: $nav_color;
-                border: 0;
-            }
         }
     }
 

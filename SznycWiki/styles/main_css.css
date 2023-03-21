@@ -327,6 +327,9 @@ main .tekst {
     justify-content: center;
     margin-top: 675px;
   }
+  main #thank p {
+    font-size: 26px;
+  }
   main .tekst {
     font-size: 22px;
   }

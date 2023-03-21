@@ -356,17 +356,6 @@ footer #footer_part {
     cursor: pointer;
     transform: rotate(-45deg);
   }
-  nav #button_mobile .script_button:hover {
-    transform: scale(1.2);
-  }
-  nav #button_mobile img {
-    width: 40px;
-    height: 40px;
-  }
-  nav #button_mobile button {
-    background-color: #171614;
-    border: 0;
-  }
   #nav_bar {
     display: none;
     width: 50%;

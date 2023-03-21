@@ -384,10 +384,18 @@ main{
   main{
     display: flex;
     justify-content: center;
+    margin-top: 675px;
+    #thank{
+      p{
+        font-size: 26px;
+
+      }
+      
+    }
     .tekst{
       font-size: 22px;
     }
-    margin-top: 675px;
+    
     #plan{
       width: 100%;
       height: auto;

@@ -275,17 +275,10 @@ main .tekst {
     display: none;
   }
   nav #button_mobile {
-    background-color: #171614;
+    display: block;
     width: 20%;
-    height: 40%;
-    margin: 5px 15px 0px 0px;
-    display: flex;
-    justify-content: center;
-    top: 0;
-    right: 0;
   }
   nav #button_mobile #arrow_button {
-    width: 100%;
     background-color: rgba(0, 0, 0, 0);
     border: none;
     display: flex;
@@ -300,6 +293,8 @@ main .tekst {
     width: 35px;
     height: 35px;
     transition: 0.5s;
+    position: relative;
+    right: 0;
     box-shadow: -2px 2px 0 rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transform: rotate(-45deg);
