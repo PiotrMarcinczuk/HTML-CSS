@@ -42,7 +42,11 @@
             </section>
             <!--Rozwijana lista guzik /koniec-->
         </nav>
-        <main> 
+        <main>
+            <section id="random_article">
+                <button id="random" onclick="generate()">Losuj</button>
+                <p id="article"></p>
+            </section>
             <!--Pojemnik na wszystkie artykuly /start-->
             <div id="opis"></div>
             <!--Pojemnik na wszystkie artykuly /koniec-->
@@ -126,7 +130,28 @@
                     content_div.appendChild(list);
                 }     
             }
-        </script>
 
+            //Funkcja losująca artykuł
+            let random = document.getElementById("random");
+            let help_tab = [];
+            function random_int(n){
+                return Math.floor(Math.random() * n);
+            }
+            function generate(){
+                let page = random_int(pages.length);
+                let ready = pages[page];
+                let a = document.createElement("a");
+                let p = document.createElement("p");
+                let article = document.getElementById("article");
+                a.href = ready.url;
+                a.textContent = ready.title;
+                p.appendChild(a);
+                if(article.contains(help_tab[0])){
+                    article.removeChild(help_tab[0])
+                }
+                article.appendChild(p);
+                help_tab = [p];
+            }
+        </script>
     </body>
 </html>

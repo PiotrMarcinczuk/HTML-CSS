@@ -100,8 +100,15 @@ main{
     height: 80%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: $nav_color;
     margin-top: 150px;
+    color: $font_color;
+    h2{
+        font-size: 55px;
+    }
+
     #gallery{
         width: 90%;
         height: 800px;
@@ -124,7 +131,7 @@ main{
             border: solid 2px black;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 2px 2px 1px ;
+            box-shadow: 2px 2px 1px black;
             transition-duration: 0.5s;
             img{
                 width: 100%;
@@ -135,7 +142,7 @@ main{
         .foto:hover{
             transform: scale(1.1);
             cursor: pointer;
-            box-shadow: 5px 5px 5px ;
+            box-shadow: 5px 5px 5px black;
         }
     }
 }

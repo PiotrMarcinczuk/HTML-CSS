@@ -87,6 +87,7 @@ main {
   width: 100%;
   background-color: #1e1e1e;
   margin-top: 150px;
+  margin-bottom: 15px;
   font-family: "Kanit", sans-serif;
   font-size: 22px;
   color: #E6E9E8;
@@ -94,6 +95,9 @@ main {
 main h2 {
   color: #E45429;
   font-size: 40px;
+}
+main #random {
+  color: red;
 }
 main a {
   text-decoration: none;
@@ -187,7 +191,7 @@ main #slownik div {
 footer {
   width: 100%;
   height: 40px;
-  display: flex;
+  display: none;
   align-items: center;
   padding: 5px;
 }

@@ -75,7 +75,7 @@ nav #button_mobile {
 }
 
 main {
-  margin-top: 250px;
+  margin-top: 350px;
   width: 90%;
   height: 800px;
   display: flex;
@@ -91,6 +91,9 @@ main a {
 }
 main a:hover {
   color: #E45429;
+}
+main hr {
+  display: none;
 }
 main #thank p {
   font-size: 80px;
@@ -110,23 +113,32 @@ main #plan {
   margin: 5px;
   padding: 10px;
 }
+main #plan #slowo {
+  background: linear-gradient(to left, #1e1e1e, #E45429, #1e1e1e 80%);
+}
+main #plan #bugi {
+  background: linear-gradient(to bottom left, #1e1e1e, #E45429, #1e1e1e 80%);
+}
 main #plan #slowo, main #plan #bugi {
   width: 45%;
+  padding: 5px;
   height: auto;
   display: flex;
   flex-direction: column;
 }
 main #plan #slowo input[type=text], main #plan #bugi input[type=text] {
   width: 70%;
-  height: 30px;
+  height: 35px;
   margin: 3px;
   text-orientation: upright;
+  font-size: 28px;
+  box-shadow: 12px 10px 10px 5px #171614;
 }
 main #plan #slowo #slowo_opis, main #plan #bugi #slowo_opis {
-  height: 60px;
+  height: 150px;
 }
 main #plan #slowo #mail_opis, main #plan #bugi #mail_opis {
-  height: 80px;
+  height: 150px;
 }
 main #plan #formsy {
   width: 100%;
@@ -143,9 +155,22 @@ main #plan #formsy h1 {
 }
 main #plan #formsy .guzik {
   display: block;
-  width: 25%;
+  width: 20%;
   height: 50px;
   cursor: pointer;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  background-color: #171614;
+  border: none;
+  font-size: 30px;
+  font-family: "Kanit", sans-serif;
+  transition: 0.5s;
+}
+main #plan #formsy .guzik:hover {
+  transform: scale(1.1);
+  border: 1px solid red;
+  background-color: #E45429;
+  color: #E6E9E8;
 }
 main #plan .all {
   margin-right: 10px;
@@ -320,15 +345,15 @@ main .tekst {
   main {
     display: flex;
     justify-content: center;
-    margin-top: 300px;
-  }
-  main .tekst {
-    font-size: 22px;
+    margin-top: 700px;
   }
   main hr {
     width: 100%;
     border: 1px solid #E45429;
     margin: 50px 0px 25px 0px;
+  }
+  main .tekst {
+    font-size: 22px;
   }
   main #plan {
     width: 100%;
@@ -337,17 +362,25 @@ main .tekst {
   main #plan #formsy {
     font-size: 20px;
   }
+  main #plan #formsy .guzik {
+    width: 35%;
+  }
   main #plan #formsy #tutorial {
     width: 100%;
   }
   main #plan #formsy #slowo {
     width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
   }
   main #plan #formsy #slowo #mail_opis {
     height: 50px;
   }
   main #plan #formsy #bugi {
     width: 100%;
+  }
+  main #plan #formsy input[type=text] {
+    width: 95%;
   }
   main #podziekowania {
     width: 100%;

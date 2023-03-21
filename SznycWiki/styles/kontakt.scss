@@ -96,7 +96,7 @@ nav{
 
 //main 
 main{
-  margin-top: 250px;
+  margin-top: 350px;
   width: 90%;
   height: 800px;
   display: flex;
@@ -112,6 +112,10 @@ main{
 
   a:hover{
     color: $hover_color;
+  }
+
+  hr{
+    display: none;
   }
 
   #thank{
@@ -135,25 +139,36 @@ main{
     background-color: $nav_color;
     margin: 5px;
     padding: 10px;
+    #slowo{
+      background: linear-gradient(to left, $background_color,$hover_color,$background_color 80%);
+    }
+    #bugi{
+      background: linear-gradient(to bottom left, $background_color,$hover_color,$background_color 80%);
+
+    }
     #slowo, #bugi{
       width: 45%;
+      padding: 5px;
       height: auto;
       display: flex;
       flex-direction: column;
       input[type="text"] {
         width: 70%;
-        height: 30px;
+        height: 35px;
         margin: 3px;
         text-orientation: upright;
+        font-size: 28px;
+        box-shadow: 12px 10px 10px 5px $nav_color;
       }
 
       #slowo_opis{
-        height: 60px;
+        height: 150px;
       }
       #mail_opis{
-        height: 80px;
+        height: 150px;
       }
     }
+
     #formsy{
       width: 100%;
       font-size: auto;
@@ -168,11 +183,26 @@ main{
       }
       .guzik{
         display: block;
-        width: 25%;
+        width: 20%;
         height: 50px;
         cursor: pointer;
+        margin-left: 20px;
+        margin-bottom: 5px;
+        background-color: $nav_color;
+        border: none;
+        font-size: 30px;
+        font-family: $default_font;
+        transition: 0.5s;
+      }
+
+      .guzik:hover{
+        transform: scale(1.1);
+        border: 1px solid red;
+        background-color: $hover_color;
+        color: $font_color;
       }
     }
+
     .all{
       margin-right: 10px;
     }
@@ -382,25 +412,31 @@ main{
   main{
     display: flex;
     justify-content: center;
-    margin-top: 300px;
-    .tekst{
-      font-size: 22px;
-    }
+    margin-top: 700px;
     hr{
       width: 100%;
       border: 1px solid $hover_color;
       margin: 50px 0px 25px 0px;
+    }
+
+    .tekst{
+      font-size: 22px;
     }
     #plan{
       width: 100%;
       height: auto;
       #formsy{
         font-size: 20px;
+        .guzik{
+          width: 35%;
+        }
         #tutorial{
           width: 100%;
         }
         #slowo{
           width: 100%;
+          text-align: center;
+          margin-bottom: 35px;
           #mail_opis{
             height: 50px;
           }
@@ -409,6 +445,10 @@ main{
         #bugi{
           width: 100%;
         }
+
+        input[type="text"]{
+          width: 95%;
+        }   
       }
     }
 
