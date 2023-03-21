@@ -107,7 +107,7 @@ main #random_article {
   display: flex;
 }
 main #random_article #random {
-  width: 150px;
+  width: 200px;
   height: 80px;
   margin: 10px 0px 0px 40px;
   font-family: "Kanit", sans-serif;
@@ -125,7 +125,7 @@ main #random_article #random:hover {
   box-shadow: 5px 5px 5px 5px black;
 }
 main #random_article #article {
-  width: 25%;
+  width: 40%;
   height: 50px;
   display: flex;
   align-items: center;
@@ -140,7 +140,7 @@ main #random_article #article p {
   transition-duration: 0.5s;
 }
 main #random_article #article p:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 main a {
   text-decoration: none;
@@ -421,12 +421,13 @@ footer #footer_part {
     font-size: 20px;
   }
   main #random_article #article {
-    width: 190px;
+    width: 250px;
     height: 75px;
     margin-left: 40px;
+    text-align: center;
   }
   main #random_article a {
-    font-size: 18px;
+    font-size: 15px;
   }
   main #opis {
     width: 95%;

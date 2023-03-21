@@ -124,7 +124,7 @@ nav{
         color: red;
         display: flex;
         #random{
-            width: 150px;
+            width: 200px;
             height: 80px;
             margin: 10px 0px 0px 40px;
             font-family: $default_font;
@@ -144,7 +144,7 @@ nav{
         }
 
         #article{
-            width: 25%;
+            width: 40%;
             height: 50px;
             display: flex;
             align-items: center;
@@ -160,7 +160,7 @@ nav{
             }
 
             p:hover{
-                transform: scale(1.2);
+                transform: scale(1.1);
             }
         }
     }
@@ -496,12 +496,13 @@ nav{
                 font-size: 20px;
             }
             #article{
-                width: 190px;
+                width: 250px;
                 height: 75px;
                 margin-left: 40px;
+                text-align: center;
             }
             a{
-                font-size: 18px;
+                font-size: 15px;
             }
         }
 
