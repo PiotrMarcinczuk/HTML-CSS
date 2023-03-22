@@ -12,5 +12,5 @@ document.addEventListener('DOMContentLoaded', function() {
         div.style.display = "block";
       }  
     }
-  });
+});
   

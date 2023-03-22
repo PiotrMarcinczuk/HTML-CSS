@@ -140,8 +140,9 @@ main #gallery .foto:hover {
   color: red;
 }
 #selected_foto img {
-  width: 35%;
-  height: 85%;
+  width: 30%;
+  height: 70%;
+  margin-top: 200px;
 }
 #selected_foto .napis {
   width: 300px;
