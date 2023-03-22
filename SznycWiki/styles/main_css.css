@@ -255,6 +255,9 @@ main #podziekowania.open {
   main #rand {
     height: auto;
   }
+  main #podziekowania {
+    height: 400px;
+  }
 }
 @media screen and (min-width: 1051px) and (max-width: 1281px) {
   nav #nav_logo {
