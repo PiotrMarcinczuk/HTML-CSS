@@ -154,23 +154,46 @@ main #plan #formsy h1 {
   margin-bottom: 40px;
 }
 main #plan #formsy .guzik {
-  display: block;
-  width: 20%;
-  height: 50px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
   cursor: pointer;
-  margin-left: 20px;
-  margin-bottom: 5px;
-  background-color: #171614;
-  border: none;
-  font-size: 30px;
+  display: inline-block;
   font-family: "Kanit", sans-serif;
-  transition: 0.5s;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.24px;
+  margin: 0 0 5px 25px;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 main #plan #formsy .guzik:hover {
-  transform: scale(1.1);
-  border: 1px solid red;
-  background-color: #E45429;
-  color: #E6E9E8;
+  background-color: #FFC229;
+  box-shadow: #FF6314 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+main #plan #formsy .guzik:active {
+  transform: scale(1.025);
+}
+@media (min-width: 768px) {
+  main #plan #formsy .guzik {
+    font-size: 1.5rem;
+    padding: 0.75rem 2rem;
+  }
 }
 main #plan .all {
   margin-right: 10px;
@@ -218,6 +241,7 @@ main .tekst {
     margin-top: 350px;
   }
   main #plan {
+    margin-top: 300px;
     height: auto;
   }
   main #podziekowania {
@@ -248,6 +272,7 @@ main .tekst {
     display: none;
   }
   main #plan {
+    margin-top: 200px;
     height: auto;
   }
   main #podziekowania {
