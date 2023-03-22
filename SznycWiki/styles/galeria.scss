@@ -179,16 +179,21 @@ main{
 }
 
 #close{
-    height: 50px;
+    width: 100px;
+    height: 100px;
     position: fixed;
     right: 50px;
     top: 50px;
-    font-size: 180px;
+    font-size: 150px;
     background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     rotate: (45deg);
     cursor: pointer;
     border: none;
     transition-duration: 0.5s;
+    border-radius: 50px;
 }
 
 #close:hover{
@@ -212,12 +217,11 @@ main{
 #left{
     width: 80px;
     height: 80px;
-    transition: 0.5s;
     box-shadow: -2px 2px 0 rgba(255,255,255,0.5);
     cursor: pointer;
-    position: relative;
+    position: fixed;
     top: 45%;
-    right: 38%;
+    left: 30%;
     transform: rotate(45deg);
 
 }
@@ -225,12 +229,11 @@ main{
 #right{
     width: 80px;
     height: 80px;
-    transition: 0.5s;
     box-shadow: -2px 2px 0 rgba(255,255,255,0.5);
     cursor: pointer;
-    position: relative;
+    position: fixed;
     top: 45%;
-    right: 4%;
+    right: 30%;
     transform: rotate(225deg);
 }
 
@@ -329,7 +332,7 @@ main{
         }
         
         #arrow_button:hover{
-            transform: scale(1.);
+            transform: scale(1.2);
         }
 
         #arrow{
@@ -473,9 +476,9 @@ main{
 
         #close{
             position: fixed;
-            right: 10px;
+            right: -20px;
             top: 10px;
-            font-size: 50px;
+            font-size: 100px;
         }
         
         .arrow{
@@ -484,7 +487,18 @@ main{
             display: flex;
             align-items: center;
             transition: 0.5s;
-            height: auto;
+            width: 50px;
+            height: 50px;
+        }
+
+        #left{
+            position: fixed;
+            left: 10%;
+        }
+
+        #right{
+            position: fixed;
+            right: 10%;
         }
         
         .arrow:hover{
