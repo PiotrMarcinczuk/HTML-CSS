@@ -150,32 +150,43 @@ main #plan #formsy .guzik {
 main #plan .all {
   margin-right: 10px;
 }
-main #podziekowania {
+main #rand {
   width: 97%;
   height: 50%;
   background-color: #171614;
   margin: 5px;
   padding: 10px;
 }
-main #podziekowania h2 {
+main #rand span {
+  font-size: 28px;
+}
+main #rand h2 {
   font-size: 35px;
 }
-main #podziekowania ul {
-  font-size: 28px;
+main #rand form {
+  margin-top: 40px;
+}
+main #rand form input {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
 }
 main .tekst {
   font-size: 28px;
 }
-main #cytat {
+main #podziekowania {
   width: 100%;
-  height: 175px;
-  margin-top: 50px;
+  height: 300px;
+  margin-top: 15px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   font-size: 3px;
   transition: 0.6s;
 }
-main #cytat #slide {
+main #podziekowania p {
+  display: inline;
+}
+main #podziekowania #slide {
   width: 125px;
   height: 125px;
   transition: 0.5s;
@@ -183,9 +194,9 @@ main #cytat #slide {
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
   position: relative;
-  left: -6%;
+  left: -5%;
 }
-main #cytat #slide #sign {
+main #podziekowania #slide #sign {
   width: 80px;
   height: 80px;
   transition: 0.8s;
@@ -193,28 +204,24 @@ main #cytat #slide #sign {
   cursor: pointer;
   transform: rotate(-135deg);
 }
-main #cytat #slide #sign:hover {
+main #podziekowania #slide #sign:hover {
   scale: 1.2;
 }
-main #cytat .in {
-  display: block;
+main #podziekowania .in {
   transform: translateX(-650px);
   transition: transform 0.5s;
 }
-main #cytat .in.open {
+main #podziekowania .in.open {
+  height: 250px;
   transform: translateX(50px);
+  margin-bottom: 40px;
 }
-main #cytat #slide.open {
+main #podziekowania #slide.open {
   transform: rotate(180deg);
 }
-main #cytat.open {
+main #podziekowania.open {
   background-color: #171614;
-  font-size: 30px;
-  flex-wrap: wrap;
-}
-main #cytat.open p {
-  display: inline;
-  padding-left: 40px;
+  font-size: 25px;
 }
 
 @media screen and (min-width: 901px) and (max-width: 1050px) {
@@ -245,7 +252,7 @@ main #cytat.open p {
   main #plan {
     height: auto;
   }
-  main #podziekowania {
+  main #rand {
     height: auto;
   }
 }
@@ -278,7 +285,7 @@ main #cytat.open p {
   main #plan {
     height: auto;
   }
-  main #podziekowania {
+  main #rand {
     height: auto;
   }
 }
@@ -375,7 +382,7 @@ main #cytat.open p {
   main {
     display: flex;
     justify-content: center;
-    margin-top: 675px;
+    margin-top: 300px;
   }
   main #thank p {
     font-size: 26px;
@@ -387,11 +394,37 @@ main #cytat.open p {
     width: 100%;
     height: auto;
   }
-  main #podziekowania {
+  main #rand {
     width: 100%;
     height: auto;
   }
-  main #podziekowania li {
+  main #rand li {
     margin: 5px;
+  }
+  main #podziekowania {
+    height: auto;
+    margin-top: 30px;
+  }
+  main #podziekowania #slide {
+    width: 30px;
+    height: 80px;
+    position: relative;
+    left: 5%;
+  }
+  main #podziekowania #slide #sign {
+    width: 30px;
+    height: 30px;
+    box-shadow: -4px 4px 0 rgba(255, 255, 255, 0.5);
+  }
+  main #podziekowania .in {
+    transform: translateX(-300px);
+  }
+  main #podziekowania .in.open {
+    width: 90%;
+  }
+  main #podziekowania.open {
+    width: 95%;
+    background-color: #171614;
+    font-size: 23px;
   }
 }/*# sourceMappingURL=main_css.css.map */

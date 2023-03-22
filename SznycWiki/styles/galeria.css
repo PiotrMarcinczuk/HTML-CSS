@@ -409,8 +409,8 @@ main #gallery .foto:hover {
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 75%;
-    right: 10%;
+    top: 90%;
+    right: 30%;
     font-size: 25px;
   }
   #selected_foto figcaption {
@@ -434,10 +434,12 @@ main #gallery .foto:hover {
   #selected_foto #left {
     position: fixed;
     left: 10%;
+    top: 60%;
   }
   #selected_foto #right {
     position: fixed;
     right: 10%;
+    top: 60%;
   }
   #selected_foto .arrow:hover {
     scale: 1.2;

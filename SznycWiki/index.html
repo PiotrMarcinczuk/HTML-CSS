@@ -50,12 +50,29 @@
                     <h1>Sznyc My Life</h1>
                     SznycWiki to strona poświęcona lore Sznyca, znajdziesz tu opis najważniejszych postaci, miejsc a także wydarzeń z tego uniwersum. Strona 
                     powstała ze względu na dawną obietnice stworzenia SznycSłownika, w którym mieściłyby się słowa z dodatkiem "sznyc" i ich dokładny opis.
-                    Słownik ten także jest dostępny pod zakładką "<a href="o_nas.html">Słownik</a>". Propozycje nowych SznycSłów wraz z ich uzasadnieniami możesz wysyłać w zakładce "<a href="kontakt.html">Kontakt</a>".
-                    Jeśli te przejdą wstępną aktualizacje zostaną dodane do słownika.
+                    Słownik ten także jest dostępny pod zakładką "<a href="o_nas.html">Słownik</a>".
                 </span>
             </section>
-            <section id="podziekowania">
-                <h2>Szczególne podziękowania</h2>
+            <section id="rand">
+                <h2>Pomoc dla SznycWiki i wstęp</h2>
+                <span>
+                    Propozycje nowych SznycSłów wraz z ich uzasadnieniami możesz wysyłać w zakładce "<a href="kontakt.html">Kontakt</a>".
+                    Jeśli te przejdą wstępną aktualizacje zostaną dodane do słownika. W zakładce "<a href="kontakt.html">Kontakt</a>" znajduje się także
+                    możliwość zgłaszania różnych błędów i bugów na stronie, więc przeglądając artykuły zwracaj uwagę na wygląd strony jej funkcje a także
+                    optymalizacje i szybkość działania. Wszelkie zastrzeżenia wysyłaj formularzem, jeśli jednak to z nim coś będzie nie tak skontaktuj się ze Najwyższym
+                    Sznycerem Piotrem poprzez fuckbooka. Wszystkie treści umieszczone na stronie przeglądasz i czytasz na własną odpowiedzialność. Dlatego proszę żebyś zaakceptował
+                    los, który czeka wszystkich i zostań sznycerem.
+                    <form onsubmit="return checkChecbox()"> 
+                        <label>
+                            <input type="checkbox" id="checkbox">Akceptuje cały pojebany content, regulamin i chcę zostać sznycerem
+                        </label>
+                    </form>
+                </span>
+            </section>
+            <div id="podziekowania">
+                <button id="slide"><div id="sign"></div></button>
+                <div class="in">
+                    <h3>Szczególne podziękowania</h3>
                 <ul>
                     <li><b>Tymon Martyla</b>, za pomoc w dostarczaniu materiałów i doradztwo dydaktyczne.</li>
                     <li><b>Jan Stolażowicz</b>, za pomoc w dostarczaniu materiałów.</li>
@@ -63,14 +80,31 @@
                     <li><b>Dominik Wasilewski</b>, za pomoc w dostarczaniu materiałow.</li>
                     <li><b>Paweł Pszczoła</b>, za pomoc techniczną.</li>
                 </ul>
-            </section>
-            <div id="cytat">
-                <button id="slide"><div id="sign"></div></button>
-                <div class="in">
-                    <p>"TalonoSznyc wbił na bota" ~ Piotr</p>
-                    <p>"Piotrek to twoja wina" ~ Jasiu</p>
                 </div>
             </div>
         </main>
+        <script>
+            function checkChecbox() {
+                let checkbox = document.getElementById("checkbox");
+                localStorage.setItem("checkbox_local", checkbox.checked);
+                if (!checkbox.checked) {
+                    alert("Musisz zaakceptować warunki!");
+                    return false;
+                }
+            }
+
+            window.onload = function(){
+                let checkbox_all = document.getElementById("checkbox");
+                let checkbox_local = localStorage.getItem("checkbox_local");
+                let links = document.getElementsByTagName("a");
+
+                if(checkbox_local === "true"){
+                    checkbox_all.checked = true;
+                }
+                for(let i=0; i < links.length; i++){
+                    links[i].onclick = checkChecbox
+                }
+            }
+        </script>
     </body>
 </html>

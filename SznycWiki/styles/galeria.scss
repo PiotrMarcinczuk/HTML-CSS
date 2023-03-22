@@ -465,8 +465,8 @@ main{
             display: flex;
             justify-content: center;
             position: fixed;
-            top: 75%;
-            right: 10%;
+            top: 90%;
+            right: 30%;
             font-size: 25px;
         }
 
@@ -494,11 +494,13 @@ main{
         #left{
             position: fixed;
             left: 10%;
+            top: 60%;
         }
 
         #right{
             position: fixed;
             right: 10%;
+            top: 60%;
         }
         
         .arrow:hover{

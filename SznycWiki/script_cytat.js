@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     let guzik = document.querySelector("#slide");
-    let cytat = document.querySelector("#cytat");
+    let cytat = document.querySelector("#podziekowania");
     let div = document.querySelector(".in");
 
     guzik.addEventListener('click', () => {
