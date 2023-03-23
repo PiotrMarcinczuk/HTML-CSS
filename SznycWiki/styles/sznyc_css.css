@@ -363,8 +363,8 @@ footer #footer_part {
     justify-content: center;
     margin-top: 20px;
     position: fixed;
-    top: 60px;
-    right: 0;
+    top: 50px;
+    right: 0px;
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
     font-size: 20px;
@@ -421,9 +421,9 @@ footer #footer_part {
     font-size: 20px;
   }
   main #random_article #article {
-    width: 250px;
+    width: 235px;
     height: 75px;
-    margin-left: 40px;
+    margin-left: 20px;
     text-align: center;
   }
   main #random_article a {

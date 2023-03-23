@@ -160,25 +160,17 @@ main #plan #formsy .guzik {
   border-radius: 40em;
   border-style: none;
   box-shadow: #ADCFFF 0 -12px 6px inset;
-  box-sizing: border-box;
   color: #000000;
   cursor: pointer;
-  display: inline-block;
   font-family: "Kanit", sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: -0.24px;
   margin: 0 0 5px 25px;
-  outline: none;
   padding: 1rem 1.3rem;
-  quotes: auto;
   text-align: center;
   text-decoration: none;
   transition: all 0.15s;
-  -moz-user-select: none;
-       user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 main #plan #formsy .guzik:hover {
   background-color: #FFC229;
@@ -321,40 +313,43 @@ main .tekst {
     cursor: pointer;
     transform: rotate(-45deg);
   }
-  nav #nav_bar {
+  #nav_bar {
     display: none;
     width: 50%;
-    height: 170px;
+    height: 200px;
     justify-content: center;
     margin-top: 20px;
     position: fixed;
-    top: 60px;
-    right: 15px;
+    top: 50px;
+    right: 0px;
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
+    font-size: 20px;
   }
-  nav #nav_bar ul {
-    font-size: 23px;
+  #nav_bar ul {
+    font-size: 25px;
     width: 100%;
-    height: 170px;
+    height: 250px;
     text-align: center;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    margin-right: 5px;
     display: flex;
     flex-direction: column;
     text-decoration: none;
   }
-  nav #nav_bar ul li a {
+  #nav_bar ul li {
+    margin: 0;
+  }
+  #nav_bar ul li a {
     text-decoration: none;
     color: #E6E9E8;
     transition-duration: 0.5s;
   }
-  nav #nav_bar ul li a:hover {
+  #nav_bar ul li a:hover {
     color: #E45429;
   }
-  nav #nav_bar ul li:hover {
+  #nav_bar ul li:hover {
     transition-duration: 0.5s;
     background-color: #171614;
     box-shadow: 6px 5px 5px black;
