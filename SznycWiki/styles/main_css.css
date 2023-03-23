@@ -225,12 +225,11 @@ main #podziekowania.open {
 
 @media screen and (min-width: 901px) and (max-width: 1050px) {
   nav #nav_logo {
-    width: 30%;
+    width: 40%;
   }
   nav #nav_span {
     display: flex;
     justify-content: flex-end;
-    margin-right: 15px;
   }
   nav #nav_span .button_1 {
     font-size: 18px;
@@ -259,7 +258,7 @@ main #podziekowania.open {
 }
 @media screen and (min-width: 1051px) and (max-width: 1281px) {
   nav #nav_logo {
-    width: 30%;
+    width: 40%;
   }
   nav #nav_span {
     display: flex;
@@ -538,7 +537,7 @@ main #podziekowania.open {
   main #podziekowania .in.open {
     position: relative;
     right: 15%;
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
     height: 100%;
   }

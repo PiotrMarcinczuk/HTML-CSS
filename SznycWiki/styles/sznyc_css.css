@@ -31,7 +31,6 @@ nav #nav_logo h1 {
   margin: 0;
 }
 nav #nav_span {
-  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -126,7 +125,7 @@ main #random_article #random:hover {
 }
 main #random_article #article {
   width: 40%;
-  height: 50px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,17 +265,23 @@ footer #footer_part {
     display: none;
   }
   main #random_article #article {
-    width: 270px;
+    width: 290px;
     height: 70px;
     margin-left: 100px;
   }
   main #random_article a {
     font-size: 20px;
   }
+  main #opis #opis_postaci #wstepny_opis {
+    width: 100%;
+  }
+  main #opis #opis_postaci #zdjecie_postaci {
+    display: none;
+  }
 }
 @media screen and (min-width: 1051px) and (max-width: 1281px) {
   nav #nav_logo {
-    width: 30%;
+    width: 40%;
   }
   nav #nav_span {
     width: 70%;
@@ -285,7 +290,7 @@ footer #footer_part {
     margin-right: 15px;
   }
   nav #nav_span .button_1 {
-    font-size: 25px;
+    font-size: 20px;
     margin: 5px;
   }
   nav #nav_span .button_1:hover {
@@ -306,8 +311,11 @@ footer #footer_part {
   main #opis #opis_postaci {
     height: auto;
   }
+  main #random_article {
+    width: 90%;
+  }
   main #random_article #article {
-    width: 300px;
+    width: 350px;
     height: 70px;
     margin-left: 100px;
   }

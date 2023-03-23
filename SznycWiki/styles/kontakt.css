@@ -240,7 +240,7 @@ main .tekst {
 }
 @media screen and (min-width: 1051px) and (max-width: 1281px) {
   nav #nav_logo {
-    width: 30%;
+    width: 40%;
   }
   nav #nav_span {
     display: flex;
@@ -248,7 +248,7 @@ main .tekst {
     margin-right: 15px;
   }
   nav #nav_span .button_1 {
-    font-size: 25px;
+    font-size: 20px;
     margin: 5px;
   }
   nav #nav_span .button_1:hover {
