@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+$font: 'Noto Sans', sans-serif;
+$nav_color: #13E796;
+*{
+    font-family: $font;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+// belka nagłówkowa /start ------------------------------------------------
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        background: linear-gradient($nav_color, #1AE094);
+        h1{
+            font-size: 4rem;
+            margin: 5px 0 0 5px;
+        }
+        p{
+            display: inline;
+            font-size: 2rem;
+            margin: 7px 35px 0 0;
+        }
+    }
+}
+// belka nagłówkowa /koniec --------------------------------------------------
+// main /start ----------------------------------------------------------------
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 8em 5em 0 0;
+    height: auto;
+    #description{
+        padding: 1.5em;
+        height: auto;
+        background: linear-gradient($nav_color, #1AE094, #2BE79F, #10B978);
+        transition-duration: 0.8s;
+        h2{
+            font-size: 2em;
+        }
+        #shop_description{
+            font-size: 1.5em;
+            display: flex;
+            justify-content: center;
+            margin: 2em 0 0 0;
+        }
+    }
+    
+    #description:hover{
+        background: rgba();
+
+    }
+}
+// main /koniec----------------------------------------------------------------
