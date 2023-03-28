@@ -141,30 +141,98 @@ main{
         //etapy rozwoju firmy /start ---------------------------------------------------
         #shop_description{
             font-size: 1.5em;
+            height: 1000px;
             display: flex;
-            justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin: 10em 0 0 0;
+            margin: 150px 0 0 0;
             h3{
                 display: inline;
                 font-size: 45px;
             }
-            #history_level{
+            .history_level{
                 display: flex;
                 width: 100%;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
                 justify-content: center;
+                align-items: center;
                 text-align: center;
-                .left{
-                    width: 33%;
-
+                .left, .center, .right{
+                    width: 40%;
+                    margin-top: 15px;
+                    font-size: 30px;
+                    p{
+                        font-size: 45px;
+                        font-weight: bold;
+                    }
                 }
                 .center{
-                    width: 33%;
+                    width: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    z-index: 30;
+                    .circle{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 150px;
+                        height: 150px;
+                        border-radius: 50%;
+                        background-color: rgba(#CED6D2,0.9);
+                        font-size: 100px;
+                    }
                 }
-                .right{
-                    width: 33%;
+                h4{
+                    text-align: center;
+                    font-size: 35px;
+                }
+                //linia pozioma prawa od lewej różni się tylko pozycją absolute /start ----------------------------------------------
+                .line_left{
+                    z-index: -1;
+                    position: absolute;
+                    left: 30%;
+                    width: 125px;
+                    height: 5px;
+                    background-color: rgba(#CED6D2,0.9);
+                }
+                .line_left:before{
+                    content: "";
+                    display: block;
+                    background-color: rgba(#CED6D2,0.9);
+                    border-radius: 100%;
+                    width: 8px;
+                    height: 8px;
+                }
+
+                .line_right{
+                    z-index: -1;
+                    position: absolute;
+                    right: 30%;
+                    width: 125px;
+                    height: 5px;
+                    background-color: rgba(#CED6D2,0.9);
+                }
+                .line_right:after{
+                    content: "";
+                    position: relative;
+                    left: 120px;
+                    display: block;
+                    background-color: rgba(#CED6D2,0.9);
+                    border-radius: 100%;
+                    width: 5px;
+                    height: 5px;
+                }
+                //linia pozioma /koniec --------------------------------------------------
+                //linia pionowa /start -------------------------------------------------
+                .vertical_line{
+                    z-index: -1;
+                    position: absolute;
+                    top: 48%;
+                    width: 5px;
+                    height: 225px;
+                    background-color: rgba(#CED6D2,0.9);
                 }
             }
         }
