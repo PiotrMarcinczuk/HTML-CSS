@@ -9,6 +9,14 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  background: linear-gradient(#2ecc71, #1abc9c);
+  background-repeat: no-repeat;
+}
+
+hr {
+  margin-top: 6em;
+  width: 100%;
+  border: 1px solid black;
 }
 
 header {
@@ -19,41 +27,111 @@ header {
 header nav {
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(#13E796, #1AE094);
 }
 header nav h1 {
   font-size: 4rem;
   margin: 5px 0 0 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
 }
-header nav p {
+header nav h1:hover {
+  font-size: 4.3rem;
+}
+header nav button {
   display: inline;
   font-size: 2rem;
-  margin: 7px 35px 0 0;
+  margin: 15px 35px 0 0;
+  transition: 0.5s ease;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+header nav button:hover {
+  transform: scale(1.1);
+  border-bottom: 1px solid;
 }
 
 main {
+  width: 100%;
+  display: flex;
+  margin: 6em 2em 0 0;
+  height: auto;
+  justify-content: center;
+}
+main #description {
+  width: 100%;
+  height: auto;
+  transition-duration: 0.8s;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
-  margin: 8em 5em 0 0;
-  height: auto;
-}
-main #description {
-  padding: 1.5em;
-  height: auto;
-  background: linear-gradient(#13E796, #1AE094, #2BE79F, #10B978);
-  transition-duration: 0.8s;
 }
 main #description h2 {
   font-size: 2em;
+  text-align: center;
+}
+main #description #offer {
+  width: 100%;
+  height: auto;
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  margin: 50px 10px 0 10px;
+}
+main #description #offer .task {
+  width: 25%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main #description #offer .task .hook_unicode {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 80px;
+  border: 2px solid #D4D8D6;
+  transition: 0.5s ease;
+}
+main #description #offer .task .hook_unicode:hover {
+  color: red;
+}
+main #description #offer .task p {
+  height: 50%;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.8em;
 }
 main #description #shop_description {
   font-size: 1.5em;
   display: flex;
   justify-content: center;
-  margin: 2em 0 0 0;
+  align-items: center;
+  flex-direction: column;
+  margin: 10em 0 0 0;
 }
-main #description:hover {
-  background: linear-gradient(#13E796, #1AE094, #2BE79F, #10B978);
+main #description #shop_description h3 {
+  display: inline;
+  font-size: 45px;
+}
+main #description #shop_description #history_level {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+main #description #shop_description #history_level .left {
+  width: 33%;
+}
+main #description #shop_description #history_level .center {
+  width: 33%;
+}
+main #description #shop_description #history_level .right {
+  width: 33%;
 }/*# sourceMappingURL=style.css.map */
