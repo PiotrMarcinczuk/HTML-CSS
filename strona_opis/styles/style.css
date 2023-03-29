@@ -139,6 +139,7 @@ main #shop_description .history_level .history_line {
   height: 100%;
 }
 main #shop_description .history_level .history_line .hook_unicode {
+  width: 50%;
   background-color: rgba(255, 255, 255, 0.8);
   position: relative;
   z-index: 10;
@@ -146,7 +147,7 @@ main #shop_description .history_level .history_line .hook_unicode {
 main #shop_description .history_level .history_line .horizontal_line {
   display: block;
   position: absolute;
-  left: 60px;
+  left: 90px;
   width: 5px;
   height: 450px;
   background-color: rgba(212, 216, 214, 0.8);
@@ -174,4 +175,32 @@ main #shop_description .hook_unicode {
   font-size: 80px;
   border: 2px solid #D4D8D6;
   transition: 0.5s ease;
+}
+main .task_description {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+main .task_description img {
+  width: 750px;
+  height: 550px;
+  transition: 0.8s ease;
+}
+main .task_description img:hover {
+  transform: scale(1.1);
+}
+main .task_description .task_left {
+  padding: 50px;
+}
+main .task_description .task_right {
+  font-size: 35px;
+  margin: 10px 10px 10px 30px;
+}
+main .task_description .task_right h5 {
+  padding: 10px;
+  font-size: 45px;
 }/*# sourceMappingURL=style.css.map */

@@ -169,6 +169,7 @@ main{
                 width: 30%;
                 height: 100%;
                 .hook_unicode{
+                    width: 50%;
                     background-color: rgba(white, 0.8);
                     position: relative;
                     z-index: 10;
@@ -176,7 +177,7 @@ main{
                 .horizontal_line{
                     display: block;
                     position: absolute;
-                    left: 60px;
+                    left: 90px;
                     width: 5px;
                     height: 450px;
                     background-color: rgba(#D4D8D6, 0.8);
@@ -211,5 +212,33 @@ main{
         // haczyki w ważnych wydarzeniach /koniec -----------------------------------------------------
     }
     //etapy rozwoju firmy /koniec ----------------------------------------------
+    .task_description{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        img{
+            width: 750px;
+            height: 550px;
+            transition: 0.8s ease;
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+        .task_left{
+            padding: 50px;
+        }
+        .task_right{
+            font-size: 35px;
+            margin: 10px 10px 10px 30px;
+            h5{
+                padding: 10px;
+                font-size: 45px;
+            }
+        }
+    }
 }
 // main /koniec----------------------------------------------------------------
