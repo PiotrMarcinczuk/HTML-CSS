@@ -23,8 +23,10 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 999;
 }
 header nav {
+  background-color: white;
   display: flex;
   justify-content: space-between;
 }
@@ -56,6 +58,7 @@ main {
   display: flex;
   margin: 6em 2em 0 0;
   height: auto;
+  flex-direction: column;
   justify-content: center;
 }
 main #description {
@@ -107,15 +110,68 @@ main #description #offer .task p {
   text-align: center;
   font-size: 1.8em;
 }
-main #description #shop_description {
-  font-size: 1.5em;
-  height: 1000px;
+main #shop_description {
   display: flex;
+  flex-direction: column;
   align-items: center;
   flex-direction: column;
+  font-size: 1.5em;
+  height: 4000px;
+  width: 100%;
   margin: 150px 0 0 0;
 }
-main #description #shop_description h3 {
+main #shop_description h3 {
   display: inline;
-  font-size: 45px;
+  font-size: 40px;
+}
+main #shop_description #first_level {
+  margin-top: 75px;
+}
+main #shop_description .history_level {
+  display: flex;
+  flex-direction: row;
+  margin-top: 200px;
+  width: 95%;
+  height: 9%;
+}
+main #shop_description .history_level .history_line {
+  width: 30%;
+  height: 100%;
+}
+main #shop_description .history_level .history_line .hook_unicode {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  z-index: 10;
+}
+main #shop_description .history_level .history_line .horizontal_line {
+  display: block;
+  position: absolute;
+  left: 60px;
+  width: 5px;
+  height: 450px;
+  background-color: rgba(212, 216, 214, 0.8);
+}
+main #shop_description .history_level .level {
+  width: 70%;
+  height: 100%;
+  font-size: 35px;
+}
+main #shop_description .history_level .level h4 {
+  font-size: 50px;
+}
+main #shop_description .history_level .level p {
+  font-size: 40px;
+  padding: 8px 0 8px 0;
+  font-weight: bold;
+}
+main #shop_description .hook_unicode {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  text-align: center;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 80px;
+  border: 2px solid #D4D8D6;
+  transition: 0.5s ease;
 }/*# sourceMappingURL=style.css.map */

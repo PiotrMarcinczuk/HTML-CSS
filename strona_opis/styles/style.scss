@@ -25,7 +25,9 @@ header{
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 999;
     nav{
+        background-color: white;
         display: flex;
         justify-content: space-between;
         h1{
@@ -59,6 +61,7 @@ main{
     display: flex;
     margin: 6em 2em 0 0;
     height: auto;
+    flex-direction: column;
     justify-content: center;
     // #bar{
     //     position: fixed;
@@ -138,21 +141,75 @@ main{
             }
         }
         //h1 z haczykami i ich opisami /koniec ---------------------------------------------
-        //etapy rozwoju firmy /start ---------------------------------------------------
-        #shop_description{
-            font-size: 1.5em;
-            height: 1000px;
+    }
+    //etapy rozwoju firmy /start ---------------------------------------------------
+    #shop_description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.5em;
+        height: 4000px;
+        width: 100%;
+        margin: 150px 0 0 0;
+        h3{
+            display: inline;
+            font-size: 40px;
+        }
+        #first_level{
+            margin-top: 75px;
+        }
+        .history_level{
             display: flex;
-            align-items: center;
-            flex-direction: column;
-            margin: 150px 0 0 0;
-            h3{
-                display: inline;
-                font-size: 45px;
+            flex-direction: row;
+            margin-top: 200px;
+            width: 95%;
+            height: 9%;
+            .history_line{
+                width: 30%;
+                height: 100%;
+                .hook_unicode{
+                    background-color: rgba(white, 0.8);
+                    position: relative;
+                    z-index: 10;
+                }
+                .horizontal_line{
+                    display: block;
+                    position: absolute;
+                    left: 60px;
+                    width: 5px;
+                    height: 450px;
+                    background-color: rgba(#D4D8D6, 0.8);
+                }
+            }
+            .level{
+                width: 70%;
+                height: 100%;
+                font-size: 35px;
+                h4{
+                    font-size: 50px;
+                }
+                p{
+                    font-size: 40px;
+                    padding: 8px 0 8px 0;
+                    font-weight: bold;
+                }
             }
         }
-            
-        //etapy rozwoju firmy /koniec ----------------------------------------------
+        // haczyki w ważnych wydarzeniach /start -----------------------------------------------------
+        .hook_unicode{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            text-align: center;
+            background-color: white;
+            border-radius: 50%;
+            font-size: 80px;
+            border: 2px solid #D4D8D6;
+            transition: 0.5s ease;
+        }
+        // haczyki w ważnych wydarzeniach /koniec -----------------------------------------------------
     }
+    //etapy rozwoju firmy /koniec ----------------------------------------------
 }
 // main /koniec----------------------------------------------------------------
