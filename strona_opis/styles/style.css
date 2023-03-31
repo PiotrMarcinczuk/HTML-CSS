@@ -134,6 +134,9 @@ main #shop_description .history_level {
   width: 95%;
   height: 9%;
 }
+main #shop_description .history_level .right {
+  display: none;
+}
 main #shop_description .history_level .history_line {
   width: 30%;
   height: 100%;
@@ -203,4 +206,36 @@ main .task_description .task_right {
 main .task_description .task_right h5 {
   padding: 10px;
   font-size: 45px;
+}
+
+@media screen and (min-width: 1024px) {
+  main #shop_description .history_level {
+    padding: 0 15px 0 15px;
+    width: 100%;
+  }
+  main #shop_description .history_level .history_line {
+    width: 35%;
+  }
+  main #shop_description .history_level .history_line .horizontal_line {
+    display: none;
+  }
+  main #shop_description .history_level .level {
+    width: 30%;
+    font-size: 20px;
+    text-align: center;
+  }
+  main #shop_description .history_level .level h4 {
+    font-size: 28px;
+  }
+  main #shop_description .history_level .level .span_text {
+    display: none;
+  }
+  main #shop_description .history_level span {
+    text-align: right;
+  }
+  main #shop_description .history_level .right {
+    width: 35%;
+    padding-left: 10%;
+    display: flex;
+  }
 }/*# sourceMappingURL=style.css.map */

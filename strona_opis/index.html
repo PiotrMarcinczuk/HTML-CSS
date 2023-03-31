@@ -54,8 +54,9 @@
                 <span class="level">
                     <h4>Powstanie firmy</h4>
                     <p>1997</p>
-                    <span>Firma powstała 21 marca 1999 roku, ponieważ po zmianie ustroju w kraju, występowało duże zapotrzebowanie na usługi remontowe i budowlane</span>
+                    <span class="span_text">Firma powstała 21 marca 1999 roku, ponieważ po zmianie ustroju w kraju, występowało duże zapotrzebowanie na usługi remontowe i budowlane</span>
                 </span>
+                <span class="right"></span>
             </div>
             <!-- pojedyncza sekcja o historii firmy /koniec -->
             <!-- pojedyncza sekcja o historii firmy /start -->
@@ -67,8 +68,9 @@
                 <span class="level">
                     <h4>Pierwszy duży klient</h4>
                     <p>1999</p>
-                    <span>Po dwóch latach udanych remontów zwróciła się do nas bardzo szybko rozwijająca się firma adwokackam, która zleciła nam remont i dobudowe pewnego segmentu kancelarii</span>
+                    <span class="span_text">Po dwóch latach udanych remontów zwróciła się do nas bardzo szybko rozwijająca się firma adwokackam, która zleciła nam remont i dobudowe pewnego segmentu kancelarii</span>
                 </span>
+                <span class="right"></span>
             </div>
             <!-- pojedyncza sekcja o historii firmy /koniec -->
             <!-- pojedyncza sekcja o historii firmy /start -->
@@ -80,8 +82,9 @@
                 <span class="level">
                     <h4>Rozpoczęcie ekspansji na rynek całego kraju</h4>
                     <p>2004</p>
-                    <span>Po idealnej reputacji SznycBudu w Olsztynie, rozpoczeliśmy współprace z innymi firmami w tej samej branży, dzięki czemu nasza firma posiadała odpowiedni personel i środki na zbudowanie pierwszego odziału poza rodzimym miastem</span>
+                    <span class="span_text">Po idealnej reputacji SznycBudu w Olsztynie, rozpoczeliśmy współprace z innymi firmami w tej samej branży, dzięki czemu nasza firma posiadała odpowiedni personel i środki na zbudowanie pierwszego odziału poza rodzimym miastem</span>
                 </span>
+                <span class="right"></span>
             </div>
             <!-- pojedyncza sekcja o historii firmy /koniec -->
             <!-- pojedyncza sekcja o historii firmy /start -->
@@ -93,8 +96,9 @@
                 <span class="level">
                     <h4>Gigantyczny projekt państwowy</h4>
                     <p>2008</p>
-                    <span>Okres największego rozwoju SznycBudu rozpoczał się od przyjęcia bardzo dużego zlecenia od rządu RP. SznycBud stał się głównym wykonawcą Dworca Głównego w Gdańsku</span>
+                    <span class="span_text">Okres największego rozwoju SznycBudu rozpoczał się od przyjęcia bardzo dużego zlecenia od rządu RP. SznycBud stał się głównym wykonawcą Dworca Głównego w Gdańsku</span>
                 </span>
+                <span class="right"></span>
             </div>
             <!-- pojedyncza sekcja o historii firmy /koniec -->
             <!-- pojedyncza sekcja o historii firmy /start -->
@@ -106,8 +110,9 @@
                 <span class="level">
                     <h4>Oddział w każdym mieście wojewódzkim</h4>
                     <p>2014</p>
-                    <span>17 lipca 2014 roku, SznycBud otworzył oficjalnie swój oddział w ostatnim wielkim mieście w Polsce a mianowicie w Bydgoszczy</span>
+                    <span class="span_text">17 lipca 2014 roku, SznycBud otworzył oficjalnie swój oddział w ostatnim wielkim mieście w Polsce a mianowicie w Bydgoszczy</span>
                 </span>
+                <span class="right"></span>
             </div>
             <!-- pojedyncza sekcja o historii firmy /koniec -->
             <!-- pojedyncza sekcja o historii firmy /start -->
@@ -118,8 +123,9 @@
                 <span class="level">
                     <h4>Firma ze wzorową opinią państwową jak i międzynarodową</h4>
                     <p>2023</p>
-                    <span>Przez wszystkie lata firma błyskawicznie roziwjała się zdobywając sympatie polaków jak i osób spoza naszego państwa, ponieważ po 2014 zaczeliśmy nawiązywać współprace z zagranicznymi inwestorami. W tym momencie jesteśmy największą tego typu firmą w Europie Wschodniej a wszystko dzięki zrozumieniu potrzeb rynku i świadomością, że najważniejszy jest klient i jego potrzeby</span>
+                    <span class="span_text">Przez wszystkie lata firma błyskawicznie roziwjała się zdobywając sympatie polaków jak i osób spoza naszego państwa, ponieważ po 2014 zaczeliśmy nawiązywać współprace z zagranicznymi inwestorami. W tym momencie jesteśmy największą tego typu firmą w Europie Wschodniej a wszystko dzięki zrozumieniu potrzeb rynku i świadomością, że najważniejszy jest klient i jego potrzeby</span>
                 </span>
+                <span class="right"></span>
             </div>
             <!-- pojedyncza sekcja o historii firmy /koniec -->
         </section>
@@ -169,6 +175,43 @@
         <!-- Sekcja rozwijajaca temat taskow firmy /koniec -->
     </main>
     <!-- main /koniec -->
+    <script>
+        const history_level_count = document.querySelectorAll('.history_level');
+        const span_text = document.querySelectorAll('.span_text');
+        const right = document.querySelectorAll('.right');
+        let check_reverse = false;
+        let check_cut = false;
+
+        function reverse_level(){
+            if(window.innerWidth > 1024 && !check_reverse && !styled){
+                for(let i=0; i<history_level_count.length; i++){
+                    if(i%2 === 0){
+                        history_level_count[i].style.flexDirection = "row";
+                    }else{
+                        history_level_count[i].style.flexDirection = "row-reverse";
+                    }       
+                }
+                check_reverse = true;
+            }
+        }
+
+        function cut_event_and_date(){
+            if(window.innerWidth > 1024 && !check_cut){
+                for(let i=0; i<span_text.length; i++){
+                    let div = document.createElement("span");
+                    let text_node = document.createTextNode(span_text[i].textContent);
+                    div.appendChild(text_node);
+                    right[i].appendChild(div);
+                }
+                check_cut = true;
+            }  
+        }
+    
+        window.addEventListener("resize", reverse_level)
+        window.addEventListener("resize", cut_event_and_date)
+        
+        
+    </script>
 
 </body>
 </html>

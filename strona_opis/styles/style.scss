@@ -165,6 +165,9 @@ main{
             margin-top: 200px;
             width: 95%;
             height: 9%;
+            .right{
+                display: none;
+            }
             .history_line{
                 width: 30%;
                 height: 100%;
@@ -242,3 +245,41 @@ main{
     }
 }
 // main /koniec----------------------------------------------------------------
+
+//style dla dużych rozdzielczości ----------------------------------------------------------
+@media screen and (min-width: 1024px){
+    main{
+        #shop_description{
+            .history_level{
+                padding: 0 15px 0 15px;
+                width: 100%;
+                .history_line{
+                    width: 35%;
+                    .horizontal_line{
+                        display: none;
+                    }
+                }
+                .level{
+                    width: 30%;
+                    font-size: 20px;
+                    text-align: center;
+                    h4{
+                        font-size: 28px;
+                    }
+                    .span_text{
+                        display: none;
+                    }
+                    // po dzialaniu skryptu znika .span_text i w .right jest wpisywany span ---------------
+                }
+                span{
+                    text-align: right;
+                }
+                .right{
+                    width: 35%;
+                    padding-left: 10%;
+                    display: flex;
+                }
+            }
+        }
+    } 
+}
