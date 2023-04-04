@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main{
+    background-color: white;
+    width: 400px;
+    height: 470px;
+    border-radius: 1%;
+    #previous{
+        width: 100%;
+        height: 8%;
+    }
+    #current{
+        width: 100%;
+        height: 14%;
+    }
+    #symbol{
+        width: 100%;
+        height: auto;
+        margin-top: 5px;
+        button{
+            font-size: 25px;
+            margin: 5px;
+            width: 85px;
+            height: 50px;
+            border: none;
+            border-radius: 10%;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        button:hover{
+            background: rgba(#000000, 0.1);
+
+        }
+    }
+}
