@@ -45,11 +45,21 @@ function operate(){
 
 function math(){
     if(parseFloat(p_current.textContent) < Infinity){
-        if(p_previous.textContent.includes('+') && !p_previous.textContent.includes('=')){
-            let temp = parseFloat(p_current.textContent);
+        let temp = parseFloat(p_current.textContent);
+        if(p_previous.textContent.includes('+') && !p_previous.textContent.includes('=')){  
             p_current.textContent = parseFloat(p_previous.textContent) + parseFloat(p_current.textContent);
             p_previous.textContent += temp + ' =';
         }
+        if(p_previous.textContent.includes('-') && !p_previous.textContent.includes('=')){
+            console.log(2);
+            p_current.textContent = parseFloat(p_previous.textContent) - parseFloat(p_current.textContent);
+            p_previous.textContent += temp + ' =';
+        }
+        if(p_previous.textContent.indexOf('&#215;') && !p_previous.textContent.includes('=')){
+            p_current.textContent = parseFloat(p_previous.textContent) * parseFloat(p_current.textContent);
+            p_previous.textContent += temp + ' =';
+        }
+        
     }else{
         p_current.textContent = "Nieskończoność";
     }
