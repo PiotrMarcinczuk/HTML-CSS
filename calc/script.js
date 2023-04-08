@@ -1,20 +1,33 @@
-const previous = document.querySelectorAll('#previous');
+const previous = document.querySelectorAll('.previous');
 const current = document.querySelectorAll('#current');
 
 const sign = document.querySelectorAll('.sign');
 const number = document.querySelectorAll('.number');
 const equal = document.querySelectorAll('.equal');
-
-let p_current = document.querySelector("#current p")
-let p_previous = document.querySelector("#previous p")
-let current_number = "";
+const clear = document.querySelectorAll(".clear");
+const p_current = document.querySelector("#current p")
+const p_previous = document.querySelector("#number")
+const p_previous_2 = document.querySelector("#number_2");
+const operator_previous = document.querySelector("#operator");
+const equal_previous = document.querySelector("#equal_previous");
+const all = document.querySelectorAll('.all');
+let current_number = 0;
 
 sign.forEach((button) => button.addEventListener('click', operate));
+
 equal.forEach((button) => button.addEventListener('click', math));
 
 number.forEach((button) => {
     button.addEventListener('click', display_number);
 })
+
+clear.forEach((button) => button.addEventListener('click', remove));
+
+function remove(){
+    all.forEach((p) => {
+        p.textContent = '';
+    })
+}
 
 function display_number(){
     if(this.textContent === '.' && p_current.textContent === ''){
@@ -25,7 +38,7 @@ function display_number(){
         }else{
             return;
         }
-    }else if(p_previous.textContent.includes('=')){
+    }else if(equal_previous.textContent.includes('=')){
         p_current.textContent = '';
         p_previous.textContent = '';
         p_current.textContent = this.textContent;
@@ -37,27 +50,58 @@ function display_number(){
 
 function operate(){
     if(p_current.textContent !== ''){
-        p_previous.textContent = p_current.textContent;
-        p_previous.textContent += this.textContent;
-        p_current.textContent = '';
+        if(operator_previous.textContent === ''){
+            p_previous.textContent = p_current.textContent;
+            operator_previous.textContent += this.textContent;
+            p_current.textContent = '';
+        }else if(p_previous !== ''){
+            p_previous.textContent = p_current.textContent;
+            operator_previous.textContent = this.textContent;
+            p_previous_2.textContent = '';
+            equal_previous.textContent = '';
+            p_current.textContent = '';
+        }
+    }else{
+        previous.textContent = '';
     }
 }
 
 function math(){
     if(parseFloat(p_current.textContent) < Infinity){
         let temp = parseFloat(p_current.textContent);
-        if(p_previous.textContent.includes('+') && !p_previous.textContent.includes('=')){  
-            p_current.textContent = parseFloat(p_previous.textContent) + parseFloat(p_current.textContent);
-            p_previous.textContent += temp + ' =';
-        }
-        if(p_previous.textContent.includes('-') && !p_previous.textContent.includes('=')){
-            console.log(2);
-            p_current.textContent = parseFloat(p_previous.textContent) - parseFloat(p_current.textContent);
-            p_previous.textContent += temp + ' =';
-        }
-        if(p_previous.textContent.indexOf('&#215;') && !p_previous.textContent.includes('=')){
-            p_current.textContent = parseFloat(p_previous.textContent) * parseFloat(p_current.textContent);
-            p_previous.textContent += temp + ' =';
+        switch(operator_previous.textContent){
+            case('+'):
+                if(equal_previous.textContent === ''){
+                    p_current.textContent = parseFloat(p_previous.textContent) + parseFloat(p_current.textContent);
+                    p_previous_2.textContent = temp;
+                    equal_previous.textContent += ' =';
+                    current_number = parseFloat(p_current.textContent);
+                    break;
+                }else{
+                    let temp_p_previous = 0;
+                    let temp_p_current = 0;
+                    temp_p_previous = parseFloat(p_previous.textContent) + parseFloat(p_previous_2.textContent);
+                    p_previous.textContent = temp_p_previous;
+                    temp_p_current = parseFloat(p_previous.textContent) + parseFloat(p_previous_2.textContent);
+                    p_current.textContent = temp_p_current;
+                    break;
+                }
+            case('-'):
+                if(equal_previous.textContent === ''){
+                    p_current.textContent = parseFloat(p_previous.textContent) - parseFloat(p_current.textContent);
+                    p_previous_2.textContent = temp;
+                    equal_previous.textContent += ' =';
+                    current_number = parseFloat(p_current.textContent);
+                    break;
+                }else{
+                    let temp_p_previous = 0;
+                    let temp_p_current = 0;
+                    temp_p_previous = parseFloat(p_previous.textContent) - parseFloat(p_previous_2.textContent);
+                    p_previous.textContent = temp_p_previous;
+                    temp_p_current = parseFloat(p_previous.textContent) - parseFloat(p_previous_2.textContent);
+                    p_current.textContent = temp_p_current;
+                }
+                
         }
         
     }else{

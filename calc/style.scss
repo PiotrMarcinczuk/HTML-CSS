@@ -16,9 +16,14 @@ main{
     width: 400px;
     height: 470px;
     border-radius: 1%;
-    #previous{
+    .previous{
         width: 100%;
         height: 8%;
+        display: flex;
+        flex-direction: row;
+        p{
+            width: auto;
+        }
     }
     #current{
         width: 100%;
