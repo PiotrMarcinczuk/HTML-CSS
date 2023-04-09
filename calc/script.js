@@ -68,10 +68,13 @@ function operate(){
         previous.textContent = '';
     }
 
-    if(this.textContent === 'x2'){
-        operator_previous.textContent = 'sqr(' + p_previous.textContent + ')';
+    if(this.textContent === 'x2' && p_current.textContent === ''){
+        p_previous.style.display = 'none';
+        let temp_previous  = p_previous.textContent;
+        operator_previous.textContent = 'sqr(' + temp_previous + ')';
         p_current.textContent = '';
         math();
+        
     }
     if(this.textContent === '√x'){
         operator_previous.textContent = '√';
