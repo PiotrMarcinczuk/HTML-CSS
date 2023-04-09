@@ -67,10 +67,18 @@ function operate(){
     }else{
         previous.textContent = '';
     }
+
+    if(this.textContent === 'x2'){
+        operator_previous.textContent = 'sqr(' + p_previous.textContent + ')';
+        p_current.textContent = '';
+        math();
+    }
+    if(this.textContent === '√x'){
+        operator_previous.textContent = '√';
+    }
 }
 
 function math(){
-    if(parseFloat(p_current.textContent) < Infinity){
         let temp = parseFloat(p_current.textContent);
         switch(operator_previous.textContent){
             case('+'):
@@ -119,12 +127,31 @@ function math(){
                     temp_p_current = parseFloat(p_previous.textContent) * parseFloat(p_previous_2.textContent);
                     p_current.textContent = temp_p_current;
                 }
-                
+            case('÷'):
+                if(equal_previous.textContent === ''){
+                    p_current.textContent = parseFloat(p_previous.textContent) / parseFloat(p_current.textContent);
+                    p_previous_2.textContent = temp;
+                    equal_previous.textContent += ' =';
+                    current_number = parseFloat(p_current.textContent);
+                    break;
+                }else{
+                    let temp_p_previous = 0;
+                    let temp_p_current = 0;
+                    temp_p_previous = parseFloat(p_previous.textContent) / parseFloat(p_previous_2.textContent);
+                    p_previous.textContent = temp_p_previous;
+                    temp_p_current = parseFloat(p_previous.textContent) / parseFloat(p_previous_2.textContent);
+                    p_current.textContent = temp_p_current;
+                }
+            case('sqr(' + p_previous.textContent + ')'):
+                if(equal_previous.textContent === ''){
+                    p_current.textContent = parseFloat(p_previous.textContent) * parseFloat(p_previous.textContent)
+                    current_number = parseFloat(p_current.textContent);
+                    console.log(p_current.textContent)
+                    break;
+               }
+
         }
-        
-    }else{
-        p_current.textContent = "Nieskończoność";
     }
     
-}
+
 
