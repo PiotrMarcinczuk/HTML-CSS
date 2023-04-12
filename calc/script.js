@@ -67,7 +67,6 @@ function operate(){
                 console.log(2.1);
                 p_previous.textContent = p_current.textContent;
             }
-            console.log(2);
             if(p_previous.textContent === '-'){
                 console.log(2.2);
                 operator_previous.textContent = '';
@@ -81,6 +80,7 @@ function operate(){
                 p_previous.textContent = '';
             }
             p_current.textContent = '';
+            console.log(2);
         }else if(p_previous.textContent !== '' && p_previous_2.textContent !== '' && this.textContent !== 'x2'){
             p_previous.textContent = p_current.textContent;
             p_previous_2.textContent = '';
@@ -118,6 +118,8 @@ function operate(){
                 console.log(p_previous_2.textContent)
                 math();
             }else{
+                console.log(this.textContent)
+                console.log(12)
                 temp_sqr = current_number;
                 operator_previous.textContent = temp_operator + 'sqr';
                 p_previous_2.textContent = '('+temp_sqr+')';
@@ -247,82 +249,82 @@ function math(){
         }
     }
 
-    // function math_sqr_operator(temp_operator){
-    //     if(temp_operator === '+'){
-    //         if(equal_previous.textContent === ''){
-    //             let temp_p = temp_sqr * temp_sqr;
-    //             p_current.textContent = parseFloat(p_previous.textContent) + temp_p;
-    //             equal_previous.textContent += ' =';
-    //         }else{
-    //             let temp_p_previous = 0;
-    //             let temp_p_current = 0;
-    //             let result = temp_sqr*temp_sqr;
-    //             temp_p_previous = parseFloat(p_previous.textContent) + parseFloat(result);
-    //             p_previous.textContent = temp_p_previous;
-    //             temp_p_current = parseFloat(p_previous.textContent) + parseFloat(result);
-    //             p_current.textContent = temp_p_current;
-    //         }
-    //     }
-    //     if(temp_operator === '-'){
-    //         if(equal_previous.textContent === ''){
-    //             let temp_p = temp_sqr * temp_sqr;
-    //             p_current.textContent = parseFloat(p_previous.textContent) - temp_p;
-    //             equal_previous.textContent += ' =';
-    //         }else{
-    //             let temp_p_previous = 0;
-    //             let temp_p_current = 0;
-    //             let result = temp_sqr*temp_sqr;
-    //             temp_p_previous = parseFloat(p_previous.textContent) - parseFloat(result);
-    //             p_previous.textContent = temp_p_previous;
-    //             temp_p_current = parseFloat(p_previous.textContent) - parseFloat(result);
-    //             p_current.textContent = temp_p_current;
-    //         }
-    //     }
-    //     if(temp_operator === '×'){
-    //         if(equal_previous.textContent === ''){
-    //             let temp_p = temp_sqr * temp_sqr;
-    //             p_current.textContent = parseFloat(p_previous.textContent) * temp_p;
-    //             equal_previous.textContent += ' =';
-    //         }else{
-    //             let temp_p_previous = 0;
-    //             let temp_p_current = 0;
-    //             let result = temp_sqr*temp_sqr;
-    //             temp_p_previous = parseFloat(p_previous.textContent) * parseFloat(result);
-    //             p_previous.textContent = temp_p_previous;
-    //             temp_p_current = parseFloat(p_previous.textContent) * parseFloat(result);
-    //             p_current.textContent = temp_p_current;
-    //         }
-    //     }
-    //     if(temp_operator === '÷'){
-    //         if(equal_previous.textContent === ''){
-    //             let temp_p = temp_sqr * temp_sqr;
-    //             p_current.textContent = parseFloat(p_previous.textContent) / temp_p;
-    //             equal_previous.textContent += ' =';
-    //         }else{
-    //             let temp_p_previous = 0;
-    //             let temp_p_current = 0;
-    //             let result = temp_sqr*temp_sqr;
-    //             temp_p_previous = parseFloat(p_previous.textContent) / parseFloat(result);
-    //             p_previous.textContent = temp_p_previous;
-    //             temp_p_current = parseFloat(p_previous.textContent) / parseFloat(result);
-    //             p_current.textContent = temp_p_current;
-    //         }
-    //     }
-    //     if(temp_operator === '√'){
-    //         if(equal_previous.textContent === ''){
-    //             let temp_p = temp_sqr * temp_sqr;
-    //             p_current.textContent = parseFloat(p_previous.textContent) / temp_p;
-    //             equal_previous.textContent += ' =';
-    //         }else{
-    //             let temp_p_previous = 0;
-    //             let temp_p_current = 0;
-    //             let result = temp_sqr*temp_sqr;
-    //             temp_p_previous = parseFloat(p_previous.textContent) / parseFloat(result);
-    //             p_previous.textContent = temp_p_previous;
-    //             temp_p_current = parseFloat(p_previous.textContent) / parseFloat(result);
-    //             p_current.textContent = temp_p_current;
-    //         }
-    //     }
-    // }
-    // zakomentowana czesc na funckje dla czytelnosci
+    function math_sqr_operator(temp_operator){
+        if(temp_operator === '+'){
+            if(equal_previous.textContent === ''){
+                let temp_p = temp_sqr * temp_sqr;
+                p_current.textContent = parseFloat(p_previous.textContent) + temp_p;
+                equal_previous.textContent += ' =';
+            }else{
+                let temp_p_previous = 0;
+                let temp_p_current = 0;
+                let result = temp_sqr*temp_sqr;
+                temp_p_previous = parseFloat(p_previous.textContent) + parseFloat(result);
+                p_previous.textContent = temp_p_previous;
+                temp_p_current = parseFloat(p_previous.textContent) + parseFloat(result);
+                p_current.textContent = temp_p_current;
+            }
+        }
+        if(temp_operator === '-'){
+            if(equal_previous.textContent === ''){
+                let temp_p = temp_sqr * temp_sqr;
+                p_current.textContent = parseFloat(p_previous.textContent) - temp_p;
+                equal_previous.textContent += ' =';
+            }else{
+                let temp_p_previous = 0;
+                let temp_p_current = 0;
+                let result = temp_sqr*temp_sqr;
+                temp_p_previous = parseFloat(p_previous.textContent) - parseFloat(result);
+                p_previous.textContent = temp_p_previous;
+                temp_p_current = parseFloat(p_previous.textContent) - parseFloat(result);
+                p_current.textContent = temp_p_current;
+            }
+        }
+        if(temp_operator === '×'){
+            if(equal_previous.textContent === ''){
+                let temp_p = temp_sqr * temp_sqr;
+                p_current.textContent = parseFloat(p_previous.textContent) * temp_p;
+                equal_previous.textContent += ' =';
+            }else{
+                let temp_p_previous = 0;
+                let temp_p_current = 0;
+                let result = temp_sqr*temp_sqr;
+                temp_p_previous = parseFloat(p_previous.textContent) * parseFloat(result);
+                p_previous.textContent = temp_p_previous;
+                temp_p_current = parseFloat(p_previous.textContent) * parseFloat(result);
+                p_current.textContent = temp_p_current;
+            }
+        }
+        if(temp_operator === '÷'){
+            if(equal_previous.textContent === ''){
+                let temp_p = temp_sqr * temp_sqr;
+                p_current.textContent = parseFloat(p_previous.textContent) / temp_p;
+                equal_previous.textContent += ' =';
+            }else{
+                let temp_p_previous = 0;
+                let temp_p_current = 0;
+                let result = temp_sqr*temp_sqr;
+                temp_p_previous = parseFloat(p_previous.textContent) / parseFloat(result);
+                p_previous.textContent = temp_p_previous;
+                temp_p_current = parseFloat(p_previous.textContent) / parseFloat(result);
+                p_current.textContent = temp_p_current;
+            }
+        }
+        if(temp_operator === '√'){
+            if(equal_previous.textContent === ''){
+                let temp_p = temp_sqr * temp_sqr;
+                p_current.textContent = parseFloat(p_previous.textContent) / temp_p;
+                equal_previous.textContent += ' =';
+            }else{
+                let temp_p_previous = 0;
+                let temp_p_current = 0;
+                let result = temp_sqr*temp_sqr;
+                temp_p_previous = parseFloat(p_previous.textContent) / parseFloat(result);
+                p_previous.textContent = temp_p_previous;
+                temp_p_current = parseFloat(p_previous.textContent) / parseFloat(result);
+                p_current.textContent = temp_p_current;
+            }
+        }
+    }
+
 
