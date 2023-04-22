@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -12,40 +15,83 @@ body{
 }
 
 main{
-    background-color: white;
+    background-color: rgba(84, 40, 251, 0.95);
+    background-image: linear-gradient(159deg, rgba(89, 131, 252, 1) 30%, rgba(41, 53, 86, 1) 100%),  url();
+    background-repeat: repeat;
     width: 400px;
-    height: 470px;
+    height: 550px;
     border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    hr{
+        border: solid 1px black;
+    }
     .previous{
         width: 100%;
         height: 8%;
         display: flex;
-        flex-direction: row;
+        align-items: center;
         p{
+            font-size: 22px;
             width: auto;
         }
     }
-    #current{
+    .current{
         width: 100%;
-        height: 14%;
+        height: 8%;
+        display: flex;
+        align-items: center;
     }
-    #symbol{
+    #calc{
         width: 100%;
         height: auto;
-        margin-top: 5px;
+        display: grid;
+        margin-top: 30px;
+        grid-template-columns: repeat(3, 1fr);
         button{
             font-size: 25px;
+            font-weight: bold;
             margin: 5px;
-            width: 85px;
+            width: 70px;
             height: 50px;
             border: none;
             border-radius: 10%;
             cursor: pointer;
-            transition: 0.3s ease;
+            transition: 0.5s ease;
+            grid-row: span 1;
+            grid-column: span;
+        }
+        
+        button:hover{
+            transform: scale(1.05);
+            font-size: 28px;
+        }
+        #zero{
+            grid-row: 7;
+            grid-column: 2;
+        }
+        #dot{
+            grid-row: 7;
+            grid-column: 1;
+        }
+        .equal{
+            grid-row: 7;
+            grid-column: 3;
+        }
+        .sign{
+            font-size: 20px;
+        }
+        .sign:hover{
+            font-size: 20px;
+        }
+        button{
+            -webkit-box-shadow: 8px 8px 58px -14px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 58px -14px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 58px -14px rgba(66, 68, 90, 1);
         }
         button:hover{
-            background: rgba(#000000, 0.1);
-
+            background: rgba(#000000, 0.2);
         }
     }
 }
+    

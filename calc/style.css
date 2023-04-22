@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap");
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -12,39 +14,79 @@ body {
 }
 
 main {
-  background-color: white;
+  background-color: rgba(84, 40, 251, 0.95);
+  background-image: linear-gradient(159deg, rgb(89, 131, 252) 30%, rgb(41, 53, 86) 100%), url();
+  background-repeat: repeat;
   width: 400px;
-  height: 470px;
+  height: 550px;
   border-radius: 1%;
+  display: flex;
+  flex-direction: column;
+}
+main hr {
+  border: solid 1px black;
 }
 main .previous {
   width: 100%;
   height: 8%;
   display: flex;
-  flex-direction: row;
+  align-items: center;
 }
 main .previous p {
+  font-size: 22px;
   width: auto;
 }
-main #current {
+main .current {
   width: 100%;
-  height: 14%;
+  height: 8%;
+  display: flex;
+  align-items: center;
 }
-main #symbol {
+main #calc {
   width: 100%;
   height: auto;
-  margin-top: 5px;
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: repeat(3, 1fr);
 }
-main #symbol button {
+main #calc button {
   font-size: 25px;
+  font-weight: bold;
   margin: 5px;
-  width: 85px;
+  width: 70px;
   height: 50px;
   border: none;
   border-radius: 10%;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
+  grid-row: span 1;
+  grid-column: span;
 }
-main #symbol button:hover {
-  background: rgba(0, 0, 0, 0.1);
+main #calc button:hover {
+  transform: scale(1.05);
+  font-size: 28px;
+}
+main #calc #zero {
+  grid-row: 7;
+  grid-column: 2;
+}
+main #calc #dot {
+  grid-row: 7;
+  grid-column: 1;
+}
+main #calc .equal {
+  grid-row: 7;
+  grid-column: 3;
+}
+main #calc .sign {
+  font-size: 20px;
+}
+main #calc .sign:hover {
+  font-size: 20px;
+}
+main #calc button {
+  box-shadow: 8px 8px 58px -14px rgb(66, 68, 90);
+}
+main #calc button:hover {
+  background: rgba(0, 0, 0, 0.2);
 }/*# sourceMappingURL=style.css.map */
