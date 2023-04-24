@@ -10,7 +10,7 @@ const equal = document.querySelectorAll('.equal');
 let current_number = 0;
 let current_operator = '';
 let tab_of_operations = ['%','C','UNDO','1/x','¬','÷','×','+','-'];
-let tab_of_special_signs = ['¬','1/x'];
+let tab_of_special_signs = ['¬','1/x','%'];
 
 sign.forEach((button) => button.addEventListener('click', operate));
 number.forEach((button) => button.addEventListener('click', display_number));
@@ -18,10 +18,13 @@ equal.forEach((button) => button.addEventListener('click', check_operator));
 
 function check_operator(){
     if(!p_previous.textContent.includes('=')){
-        let operator_for_equal = '';
-        operator_for_equal = current_operator;
-        console.log(operator_for_equal);
-        math_for_equal(operator_for_equal);
+        console.log(p_previous.textContent.slice(-1));
+        if(!tab_of_operations.includes(p_previous.textContent.slice(-1)) || (p_current.textContent !== '' && p_current.textContent !== '-')){
+            let operator_for_equal = '';
+            operator_for_equal = current_operator;
+            console.log(operator_for_equal);
+            math_for_equal(operator_for_equal);
+        }
     }  
 }
 
@@ -56,6 +59,13 @@ function display_number(){
 }
 
 function operate(){
+    if(p_current.textContent !== '' && this.textContent === 'UNDO'){
+        p_current.textContent = p_current.textContent.slice(0,-1);
+        return;
+    }else if(p_previous.textContent !== '' && this.textContent === 'UNDO'){
+        p_previous.textContent = p_previous.textContent.slice(0,-1);
+        return;
+    }
     if(p_current.textContent !== '' && p_current.textContent !== '-'){
         if(p_previous.textContent === ''){
             if(tab_of_special_signs.includes(this.textContent)){
@@ -64,28 +74,33 @@ function operate(){
                 math(current_operator);
             }else{
                 current_operator = this.textContent;
-                p_previous.textContent = p_current.textContent;   
-                p_previous.textContent += current_operator;
+                if(this.textContent !== 'UNDO'){
+                    console.log(453);
+                    p_previous.textContent = p_current.textContent;   
+                    p_previous.textContent += current_operator;
+                }
             }   
         }else{ 
-            if(!p_previous.textContent.includes(this.textContent)){ // tu moga byc problemy z bardziej zlozonymi dzialaniami
+            if(!p_previous.textContent.includes(this.textContent) && this.textContent !== 'UNDO'){ // tu moga byc problemy z bardziej zlozonymi dzialaniami
                 console.log(this.textContent);
                 console.log(current_operator)
                 console.log(432534534);
                 console.log('piewrszy math'); 
                 if(tab_of_special_signs.includes(this.textContent)){
+                    console.log(1.1);
                     math(current_operator);
                     math(this.textContent);
                 }else{
+                    console.log(1.2);
                     math(current_operator); 
                     p_previous.textContent += this.textContent;
                 }
-            }else if(!p_previous.textContent.includes('=')){// dodane warunek if wczesniej samo else
+            }else if(!p_previous.textContent.includes('=') && this.textContent !== 'UNDO'){// dodane warunek if wczesniej samo else
                 console.log('drugi math');
                 math(current_operator);
                 p_previous.textContent += current_operator;
             }
-            else{
+            else if(this.textContent !== 'UNDO'){
                 math(current_operator);
 
             }
@@ -103,6 +118,7 @@ function operate(){
     }
     if(!p_current.textContent.includes('-')){
         current_operator = this.textContent;
+        
     }
     if(p_previous.textContent !== '' && p_current.textContent === '' && !tab_of_operations.includes(p_previous.textContent.slice(-1)) ){
         if(!tab_of_special_signs.includes(this.textContent)){
@@ -204,6 +220,17 @@ function math(current_operator){
                 p_current.textContent = 1/parseFloat(p_previous.textContent);
             }
             break;
+        case '%':
+            
+            if(p_current.textContent.includes('.')){
+                p_previous.textContent = parseFloat(p_previous.textContent).toFixed(3)
+            }   
+            if(p_current.textContent.includes('-')){
+                console.log('zamiana * -1');
+                p_current.textContent = parseFloat(p_previous.textContent) / 100;
+            }
+            
+
 
     }
 }
