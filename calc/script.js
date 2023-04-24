@@ -11,6 +11,7 @@ let current_number = 0;
 let current_operator = '';
 let tab_of_operations = ['%','C','UNDO','1/x','¬','÷','×','+','-'];
 let tab_of_special_signs = ['¬','1/x','%'];
+let temp = 0;
 
 sign.forEach((button) => button.addEventListener('click', operate));
 number.forEach((button) => button.addEventListener('click', display_number));
@@ -66,6 +67,7 @@ function operate(){
         p_previous.textContent = p_previous.textContent.slice(0,-1);
         return;
     }
+    
     if(p_current.textContent !== '' && p_current.textContent !== '-'){
         if(p_previous.textContent === ''){
             if(tab_of_special_signs.includes(this.textContent)){
@@ -81,17 +83,27 @@ function operate(){
                 }
             }   
         }else{ 
+            if(p_previous.textContent !== '' && p_current.textContent === '' && this.textContent === '%'){
+                math(this.textContent);
+            }
             if(!p_previous.textContent.includes(this.textContent) && this.textContent !== 'UNDO'){ // tu moga byc problemy z bardziej zlozonymi dzialaniami
                 console.log(this.textContent);
                 console.log(current_operator)
                 console.log(432534534);
                 console.log('piewrszy math'); 
                 if(tab_of_special_signs.includes(this.textContent)){
-                    console.log(1.1);
-                    math(current_operator);
-                    math(this.textContent);
+                    if(this.textContent === '%' && !p_previous.textContent.includes('=')){
+                        console.log(1.1);
+                        math(this.textContent);
+                        math(current_operator);
+                    }else{
+                        console.log(1.1111);
+                        math(current_operator);
+                        math(this.textContent);
+                    }
                 }else{
                     console.log(1.2);
+                    current_operator = this.textContent; //nowe moze robic bugi
                     math(current_operator); 
                     p_previous.textContent += this.textContent;
                 }
@@ -128,15 +140,17 @@ function operate(){
     }
 }
 
-function math(current_operator){
+function math(current_operator){   
     if(current_operator === '×'){
         current_operator = '*';
     }else if(current_operator === '÷'){
         current_operator = '/';
     }
-    let temp = 0;
     switch(current_operator){
         case '+':
+            console.log('dod');
+            console.log(temp);
+
             if(p_previous.textContent.includes('=')){ // ty '=' byla nie wiem dlaczego
                 p_previous.textContent = parseFloat(p_current.textContent);
             }else{
@@ -221,27 +235,29 @@ function math(current_operator){
             }
             break;
         case '%':
-            
+            if(p_previous.textContent !== ''){
+                temp = parseFloat(p_previous.textContent) * (parseFloat(p_current.textContent)/100);
+                p_current.textContent = temp;
+            }
             if(p_current.textContent.includes('.')){
                 p_previous.textContent = parseFloat(p_previous.textContent).toFixed(3)
             }   
             if(p_current.textContent.includes('-')){
                 console.log('zamiana * -1');
-                p_current.textContent = parseFloat(p_previous.textContent) / 100;
+                temp *= -1;
+                p_current.textContent = temp;
             }
-            
-
-
+            break;
     }
 }
-
+// 50 - 40 blad
 function math_for_equal(current_operator){
     if(current_operator === '×'){
         current_operator = '*';
     }else if(current_operator === '÷'){
         current_operator = '/';
     }
-    let temp = 0;
+    //let temp = 0
     switch(current_operator){
         case '+':
             temp = p_previous.textContent
