@@ -54,14 +54,15 @@ main #calc {
   grid-template-columns: repeat(3, 1fr);
 }
 main #calc button {
+  padding: 0;
   font-size: 35px;
   font-weight: bold;
   margin: 5px;
   width: 150px;
-  height: 60px;
+  height: 65px;
   border: none;
   border-radius: 10%;
-  box-shadow: -8px -8px 10px rgba(255, 255, 255, 0.04), 5px 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: -8px -8px 11px rgba(255, 255, 255, 0.04), 5px 5px 15px rgba(0, 0, 0, 0.2);
   background: transparent;
   cursor: pointer;
   transition: 0.5s ease;
@@ -69,10 +70,45 @@ main #calc button {
   grid-column: span;
   border: none;
   color: #A3AAA6;
+  position: relative;
+  overflow-y: hidden;
+  z-index: 1;
+}
+main #calc button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 94%;
+  height: 94%;
+  position: absolute;
+  top: 2%;
+  left: 2.5%;
+  border-radius: 10px;
+  background: black;
+  z-index: 1;
 }
 main #calc button:hover {
   font-size: 38px;
   color: #50D087;
+}
+main #calc button:hover::before {
+  content: "";
+  position: absolute;
+  top: -70%;
+  left: 0;
+  width: 150px;
+  height: 175px;
+  background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+  animation: animate 3s linear infinite;
+  z-index: 0;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 main #calc #zero {
   grid-row: 7;
