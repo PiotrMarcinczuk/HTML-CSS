@@ -16,13 +16,11 @@ body {
 }
 
 main {
-  background-color: #3a4452;
-  background-repeat: repeat;
-  width: 500px;
-  height: 725px;
-  border-radius: 1%;
+  width: 100%;
+  height: 1250px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   overflow: hidden;
 }
 main hr {
@@ -46,14 +44,27 @@ main p {
   width: auto;
   margin-left: 5px;
 }
-main #calc {
-  width: 100%;
-  height: auto;
+main #calculator {
+  position: absolute;
+  left: 40%;
+  top: 5%;
+  background-color: #3a4452;
+  background-repeat: repeat;
+  width: 500px;
+  height: 725px;
+  border-radius: 1%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+main #calculator #calc_buttons {
+  width: 500px;
+  height: 600px;
   display: grid;
   margin-top: 50px;
   grid-template-columns: repeat(3, 1fr);
 }
-main #calc button {
+main #calculator #calc_buttons button {
   padding: 0;
   font-size: 35px;
   font-weight: bold;
@@ -74,7 +85,7 @@ main #calc button {
   overflow-y: hidden;
   z-index: 1;
 }
-main #calc button span {
+main #calculator #calc_buttons button span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -87,11 +98,11 @@ main #calc button span {
   background: black;
   z-index: 1;
 }
-main #calc button:hover {
+main #calculator #calc_buttons button:hover {
   font-size: 38px;
   color: #50D087;
 }
-main #calc button:hover::before {
+main #calculator #calc_buttons button:hover::before {
   content: "";
   position: absolute;
   top: -70%;
@@ -110,24 +121,202 @@ main #calc button:hover::before {
     transform: rotate(360deg);
   }
 }
-main #calc #zero {
+main #calculator #calc_buttons #zero {
   grid-row: 7;
   grid-column: 2;
 }
-main #calc #dot {
+main #calculator #calc_buttons #dot {
   grid-row: 7;
   grid-column: 1;
 }
-main #calc .equal {
+main #calculator #calc_buttons .equal {
   grid-row: 7;
   grid-column: 3;
 }
-main #calc .sign {
+main #calculator #calc_buttons .sign {
   font-size: 30px;
 }
-main #calc .sign:hover {
+main #calculator #calc_buttons .sign:hover {
   font-size: 32px;
 }
-main #calc button:hover {
+main #calculator #calc_buttons button:hover {
   background: rgba(0, 0, 0, 0.2);
+}
+main #test {
+  position: absolute;
+  right: 10%;
+  top: 0;
+  overflow-y: hidden;
+  border-radius: 20px;
+  width: 600px;
+  height: 900px;
+}
+main #test img {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  z-index: 998;
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+main #test #tutorial {
+  position: relative;
+  left: 0;
+  top: 5%;
+  overflow-y: hidden;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  transform: translate(0%, 50%);
+}
+main #test #tutorial span, main #test #tutorial h1 {
+  color: white;
+  visibility: hidden;
+}
+main #test #tutorial_div {
+  position: relative;
+  left: 0;
+  top: -50%;
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+main #test #tutorial_div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3a4452;
+  -webkit-clip-path: circle(120px at center);
+          clip-path: circle(120px at center);
+  transition: 0.5s;
+}
+main #test:hover #tutorial_div::before {
+  background-color: blue;
+  -webkit-clip-path: circle(550px at center);
+          clip-path: circle(550px at center);
+}
+main #test:hover #tutorial {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0%, 0%);
+  padding-left: 5px;
+}
+main #test:hover #tutorial span {
+  visibility: visible;
+  font-size: 25px;
+}
+main #test:hover #tutorial h1 {
+  visibility: visible;
+}
+main #test:hover img {
+  top: 80%;
+  width: 250px;
+  height: 250px;
+}
+main #bug_forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 450px;
+}
+main #bug_forms h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+main #bug_forms form {
+  font-size: 24px;
+}
+main #bug_forms input {
+  width: 90%;
+  height: 50px;
+}
+main #bug_forms .guzik {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  width: 90%;
+  background-color: #3a4452;
+  cursor: pointer;
+  transition: 1s;
+}
+main #bug_forms .guzik:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    overflow-y: hidden;
+  }
+  main #calculator {
+    overflow-y: hidden;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    width: 55%;
+    height: 55%;
+  }
+  main #calculator .previous {
+    overflow-y: hidden;
+  }
+  main #calculator .current {
+    overflow-y: hidden;
+  }
+  main #calculator #calc_buttons {
+    width: 100%;
+    height: 100%;
+  }
+  main #calculator #calc_buttons button {
+    width: 125px;
+    height: 55px;
+  }
+  main #calculator #calc_buttons button span {
+    overflow-y: hidden;
+  }
+  main #test {
+    top: 60%;
+    right: -15%;
+    position: absolute;
+    height: 500px;
+  }
+  main #test img {
+    top: 55%;
+  }
+  main #tutorial {
+    text-align: center;
+    width: 75%;
+  }
+  main #tutorial span {
+    text-align: center;
+  }
+  main #test:hover #tutorial {
+    left: 12%;
+  }
+  main #test:hover #tutorial span {
+    font-size: 15px;
+  }
+  main #test:hover img {
+    top: 80%;
+    width: 160px;
+    height: 160px;
+  }
+  main #bug_forms {
+    position: absolute;
+    overflow-y: hidden;
+    top: 100%;
+    width: 100%;
+    height: 550px;
+  }
+  main #bug_forms form {
+    overflow-y: hidden;
+    width: 90%;
+    margin-top: 50px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -17,13 +17,11 @@ body{
 }
 
 main{
-    background-color: #3a4452;
-    background-repeat: repeat;
-    width: 500px;
-    height: 725px;
-    border-radius: 1%;
+    width: 100%;
+    height: 1250px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     overflow: hidden;
     hr{
         border: solid 1px black;
@@ -46,87 +44,288 @@ main{
         width: auto;
         margin-left: 5px;
     }
-    #calc{
-        width: 100%;
-        height: auto;
-        display: grid;
-        margin-top: 50px;
-        grid-template-columns: repeat(3, 1fr);
-        
-        button{
-            padding: 0;
-            font-size: 35px;
-            font-weight: bold;
-            margin: 5px;
-            width: 150px;
-            height: 65px;
-            border: none;
-            border-radius: 10%;
-            box-shadow: -8px -8px 11px rgba(255,255,255,0.04),5px 5px 15px rgba(0,0,0,0.2);
-            background: transparent;
-            cursor: pointer;
-            transition: 0.5s ease;
-            grid-row: span 1;
-            grid-column: span;
-            border: none;
-            color: #A3AAA6;
-            position: relative;
-            overflow-y: hidden;
-            z-index: 1;
-            span{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 94%;
-                height: 94%;
-                position: absolute;
-                top: 2%;
-                left: 2.5%;
-                border-radius: 10px;
-                background: black;
+    #calculator{
+        position: absolute;
+        left: 40%;
+        top: 5%;
+        background-color: #3a4452;
+        background-repeat: repeat;
+        width: 500px;
+        height: 725px;
+        border-radius: 1%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        #calc_buttons{
+            width: 500px;
+            height: 600px;
+            display: grid;
+            margin-top: 50px;
+            grid-template-columns: repeat(3, 1fr);      
+            button{
+                padding: 0;
+                font-size: 35px;
+                font-weight: bold;
+                margin: 5px;
+                width: 150px;
+                height: 65px;
+                border: none;
+                border-radius: 10%;
+                box-shadow: -8px -8px 11px rgba(255,255,255,0.04),5px 5px 15px rgba(0,0,0,0.2);
+                background: transparent;
+                cursor: pointer;
+                transition: 0.5s ease;
+                grid-row: span 1;
+                grid-column: span;
+                border: none;
+                color: #A3AAA6;
+                position: relative;
+                overflow-y: hidden;
                 z-index: 1;
+                span{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 94%;
+                    height: 94%;
+                    position: absolute;
+                    top: 2%;
+                    left: 2.5%;
+                    border-radius: 10px;
+                    background: black;
+                    z-index: 1;
+                }
+            }
+            button:hover{
+                font-size: 38px;
+                color: #50D087;
+            }
+            button:hover::before{
+                content: "";
+                position: absolute;
+                top: -70%;
+                left: 0;
+                width: 150px;
+                height: 175px;
+                background-image: conic-gradient(transparent,transparent,transparent, #00ccff);
+                animation: animate 3s linear infinite;
+                z-index: 0;
+            }
+            @keyframes animate {
+                0%{transform: rotate(0deg);}
+                100%{transform: rotate(360deg);}  
+            }
+            #zero{
+                grid-row: 7;
+                grid-column: 2;
+            }
+            #dot{
+                grid-row: 7;
+                grid-column: 1;
+            }
+            .equal{
+                grid-row: 7;
+                grid-column: 3;
+            }
+            .sign{
+                font-size: 30px;
+            }
+            .sign:hover{
+                font-size: 32px;
+            }
+            button:hover{
+                background: rgba(#000000, 0.2);
             }
         }
-        button:hover{
-            font-size: 38px;
-            color: #50D087;
-        }
-        button:hover::before{
-            content: "";
+    }
+    #test{
+        position: absolute;
+        right: 10%;
+        top: 0;
+        overflow-y: hidden;
+        border-radius: 20px;
+        width: 600px;
+        height: 900px;
+        img{
             position: absolute;
-            top: -70%;
+            left: 50%;
+            top: 25%;
+            transform: translate(-50%, -50%);
+            z-index: 998;
+            pointer-events: none;
+            transition: 0.5s ease;
+        }
+        #tutorial{
+            position: relative;
             left: 0;
-            width: 150px;
-            height: 175px;
-            background-image: conic-gradient(transparent,transparent,transparent, #00ccff);
-            animation: animate 3s linear infinite;
-            z-index: 0;
+            top: 5%;
+            overflow-y: hidden;
+            transition: 0.5s;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 999;
+            transform: translate(0%, 50%);
+            span, h1{
+                color: white;
+                visibility: hidden;
+            }
         }
-        @keyframes animate {
-            0%{transform: rotate(0deg);}
-            100%{transform: rotate(360deg);}  
+        #tutorial_div{
+            position: relative;
+            left: 0;
+            top: -50%;
+            margin-top: 10px;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
         }
-        #zero{
-            grid-row: 7;
-            grid-column: 2;
+        #tutorial_div::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #3a4452;;
+            clip-path: circle(120px at center);
+            transition: 0.5s;
         }
-        #dot{
-            grid-row: 7;
-            grid-column: 1;
+    }
+    #test:hover{
+        #tutorial_div::before{
+            background-color: blue;
+            clip-path: circle(550px at center);
+        }  
+    }
+    #test:hover{
+        #tutorial{
+            opacity: 1;
+            visibility: visible;
+            transform: translate(0%, 0%);
+            padding-left: 5px;
+            span{
+                visibility: visible;
+                font-size: 25px;
+            }
+            h1{
+                visibility: visible;
+            }
         }
-        .equal{
-            grid-row: 7;
-            grid-column: 3;
+    }
+    #test:hover{
+        img{
+            top: 80%;
+            width: 250px;
+            height: 250px;
         }
-        .sign{
+    }
+    #bug_forms{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        width: 100%;
+        height: 450px;
+        h2{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        form{
+            font-size: 24px;
+        }
+        input{
+            width: 90%;
+            height: 50px;
+        }
+        .guzik{
             font-size: 30px;
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+            width: 90%;
+            background-color: #3a4452;
+            cursor: pointer;
+            transition: 1s;
         }
-        .sign:hover{
-            font-size: 32px;
-        }
-        button:hover{
-            background: rgba(#000000, 0.2);
+        .guzik:hover{
+            transform: scale(1.1);
+
         }
     }
 }
+
+@media screen and (max-width: 1000px){
+    main{
+        overflow-y: hidden;
+        #calculator{
+            overflow-y: hidden;
+            position: absolute;
+            left: 5%;
+            top: 10%;
+            width: 55%;
+            height: 55%;
+            .previous{
+                overflow-y: hidden;
+            }
+            .current{
+                overflow-y: hidden;
+            }
+            #calc_buttons{               
+                width: 100%;
+                height: 100%;
+                button{
+                    width: 125px;
+                    height: 55px;
+                    span{
+                        overflow-y: hidden;
+                    }
+                }
+            }
+        }
+        #test{
+            top: 60%;
+            right: -15%;
+            position: absolute;
+            height: 500px;
+            img{
+                top: 55%;
+            }
+        }
+        #tutorial{
+            text-align: center;
+            width: 75%;
+            span{
+                text-align: center;
+            }
+        }
+        #test:hover{
+            #tutorial{
+                left: 12%;
+                span{
+                    font-size: 15px;
+                }
+            }
+            img{
+                top: 80%;
+                width: 160px;
+                height: 160px;
+            }
+            
+        }
+        #bug_forms{
+            position: absolute;
+            overflow-y: hidden;
+            top: 100%;
+            width: 100%;
+            height: 550px;
+            form{
+                overflow-y: hidden;
+                width: 90%;
+                margin-top: 50px;
+            }
+        }
+    }
+
+}
+    
+
     
