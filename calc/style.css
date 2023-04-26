@@ -108,7 +108,7 @@ main #calculator #calc_buttons button:hover::before {
   top: -70%;
   left: 0;
   width: 150px;
-  height: 175px;
+  height: 300px;
   background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
   animation: animate 3s linear infinite;
   z-index: 0;
@@ -219,18 +219,31 @@ main #test:hover img {
   width: 250px;
   height: 250px;
 }
-main #bug_forms {
+main #report {
+  width: 10%;
+  font-size: 30px;
   display: flex;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 65%;
+  left: 45%;
+}
+main #bug_forms {
+  overflow-y: hidden;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 450px;
+  margin-top: 200px;
+  height: 400px;
 }
 main #bug_forms h2 {
   text-align: center;
   margin-bottom: 10px;
 }
 main #bug_forms form {
+  margin-top: 100px;
   font-size: 24px;
 }
 main #bug_forms input {
