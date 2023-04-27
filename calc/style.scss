@@ -18,9 +18,10 @@ body{
 
 main{
     width: 100%;
-    height: 1250px;
+    height: 80rem; //zmiana
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: flex-end;
     overflow: hidden;
     hr{
@@ -50,15 +51,15 @@ main{
         top: 5%;
         background-color: #3a4452;
         background-repeat: repeat;
-        width: 500px;
-        height: 725px;
+        width: 31rem;
+        height: 45rem;
         border-radius: 1%;
         display: flex;
         flex-direction: column;
         overflow: hidden;
         #calc_buttons{
-            width: 500px;
-            height: 600px;
+            width: 31rem;
+            height: 45rem;
             display: grid;
             margin-top: 50px;
             grid-template-columns: repeat(3, 1fr);      
@@ -67,8 +68,8 @@ main{
                 font-size: 35px;
                 font-weight: bold;
                 margin: 5px;
-                width: 150px;
-                height: 65px;
+                width: 9.5rem;
+                height: 4rem;
                 border: none;
                 border-radius: 10%;
                 box-shadow: -8px -8px 11px rgba(255,255,255,0.04),5px 5px 15px rgba(0,0,0,0.2);
@@ -105,8 +106,8 @@ main{
                 position: absolute;
                 top: -70%;
                 left: 0;
-                width: 150px;
-                height: 300px;
+                width: 9.5rem;
+                height: 18rem;
                 background-image: conic-gradient(transparent,transparent,transparent, #00ccff);
                 animation: animate 3s linear infinite;
                 z-index: 0;
@@ -144,8 +145,8 @@ main{
         top: 0;
         overflow-y: hidden;
         border-radius: 20px;
-        width: 600px;
-        height: 900px;
+        width: 36rem;
+        height: 55rem;
         img{
             position: absolute;
             left: 50%;
@@ -220,62 +221,177 @@ main{
         }
     }
     #report{
-        width: 10%;
-        font-size: 30px;
+        width: 18rem;
+        height: 4rem;
+        font-size: 35px;
         display: flex;
         justify-content: center;
+        align-items: center;
         cursor: pointer;
+        border: none;
         position: absolute;
-        top: 65%;
+        font-weight: bold;
+        top: 87%;
         left: 45%;
+        border-radius: 40px;
+        background: rgb(49,49,55);
+        background: linear-gradient(90deg, rgba(49,49,55,1) 8%, rgba(52,71,80,1) 54%, rgba(141,152,153,1) 100%);
+        transition: 1s ease;
+    } 
+    #report:hover{
+        transform: scale(1.05);
+        font-size: 36px;
     }
     #bug_forms{
         overflow-y: hidden;
         display: none;
+        text-align: center;
+        align-items: center;
         justify-content: center;
         align-items: center; 
-        width: 100%;
-        margin-top: 200px;
-        height: 400px;
+        width: 40rem;
+        height: 23rem;
+        position: absolute;
+        top: 15%;
+        left: 0;
         h2{
             text-align: center;
             margin-bottom: 10px;
         }
         form{
-            margin-top: 100px;
-            font-size: 24px;
+            font-size: 18px;
+            overflow-y: hidden;
+            align-items: center;
+        }
+        #description{
+            height: 60px;
         }
         input{
             width: 90%;
             height: 50px;
+            font-size: 25px;
         }
         .guzik{
             font-size: 30px;
-            display: flex;
-            justify-content: center;
             margin-top: 25px;
             width: 90%;
             background-color: #3a4452;
             cursor: pointer;
             transition: 1s;
+            overflow-y: hidden;
         }
         .guzik:hover{
             transform: scale(1.1);
-
         }
     }
 }
-
-@media screen and (max-width: 1000px){
+@media screen and (min-width: 1855.1px) and (max-width: 2150px){
+    main{
+        #test{
+            position: absolute;
+            right: 2%;
+            top: 0;
+        }
+    }
+}
+@media screen and (min-width: 1550.1px) and (max-width: 1855px){
+    main{
+        #test{
+            position: absolute;
+            right: 2%;
+            top: 0;
+            width: 25rem;
+            height: 60rem;
+            #tutorial_div{
+                top: -55%;
+            }
+        }
+        #test:hover{
+            #tutorial{
+                span{
+                    font-size: 22px;
+                }
+            }
+        } 
+    }
+}
+@media screen and (min-width: 1430.1px) and (max-width: 1550px){
+    main{
+        #calculator{
+            left: 35%;
+            top: 5%;
+        }
+        #test{
+            position: absolute;
+            right: 1%;
+            top: 0;
+            width: 26rem;
+            height: 60rem;
+            #tutorial_div{
+                top: -55%;
+            }
+        }
+        #test:hover{
+            #tutorial{
+                span{
+                    font-size: 22px;
+                }
+            }
+        } 
+        #report{
+            left: 42%;
+        }
+        #bug_forms{
+            width: 28rem;
+            height: 24rem;
+            left: -1%;
+        }
+    }
+}
+@media screen and (min-width: 1000.1px) and (max-width: 1430px){
+    main{
+        #calculator{
+            left: 15%;
+            top: 5%;
+        }
+        #test{
+            position: absolute;
+            right: 2%;
+            top: 0;
+            width: 22rem;
+            height: 60rem;
+            #tutorial_div{
+                top: -55%;
+            }
+            img{
+                top: 30%;
+            }
+        }
+        #test:hover{
+            #tutorial{
+                span{
+                    font-size: 20px;
+                }
+            }
+        } 
+        #report{
+            left: 25%;
+        }
+        #bug_forms{
+            left: 10%;
+            top: 100%;
+        }
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 1000px){
     main{
         overflow-y: hidden;
         #calculator{
             overflow-y: hidden;
             position: absolute;
-            left: 5%;
+            left: 30%;
             top: 10%;
-            width: 55%;
-            height: 55%;
+            width: 25rem;
             .previous{
                 overflow-y: hidden;
             }
@@ -283,22 +399,104 @@ main{
                 overflow-y: hidden;
             }
             #calc_buttons{               
-                width: 100%;
+                width: 25rem;
                 height: 100%;
                 button{
-                    width: 125px;
-                    height: 55px;
+                    width: 7.5rem;
+                    height: 3rem;
                     span{
                         overflow-y: hidden;
                     }
                 }
             }
         }
+        #report{
+            top: 140%;
+            left: 35%;
+        }
         #test{
-            top: 60%;
-            right: -15%;
+            top: 95%;
+            right: 20%;
             position: absolute;
-            height: 500px;
+            height: 25rem;
+            img{
+                top: 55%;
+            }
+            #tutorial_div{
+                top: -65%;
+            }
+        }
+        #tutorial{
+            text-align: center;
+            width: 75%;
+            span{
+                text-align: center;
+            }
+        }
+        #test:hover{
+            #tutorial{
+                left: 12%;
+                top: 5%;
+                span{
+                    font-size: 12px;
+                }
+            }
+            img{
+                width: 130px;
+                height: 130px;
+            }
+            
+        }
+        #bug_forms{
+            position: absolute;
+            overflow-y: hidden;
+            top: 140%;
+            width: 100%;
+            height: 550px;
+            form{
+                overflow-y: hidden;
+                width: 90%;
+                margin-top: 50px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 700px) {
+    main{
+        #calculator{
+            overflow-y: hidden;
+            position: absolute;
+            left: 30%;
+            top: 10%;
+            width: 50rem;
+            height: 40rem;
+            .previous{
+                overflow-y: hidden;
+            }
+            .current{
+                overflow-y: hidden;
+            }
+            #calc_buttons{               
+                width: 25rem;
+                height: 100%;
+                button{
+                    width: 7.5rem;
+                    height: 3rem;
+                    span{
+                        overflow-y: hidden;
+                    }
+                }
+            }
+        }
+        #report{
+            top: 105%;
+            left: 35%;
+        }
+        #test{
+            top: 69%;
+            right: 20%;
+            position: absolute;
+            height: 25rem;
             img{
                 top: 55%;
             }
@@ -313,21 +511,21 @@ main{
         #test:hover{
             #tutorial{
                 left: 12%;
+                top: 5%;
                 span{
-                    font-size: 15px;
+                    font-size: 12px;
                 }
             }
             img{
-                top: 80%;
-                width: 160px;
-                height: 160px;
+                width: 130px;
+                height: 130px;
             }
             
         }
         #bug_forms{
             position: absolute;
             overflow-y: hidden;
-            top: 100%;
+            top: 105%;
             width: 100%;
             height: 550px;
             form{
@@ -337,7 +535,6 @@ main{
             }
         }
     }
-
 }
     
 
