@@ -445,7 +445,7 @@ main #bug_forms .guzik:hover {
   main #calculator {
     overflow-y: hidden;
     position: absolute;
-    left: 10%;
+    left: 6%;
     top: 10%;
     width: 20rem;
   }
@@ -472,10 +472,10 @@ main #bug_forms .guzik:hover {
   }
   main #test {
     top: 95%;
-    right: 5%;
+    right: 1%;
     position: absolute;
     height: 25rem;
-    width: 23rem;
+    width: 22rem;
   }
   main #test img {
     top: 55%;
@@ -495,6 +495,9 @@ main #bug_forms .guzik:hover {
   main #test:hover #tutorial {
     left: 12%;
     top: 5%;
+  }
+  main #test:hover #tutorial h2 {
+    font-size: 25px;
   }
   main #test:hover #tutorial span {
     font-size: 8px;
