@@ -13,6 +13,7 @@ body {
   align-items: center;
   height: 100vh;
   z-index: 999;
+  overflow-y: hidden;
 }
 
 main {
@@ -64,6 +65,7 @@ main #calculator #calc_buttons {
   display: grid;
   margin-top: 50px;
   grid-template-columns: repeat(3, 1fr);
+  overflow-y: hidden;
 }
 main #calculator #calc_buttons button {
   padding: 0;
@@ -442,12 +444,16 @@ main #bug_forms .guzik:hover {
   main {
     overflow-y: hidden;
   }
+  main p {
+    font-size: 20px;
+  }
   main #calculator {
     overflow-y: hidden;
     position: absolute;
     left: 6%;
     top: 10%;
     width: 20rem;
+    height: 25rem;
   }
   main #calculator .previous {
     overflow-y: hidden;
@@ -467,49 +473,16 @@ main #bug_forms .guzik:hover {
     overflow-y: hidden;
   }
   main #report {
-    top: 140%;
+    top: 100%;
     left: 10%;
   }
   main #test {
-    top: 95%;
-    right: 1%;
-    position: absolute;
-    height: 25rem;
-    width: 22rem;
-  }
-  main #test img {
-    top: 55%;
-  }
-  main #test #tutorial_div {
-    top: -95%;
-    left: 0;
-  }
-  main #tutorial {
-    text-align: center;
-    width: 75%;
-    top: 0;
-  }
-  main #tutorial span {
-    text-align: center;
-  }
-  main #test:hover #tutorial {
-    left: 12%;
-    top: 5%;
-  }
-  main #test:hover #tutorial h2 {
-    font-size: 25px;
-  }
-  main #test:hover #tutorial span {
-    font-size: 8px;
-  }
-  main #test:hover img {
-    width: 130px;
-    height: 130px;
+    display: none;
   }
   main #bug_forms {
     position: absolute;
     overflow-y: hidden;
-    top: 140%;
+    top: 110%;
     width: 100%;
     height: 550px;
   }

@@ -17,7 +17,7 @@ var result = 0;
 sign.forEach((button) => button.addEventListener('click', operate));
 number.forEach((button) => button.addEventListener('click', display_number));
 equal.forEach((button) => button.addEventListener('click', check_operator));
-// jest bug z UNDO jesli na poczatku zostanie - 
+
 function check_operator(){
     if(!p_previous.textContent.includes('=')){
         if(!tab_of_operations.includes(p_previous.textContent.slice(-1)) || (p_current.textContent !== '' && p_current.textContent !== '-')){
@@ -114,6 +114,8 @@ function operate(){
             p_previous.textContent += this.textContent;
         }else if(!p_previous.textContent === ''){
             p_current.textContent += this.textContent;
+        }else if(p_current.textContent === '' && p_previous.textContent !== ''){
+            p_current.textContent += this.textContent; // ten else if dodany pozno nie sprawdzony dokladnie wsteponie dziala
         }
     }
     if(!p_current.textContent.includes('-')){
