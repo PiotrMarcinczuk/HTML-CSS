@@ -74,6 +74,17 @@
                     <label for="opis" class="all">Descript your problem and tell me where he is occors and when: </label>
                     <input type="text" name="description" id="description" class="all_input"><br>
                     <input type="submit" class="guzik" value="Send">
+                    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdioOUlAAAAAM6xyYiIasaLIwtymHahGa3nJxya"></script>
+                    <script>
+                        if(bug_forms.style.display === 'flex'){
+                            console.log(12312);
+                            grecaptcha.enterprise.ready(function() {
+                                grecaptcha.enterprise.execute('6LdioOUlAAAAAM6xyYiIasaLIwtymHahGa3nJxya', {action: 'login'}).then(function(token) {
+                                    '...'
+                                });
+                            });
+                        }
+                    </script>
                 </form>
             </div>
         </main>

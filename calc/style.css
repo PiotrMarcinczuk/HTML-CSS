@@ -464,6 +464,7 @@ main #bug_forms .guzik:hover {
   main #calculator #calc_buttons {
     width: 20rem;
     height: 100%;
+    overflow-y: auto;
   }
   main #calculator #calc_buttons button {
     width: 6rem;

@@ -15,7 +15,6 @@ if(isset($_POST['mail_text'])) {
     $problem_name = $_POST['problem_name'];
     $description = $_POST['description'];
 
-    // Sprawdź, czy pola nie są puste
     if(empty($email) || empty($problem_name) || empty($description)) {
         header("Location: kontakt.html");
         echo "<script>alert('Nie wypełniłeś wszystkich pól.')</script>";
@@ -27,7 +26,7 @@ if(isset($_POST['mail_text'])) {
         $mail->Host = 'smtp.gmail.com';  // adres serwera SMTP
         $mail->SMTPAuth = true;
         $mail->Username = 'sznycer2137@gmail.com'; // adres email
-        $mail->Password = 'mqrqzesdoqgbommd'; // hasło do emaila
+        $mail->Password = 'jostzjogigmxukre'; // hasło do emaila
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
         $mail->IsHTML(true);
@@ -55,7 +54,7 @@ if(isset($_POST['mail_text'])) {
         $mail1->Host = 'smtp.gmail.com';  // adres serwera SMTP
         $mail1->SMTPAuth = true;
         $mail1->Username = 'sznycer2137@gmail.com'; // adres email
-        $mail1->Password = 'mqrqzesdoqgbommd'; // hasło do emaila
+        $mail1->Password = 'jostzjogigmxukre'; // hasło do emaila
         $mail1->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail1->Port = 587;
         // treść wiadomości

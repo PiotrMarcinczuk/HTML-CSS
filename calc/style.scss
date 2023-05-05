@@ -485,6 +485,7 @@ main{
             #calc_buttons{               
                 width: 20rem;
                 height: 100%;
+                overflow-y: auto;
                 button{
                     width: 6rem;
                     height: 3rem;
