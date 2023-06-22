@@ -33,18 +33,21 @@
         }
 
         class Human extends Animal {
-            constructor(name){
+            constructor(name, city){
                 super(name);
+                this.city = city
             }
+
+            #job = 'proggramer';
 
             printName(){
                 super.printName(); // odwolujemy sie takze do tej metody z klasy nadrzednej
-                console.log('Human: ', this.name);
+                console.log('Human: ', this.name, ', City: ', this.city, ', Job: ', this.#job);
             }
         }
 
         const animal1 = new Animal('Tiger');
-        const human1 = new Human('Olek');
+        const human1 = new Human('Olek','Paslek');
         human1.printName();
         console.log(Animal.count);
     </script>
