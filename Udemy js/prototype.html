@@ -52,6 +52,18 @@
 
         tv.printWeight();
         telephone.printWeight();
+
+        // listowanie wlasciowosci tylko obiektu tak powinno wygladac
+        for(prop in telephone){
+            if( telephone.hasOwnProperty(prop) ){
+                console.log(prop);
+            }
+        }
+
+        // listowanie dla obiektu i dla prototypu
+        for(prop in telephone){
+            console.log(prop);
+        }
     </script>
 </body>
 </html>
