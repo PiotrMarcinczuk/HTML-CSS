@@ -1,0 +1,24 @@
+#nav-data{
+    color: red;
+    font-size: 1.5rem;
+}
+
+#nav-data input{
+    width: 15rem;
+    height: 1.5rem;
+    font-size: 1.3rem;
+}
+
+main{
+    background-color: pink;
+}
+
+main button{
+    width: 4rem;
+    height: 1.2rem;
+}
+
+td{
+    margin: 50px;
+}
+
