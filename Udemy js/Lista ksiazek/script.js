@@ -43,35 +43,32 @@ class BookList{
         let elementDiv = document.createElement('div');
         let elementTable = document.querySelector('table');
 
-        let elementCol = document.createElement('tr');
-        let elementRow1 = document.createElement('td');
-        let elementRow2 = document.createElement('td');
-        let elementRow3 = document.createElement('td');
-        let elementRow4 = document.createElement('td');
-        let buttonUp = document.createElement('button');
-        let buttonRemove = document.createElement('button');
-        buttonUp.innerText = 'Up';
+        let tr = document.createElement('tr');
+        const buttonRemove = document.createElement('button');
+        const buttonUp = document.createElement('button');
         buttonRemove.innerText = 'Remove';
-        elementDiv.appendChild(elementTable);
-        elementTable.appendChild(elementCol);
-        elementCol.appendChild(elementRow1);
-        elementCol.appendChild(elementRow2);
-        elementCol.appendChild(elementRow3);
-        elementCol.appendChild(elementRow4);
-        elementRow3.appendChild(buttonUp);
-        elementRow4.appendChild(buttonRemove);
+        buttonUp.innerText = 'Up';
 
-        elementRow1.innerHTML = 'Imię autora: ' + book.name; 
-        elementRow2.innerHTML = 'Id książki : ' + book.id;
-        main.appendChild(elementDiv);
+        main.appendChild(elementTable);
+        elementTable.appendChild(tr);
+
+        tr.innerHTML = `
+            <td>${book.name}</td>
+            <td>${book.id}</td>
+            <td></td>
+            <td></td>
+        `;
+        const tdElements = tr.querySelectorAll('td');
+        tdElements[2].appendChild(buttonUp);
+        tdElements[3].appendChild(buttonRemove);
 
         buttonRemove.addEventListener('click', () => { // usuwanie pr zyciskiem remove
             //usuwamy tez z localStorage
             const t = storageTemp.getItems();
             for(let [key, value] of t.entries()){
                 if(value.name === book.name){
-                    elementTable.remove(elementCol);
-                    bookList.list.splice(key,1);
+                    tr.remove(); // elementTable.remove(tr) to nie dziala nie wiem czemu
+                    this.list.splice(key,1);
                 }
             }
             this.saveData();
@@ -82,7 +79,10 @@ class BookList{
             for(let [key, value] of this.list.entries()){
                 if(value.listId === book.listId){
                     if(key >= 1){
-                        console.log(this.list[key]);
+                        let tempNumber = book.listId;
+                        book.listId = book.listId-1; 
+                        book.listId = tempNumber;
+
                         let temp = this.list[key-1];               
                         this.list[key-1] = this.list[key];
                         this.list[key] = temp;
@@ -130,7 +130,7 @@ class BookList{
     }
 
     deleteAll(){
-        const tableRows = document.querySelectorAll('table tr');
+        const tableRows = document.querySelectorAll('table tr:not(#names)');
         tableRows.forEach( (el) => {
             el.remove();
         })
