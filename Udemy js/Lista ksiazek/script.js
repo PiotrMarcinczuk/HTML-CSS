@@ -5,6 +5,8 @@ window.onload = () => {
 class BookList{
     constructor(){
         this.list = [];
+        this.author = document.getElementById('author'); // nie moze byc .value bo byloby to jednorazowe przypisanie
+        this.bookId = document.getElementById('bookId');
     }   
 
     init(){
@@ -15,23 +17,25 @@ class BookList{
         this.loadDataFromStorage()
     }
 
-    buttonClick(e){
-        const author = document.getElementById('author').value;
-        const bookId = document.getElementById('bookId').value;
+    buttonClear(){
+        this.author.value = '';
+        this.bookId.value = '';
+    }
 
+    buttonClick(e){
         e.preventDefault();
 
-        if(author && bookId){
-            const book = new Book(author, bookId);
+        if(this.author.value && this.bookId.value){
+            const book = new Book(this.author.value, this.bookId.value);
             bookList.addBook(book);
+            this.buttonClear();
         }
     }
 
     addBook(book){ 
         storageTemp.setItems(book); // tu musi byc book bo linie nizej pobieramy wartosc ze storage
         const item = bookList.loadData();
-        bookList.addToList(item);
-               
+        bookList.addToList(item);     
     }
     
     addElement(book){
@@ -45,8 +49,8 @@ class BookList{
         let elementRow4 = document.createElement('td');
         let button1 = document.createElement('button');
         let button2 = document.createElement('button');
-        button1.innerText = 'Up'
-        button2.innerText = 'Remove'
+        button1.innerText = 'Up';
+        button2.innerText = 'Remove';
         elementDiv.appendChild(elementTable);
         elementTable.appendChild(elementCol);
         elementCol.appendChild(elementRow1);
@@ -58,6 +62,10 @@ class BookList{
 
         elementRow1.innerHTML = 'Imię autora: ' + book.name; 
         elementRow2.innerHTML = 'Id książki : ' + book.id;
+
+        button2.addEventListener('click', (e) => { // usuwanie pr zyciskiem remove
+            elementTable.remove(elementCol);
+        });
         main.appendChild(elementDiv);
     }
 
@@ -79,7 +87,6 @@ class BookList{
 
     loadData(){
         const data = storageTemp.getItems();
-        console.log(data);
         return data;
     }
 
@@ -90,7 +97,6 @@ class BookList{
         data.forEach((value, index) => {
             bookList.addElement(value);
         })
-        console.log(data);
     }
 
     saveData(){
@@ -111,10 +117,11 @@ class Storage{
         localStorage.setItem('books', JSON.stringify(book));
     }
 
-    getItems(){
+    getItems(){ // w momencie wczytywanie na poczatku z LocalStorage zmienna booksTemp zawiera cala liste ksiazek
+        // a jesli chcemy dodac nowa ksiazke po kliknieciu to zmienna zawiera najnowsza ksiazke
         let booksTemp = null;
         if(localStorage.getItem('books') !== null){
-            booksTemp = JSON.parse(localStorage.getItem('books')); // tutaj tylko najnowszy obiekt book poniewaz jest zmienna bookTemp
+            booksTemp = JSON.parse(localStorage.getItem('books')); 
         }else{
             booksTemp = [];
         }
@@ -122,3 +129,4 @@ class Storage{
     }
 }
 const storageTemp = new Storage();
+
