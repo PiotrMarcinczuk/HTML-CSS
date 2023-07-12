@@ -1,6 +1,5 @@
 const button = document.getElementById('countdown-button');
 const dateTimeButton = document.getElementById('timer');
-let intervalId = 0;
 let finalTime = null;
 
 button.addEventListener('click', init)
@@ -56,8 +55,7 @@ function math(result){
     pSeconds.innerHTML = seconds;
 
     if(result <= 0){
-        console.log(2);
-        clearInterval(intervalId);
+        clearInterval(timerId);
         let div = document.getElementById('messege');
         div.style.display = 'block';
     } 
@@ -79,9 +77,9 @@ function loadFromStorage(){
         if(result > 0){
             math(result);
             saveStorage(finalTimeTemp, currentTimeTemp);
-            intervalId = setInterval(timer, 1000);
+
         }else{
-            clearInterval(intervalId);
+            clearInterval(timerId);
             let div = document.getElementById('messege');
             div.style.display = 'block';
         }
