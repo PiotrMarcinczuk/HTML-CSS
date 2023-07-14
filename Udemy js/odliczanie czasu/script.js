@@ -1,6 +1,7 @@
 const button = document.getElementById('countdown-button');
 const dateTimeButton = document.getElementById('timer');
 let finalTime = null;
+let timerId = null;
 
 button.addEventListener('click', init)
 dateTimeButton.addEventListener('input', enableButton);
@@ -30,7 +31,7 @@ function timer(){
         loadFromStorage();
     }else{
         result = finalTime - current;
-        math(result)
+        math(result);
         saveStorage(finalTime, current);
     }
 }
@@ -77,7 +78,6 @@ function loadFromStorage(){
         if(result > 0){
             math(result);
             saveStorage(finalTimeTemp, currentTimeTemp);
-
         }else{
             clearInterval(timerId);
             let div = document.getElementById('messege');
@@ -86,5 +86,3 @@ function loadFromStorage(){
         return finalTimeTemp;
     }
 }
-
-
