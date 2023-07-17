@@ -1,0 +1,30 @@
+#quiz-box{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    background-color: red;
+    width: 20em;
+    height: 15em;
+}
+
+main{
+    position: relative;
+    background-color: green;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+
+main input{
+    width: 25%;
+    height: 2em;
+}
+
+main label{
+    background-color: rebeccapurple;
+    width: 50%;
+    height: 25px;
+}
+
+
