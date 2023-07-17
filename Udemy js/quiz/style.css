@@ -7,6 +7,11 @@
     height: 15em;
 }
 
+#quiz-box button{
+    width: 6em;
+    height: 1.4em;
+}
+
 main{
     position: relative;
     background-color: green;
@@ -26,5 +31,6 @@ main label{
     width: 50%;
     height: 25px;
 }
+
 
 
