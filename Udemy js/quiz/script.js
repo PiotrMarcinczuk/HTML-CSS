@@ -14,10 +14,11 @@ class Quiz{
         this.questionList = [
             {question: 'Ile kg waży Sznyc?', answer1: 55, answer2: answers.answer1, answer3: 100, correctAnswer: answers.answer1, flag: false},
             {question: 'Jak nazywa się Sznyc?', answer1: answers.answer2, answer2: 'Karol', answer3: 'Bożydar', correctAnswer: answers.answer2, flag: false},
-            {question: 'Jak na imię miał Jan Paweł II?', answer1: 'Magdalena', answer2: 'Jan', answer3: answers.answer1, correctAnswer: answers.answer3, flag: false}
+            {question: 'Jak na imię miał Jan Paweł II?', answer1: 'Magdalena', answer2: 'Jan', answer3: answers.answer3, correctAnswer: answers.answer3, flag: false}
         ]
         this.inputId = null;
-        this.labelId = null;
+        this.labelName = null;
+        this.questionNumber = null;
     }
 
     getRandomNumber(len){
@@ -41,6 +42,7 @@ class Quiz{
         let index = this.getRandomNumber(unanswered.length);
         let question = unanswered[index];
         question.flag = true;
+        this.questionNumber += 1;
         return question;
     }
 
@@ -56,11 +58,8 @@ class Quiz{
     }
 
     checkAnswer(){
-        for(let i=0; i<checkboxes.length; i++){
-            if(quiz.inputId == labels[i].id){
-                console.log(labels[i]);
-            }
-        }
+        let correct = quiz.questionList[quiz.questionNumber-1].correctAnswer;
+        console.log(correct)
     }
 }
 
@@ -76,10 +75,12 @@ quiz = new Quiz();
 
 quiz.getHtmlElements();
 
-checkboxes.forEach( (el) => { // to nie dziala ale jest blisko wartosc nie jest pobierana 
-    el.addEventListener('click', (e) => {
-        const label = e.target.nextSibling
-        const labelValue = label.textContent;
+checkboxes.forEach( el => { // cos zle z kolejnosci odpowiedzi wypisywanych
+    el.addEventListener('click', () => {
+        if(el.checked){
+            const label = document.querySelector(`label[for="${el.id}"]`);
+            quiz.labelName = label.innerText;
+        }
     })
 })
 
