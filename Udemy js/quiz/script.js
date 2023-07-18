@@ -1,18 +1,23 @@
 const title = document.querySelector('main h1')
-const a1 = document.getElementById('label_answer1')
-const a2 = document.getElementById('label_answer2')
-const a3 = document.getElementById('label_answer3')
+
+const a1 = document.querySelector('label[for="answer1"]')
+const a2 = document.querySelector('label[for="answer2"]')
+const a3 = document.querySelector('label[for="answer3"]')
 
 const button = document.querySelector('#quiz-box button');
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const labels = document.querySelectorAll('label');
 
 class Quiz{
     constructor(){
+        const answers = new Answers();
         this.questionList = [
-            {question: 'Ile kg waży Sznyc?', answer1: 55, answer2: 88, answer3: 100, correctAnswer: answer2, flag: false},
-            {question: 'Jak nazywa się Sznyc?', answer1: 'Wojtek', answer2: 'Karol', answer3: 'Bożydar', correctAnswer: answer1, flag: false},
-            {question: 'Jak na imię miał Jan Paweł II?', answer1: 'Magdalena', answer2: 'Jan', answer3: 'Karol', correctAnswer: answer3, flag: false}
-
+            {question: 'Ile kg waży Sznyc?', answer1: 55, answer2: answers.answer1, answer3: 100, correctAnswer: answers.answer1, flag: false},
+            {question: 'Jak nazywa się Sznyc?', answer1: answers.answer2, answer2: 'Karol', answer3: 'Bożydar', correctAnswer: answers.answer2, flag: false},
+            {question: 'Jak na imię miał Jan Paweł II?', answer1: 'Magdalena', answer2: 'Jan', answer3: answers.answer1, correctAnswer: answers.answer3, flag: false}
         ]
+        this.inputId = null;
+        this.labelId = null;
     }
 
     getRandomNumber(len){
@@ -21,8 +26,6 @@ class Quiz{
 
     getHtmlElements(){
         let questionTemp = this.getQuestion();
-        console.log(questionTemp);
-        console.log(this.number);
         
         title.innerHTML = questionTemp.question;
         a1.innerHTML = questionTemp.answer1;
@@ -32,11 +35,9 @@ class Quiz{
 
     getQuestion(){  
         let unanswered = this.questionList.filter( (e) => !e.flag)
-        if(unanswered.length === 0){
-            this.getRandomNumber();
-            return this.getQuestion()
+        if(unanswered.length <= 1){
+            button.setAttribute('disabled', 'true');
         }
-
         let index = this.getRandomNumber(unanswered.length);
         let question = unanswered[index];
         question.flag = true;
@@ -49,15 +50,45 @@ class Quiz{
     }
 
     clearCheckbox(){
-        const checkbox = document.querySelectorAll('input[type="checkbox"]');
-        checkbox.forEach( (el) => {
+        checkboxes.forEach( (el) => {
             el.checked = false;
         })
-   
+    }
+
+    checkAnswer(){
+        for(let i=0; i<checkboxes.length; i++){
+            if(quiz.inputId == labels[i].id){
+                console.log(labels[i]);
+            }
+        }
+    }
+}
+
+class Answers{
+    constructor(){
+        this.answer1 = 88;
+        this.answer2 = 'Wojtek';
+        this.answer3 = 'Karol';
     }
 }
 
 quiz = new Quiz();
+
 quiz.getHtmlElements();
+
+checkboxes.forEach( (el) => { // to nie dziala ale jest blisko wartosc nie jest pobierana 
+    el.addEventListener('click', (e) => {
+        const label = e.target.nextSibling
+        const labelValue = label.textContent;
+    })
+})
+
 button.addEventListener('click', quiz.nextQuestion);
+button.addEventListener('click', quiz.checkAnswer);
+
+
+
+
+
+
 
