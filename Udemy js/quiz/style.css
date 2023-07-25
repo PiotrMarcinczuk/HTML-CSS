@@ -1,24 +1,30 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
 #quiz-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     left: 50%;
     top: 50%;
     background-color: red;
-    width: 20em;
-    height: 15em;
-}
-
-#quiz-box button{
-    width: 6em;
-    height: 1.4em;
+    width: 20rem;
+    height: auto;
 }
 
 main{
-    position: relative;
+    width: 100%;
     background-color: green;
     display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
+}
 
+h1{
+    width: 100%;
+    text-align: center;
 }
 
 main input{
@@ -30,6 +36,21 @@ main label{
     background-color: rebeccapurple;
     width: 50%;
     height: 25px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#quiz-box button{
+    font-size: 1.5rem;
+}
+#next-button{
+    margin-top: 8px;
+}
+
+#end-button{
+    margin-top: 8px;
+    display: none;
+    height: 2rem;
 }
 
 
