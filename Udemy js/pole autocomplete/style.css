@@ -47,3 +47,8 @@ main ul li{
     padding: 5px;
     border: 1px solid gray;
 }
+
+main ul li:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}

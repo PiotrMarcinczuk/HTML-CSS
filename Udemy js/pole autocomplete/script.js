@@ -2,7 +2,9 @@ window.onload = () => {
     instance.init();
     instance.input.addEventListener('input', (e) => {
         instance.value = e.target.value;
+        instance.removeElements()
         instance.connect();
+        
     })
 }
 
@@ -10,6 +12,7 @@ class List{
     init(){
         this.input = document.getElementById('search');
         this.button = document.getElementById('search-button');
+        this.liList = [];
         this.value = null;
     }
 
@@ -20,18 +23,29 @@ class List{
     }
 
     addHtmlElement(data){
+        if(!data.bestMatches) return;
+
         const list = data.bestMatches;
         list.forEach( (el) => {
-            instance.createElement(el['1. symbol']);
+            instance.createElement(el['1. symbol'] + ' ' + el['2. name']);
         })
     }
 
     createElement(data){
         const ul = document.querySelector('ul');
         let li = document.createElement('li');
+        
         li.innerHTML = data;
+        this.liList.push(li);
 
         ul.appendChild(li);
+    }
+
+    removeElements(){
+        const ul = document.querySelectorAll('ul');
+        this.liList.forEach( (el) => {
+            el.remove();
+        })
     }
 }
 
