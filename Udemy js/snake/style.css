@@ -1,0 +1,17 @@
+body{
+    background-color: grey;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas{
+    display: block;
+    margin-left: 3px;
+    margin-right: 3px;
+    background-color: greenyellow;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+}
