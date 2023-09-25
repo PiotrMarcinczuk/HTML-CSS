@@ -22,6 +22,7 @@ class Snake{
         setInterval(() => {
             this.clearSnake();
             this.drawSnake();
+            this.checkColision();
             this.snakeEats();
             if(!this.gamePause) this.moveSnake();
         }, 100);
@@ -81,8 +82,17 @@ class Snake{
     makeFood(){
         let randomX = Math.round((Math.random() * this.canvas.width) / 10) * 10;
         let randomY = Math.round((Math.random() * this.canvas.height) / 10) * 10;
-        console.log(randomX, randomY);
-        this.foodPosition = {x: randomX, y: randomY}; 
+        if(this.gamePause){
+            if((Math.abs(randomX - this.snakeTab[0].x) >= 30) 
+            && (Math.abs(randomY - this.snakeTab[0].y) >= 30)){
+                this.foodPosition = {x: randomX, y: randomY}; 
+            }else{
+                console.log('es');
+            }
+        }else{
+            this.foodPosition = {x: randomX, y: randomY}; 
+        }
+        
     }
 
     drawFood(){
@@ -110,6 +120,15 @@ class Snake{
         this.snakeLenSection.innerText = this.snakeLength;
     }
 
+    checkColision(){
+        if(this.snakeTab[0].x > this.canvas.width || this.snakeTab[0].x < 0){
+            this.changeButton();
+        }
+        if(this.snakeTab[0].y > this.canvas.height || this.snakeTab[0].y < 0){
+            this.changeButton();
+        }
+    }
+
     resetGame(){
         this.gamePause = true;
         this.snakeTab = [];
@@ -120,6 +139,7 @@ class Snake{
 
         this.pointSection.innerText = '';
         this.snakeLenSection.innerText = 5;
+        
     }
 
     changeButton(){
