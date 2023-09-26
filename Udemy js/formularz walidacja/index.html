@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <script src="./validate_form.js" defer></script>
+    <script src="./validate.js" defer></script>
+    <script src="./check_field.js" defer></script>
+</head>
+<body>
+    <main>
+        <form autocomplete="off">
+            <label for="name">Podaj nazwę użytkownika</label>
+            <input type="text" id="name" name="name" value="username">
+            <p id="nameFail">Nazwa użytkownika musi mieć od 8 do 16 znaków</p>
+
+            <label for="email">Podaj email</label>
+            <input type="text" id="email" name="email" value="email">
+            <p id="emailFail">Niepoprawny format email</p>
+
+            <label for="password">Podaj Hasło</label>
+            <input type="password" id="password" name="password">
+            <p id="passwordFail"></p>
+
+            <label for="passwordRepeat">Powtórz hasło</label>
+            <input type="password" id="passwordRepeat" name="passwordRepeat">
+            <p id="passwordRepeatFail"></p>
+
+            <input type="submit" value="Prześlij" onclick="">
+        </form>
+    </main>
+</body>
+</html>
