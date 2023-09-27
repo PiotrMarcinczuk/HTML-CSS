@@ -15,6 +15,7 @@ class ValidateForm{
     }
 
     checkFields(inputName){
+        const rePassword = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
         switch(inputName.id){
             case 'name':
                 if(inputName.value.length < 8 || inputName.value.length > 16){
@@ -24,12 +25,27 @@ class ValidateForm{
                 }
                 break;
             case 'email':
-                const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-                if(re.test(inputName.value.trim())){
+                const reEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                if(reEmail.test(inputName.value.trim())){
                     this.addStyle(true, inputName, emailFail);
                 }else{
                     this.addStyle(false, inputName, emailFail);
                 }
+                break;
+            case 'password':
+                if(rePassword.test(inputName.value.trim())){
+                    this.addStyle(true, inputName, passwordFail);
+                }else{
+                    this.addStyle(false, inputName, passwordFail);
+                }
+                break;
+            case 'passwordRepeat':
+                if(inputPassword.value === inputName.value && rePassword.test(inputName.value.trim())){
+                    this.addStyle(true, inputName, passwordRepeatFail);
+                }else{
+                    this.addStyle(false, inputName, passwordRepeatFail);
+                }
+                break;
         }
     }
 
